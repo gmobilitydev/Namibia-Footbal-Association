@@ -116,12 +116,12 @@ Run database seeder:
 
 
 ## Features to explore
--Visit the frontend resources/views/Site
+- Visit the frontend resources/views/Site
 
 ### To Do
 
--Navbar animations
--Store frontend
--Competitions page visit https://www.fifa.com/fifaplus/en/tournaments && https://www.thefa.com/competitions
--About page 
+- Navbar animations
+- Store frontend
+- Competitions page visit https://www.fifa.com/fifaplus/en/tournaments && https://www.thefa.com/competitions
+- About page 
 
