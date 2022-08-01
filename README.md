@@ -7,11 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-# Graveyard Management System App
+# NFA Website
 
-A demo application to illustrate how Filament Admin works.
 
-![Graveyard Management System](https://github.com/G-Mobility/gms\public\assets\Readme\GMS.png)
 
 ## Installation with docker
 
