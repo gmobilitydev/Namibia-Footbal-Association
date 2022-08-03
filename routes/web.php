@@ -49,6 +49,14 @@ Route::get('/about', function () {
     return view('Site.AboutUs.about');
 });
 
+Route::get('/procurement', function(){
+    return view('Site.Procurement.index');
+});
+
+Route::get('/vacancies', function(){
+    return view('Site.vacancies.index');
+});
+
 
 
 

@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
+
 module.exports = {
     content: [
         "./resources/**/*.blade.php",
@@ -8,9 +10,16 @@ module.exports = {
         './node_modules/tw-elements/dist/js/**/*.js'
     ],
     theme: {
-        extend: {},
-    },
-    plugins: [
-        require('tw-elements/dist/plugin')
-    ],
+        extend: {
+            colors: {
+                danger: colors.rose,
+                primary: colors.blue,
+                success: colors.green,
+                warning: colors.yellow,
+            },
+        },
+        plugins: [
+            require('tw-elements/dist/plugin')
+        ],
+    }
 }
