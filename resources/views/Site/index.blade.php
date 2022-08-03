@@ -18,7 +18,7 @@
                         aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner relative w-full overflow-hidden">
-                    @foreach ($latestPostList as $post)
+                    @forelse ($latestPostList as $post)
 
 
                     <div class="carousel-item active float-left w-full">
@@ -39,7 +39,27 @@
                             </div>
                         </div>
                     </div>
-                    @endforeach
+                    @empty
+                    <div class="carousel-item active float-left w-full">
+                        <div class="relative overflow-hidden bg-no-repeat bg-cover"
+                            style="background-position: 50%; background-image: url({{asset('assets/images/caf.jpeg')}}); height: 500px;">
+                        </div>
+
+                        <div class="container mx-auto px-6 md:px-12 xl:px-32">
+                            <div class="text-center text-gray-800">
+                                <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
+                                    style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
+                                    <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">
+                                        Test Title
+                                        <br />
+                                    </h1>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @endforelse
                     <!--<div class="carousel-item float-left w-full">
                             <div class="relative overflow-hidden bg-no-repeat bg-cover"
                                 style="background-position: 50%; background-image: url({{ asset('assets/images/team.jpg') }}); height: 500px;">
