@@ -47,6 +47,9 @@
                 <a class="text-gray-900" href="{{ url('/store') }}">Store</a>
                 <a class="text-gray-900" href="{{ url('/gallery') }}">Gallery</a>
                 <a class="text-gray-900" href="{{ url('/about') }}">About Us</a>
+                <a class="text-gray-900" href="{{ url('/procurement') }}">Procuremnt</a>
+                <a class="text-gray-900" href="{{ url('/vacancies') }}">Vacancies</a>
+
             </nav>
 
 

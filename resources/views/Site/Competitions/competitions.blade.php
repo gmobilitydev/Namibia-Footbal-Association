@@ -16,7 +16,182 @@
                 </div>
 
 
+
             </div>
         </div>
     </header>
+    <link crossorigin="anonymous" href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <script crossorigin="anonymous" defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <style>
+        .swiper-container {
+            overflow: hidden;
+        }
+    </style>
+
+    <section class="bg-zinc-900">
+        <div class="px-4 py-16 mx-auto max-w-[1340px]">
+            <div class="items-end justify-between max-w-7xl sm:flex sm:pr-6 lg:pr-8">
+                <h2 class="text-white max-w-xl text-4xl font-bold tracking-tight sm:text-5xl">
+                    Local Competitions
+                </h2>
+
+                <div class="flex mt-8 lg:mt-0">
+                    <button
+                        class="p-3 text-yellow-600 transition-colors border border-current rounded-full focus:outline-none focus:bg-yellow-600 focus:text-white prev-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transform -rotate-180" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+
+                    <button
+                        class="p-3 ml-3 text-yellow-600 border border-current rounded-full focus:outline-none focus:bg-yellow-600 focus:text-white next-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="mt-8 lg:col-span-2 lg:mx-0">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        @for ($i = 0; $i < 10; $i++)
+                            <div class="swiper-slide">
+
+                                <div class="w-full">
+                                    <a href=""
+                                        class="relative block overflow-hidden bg-center bg-no-repeat bg-cover  rounded w-full rounded-lg shadow-lg hover:scale-110 transition duration-300 ease-in-out"
+                                        style="background-image: url({{ asset('assets/images/competition.jpeg') }})">
+
+
+                                        <div class="relative p-8 pt-40 text-white bg-black bg-opacity-40">
+                                            <h5 class="text-2xl font-bold">Competition Name</h5>
+
+                                            <p class="text-sm">Competition Date</p>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        @endfor
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dark:bg-amber-300 dark:text-gray-100">
+        <div class="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
+            <div class="space-y-2 text-center">
+                <h2 class="text-3xl font-bold">Latest News</h2>
+
+            </div>
+            <a rel="noopener noreferrer" href="#"
+                class="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-900">
+                <img src="{{ asset('assets/images/galler.jpeg') }}" alt=""
+                    class="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500">
+                <div class="p-6 space-y-2 lg:col-span-5">
+                    <h3 class="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">
+                        Noster tincidunt reprimique ad pro</h3>
+                    <span class="text-xs dark:text-gray-400">February 19, 2021</span>
+                    <p>Ei delenit sensibus liberavisse pri. Quod suscipit no nam. Est in graece fuisset, eos affert
+                        putent doctus id.</p>
+                </div>
+            </a>
+            <div class="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <a rel="noopener noreferrer" href="#"
+                    class="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
+                    <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500"
+                        src="{{ asset('assets/images/caf.jpeg') }}">
+                    <div class="p-6 space-y-2">
+                        <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu
+                            laoreet repudiare legendos</h3>
+                        <span class="text-xs dark:text-gray-400">January 21, 2021</span>
+                        <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas
+                            percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea,
+                            ei vocent delicata indoctum pri.</p>
+                    </div>
+                </a>
+                <a rel="noopener noreferrer" href="#"
+                    class="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
+                    <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500"
+                        src="{{ asset('assets/images/team.jpg') }}">
+                    <div class="p-6 space-y-2">
+                        <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu
+                            laoreet repudiare legendos</h3>
+                        <span class="text-xs dark:text-gray-400">January 22, 2021</span>
+                        <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas
+                            percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea,
+                            ei vocent delicata indoctum pri.</p>
+                    </div>
+                </a>
+                <a rel="noopener noreferrer" href="#"
+                    class="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
+                    <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500"
+                        src="{{ asset('assets/images/caf.jpeg') }}">
+                    <div class="p-6 space-y-2">
+                        <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu
+                            laoreet repudiare legendos</h3>
+                        <span class="text-xs dark:text-gray-400">January 23, 2021</span>
+                        <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas
+                            percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea,
+                            ei vocent delicata indoctum pri.</p>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+    <div class="carousel-item active float-left w-full mb-20">
+        <div class="relative overflow-hidden bg-no-repeat bg-cover"
+            style="background-position: 50%; background-image: url({{ asset('assets/images/caf.jpeg') }}); height: 500px;">
+        </div>
+
+        <div class="container mx-auto px-6 md:px-12 xl:px-32">
+            <div class="text-center text-gray-800">
+                <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
+                    style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
+                    <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">Magaia brace
+                        hands South
+                        Africa first WAFCON trophy
+                        <br />
+                    </h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const swiper = new Swiper('.swiper-container', {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 32,
+                autoplay: {
+                    delay: 8000,
+                },
+                navigation: {
+                    nextEl: '.next-button',
+                    prevEl: '.prev-button',
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1.5,
+                        centeredSlides: true,
+                    },
+                    1024: {
+                        centeredSlides: false,
+                        slidesPerView: 2.25,
+                    },
+                },
+            })
+        })
+    </script>
 @endsection
