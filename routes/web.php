@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Site\WebsiteController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('Site.index');
-});
+Route::get('/', [WebsiteController::class, 'latestPosts']);
 
 Route::get('/news', function(){
     return view('Site.NewsCenter.news');
