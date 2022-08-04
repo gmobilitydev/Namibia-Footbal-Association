@@ -21,9 +21,20 @@ Route::get('/news', function(){
     return view('Site.NewsCenter.news');
 });
 
+//---------------------------------------- Men's/Brave Warriors Routes ----------------------------------------
 Route::get('/warriors', function(){
     return view('Site.Men.men');
 });
+
+Route::get('/warriors-fixtures', function(){
+    return view('Site.Men.fixtures-results');
+});
+
+Route::get('/warriors-squads', function(){
+    return view('Site.Men.squads');
+});
+
+// ------------------------------------ End of Men's/Brave Warriors Routes -------------------------------------
 
 Route::get('/gladiators', function(){
     return view('Site.Women.women');
