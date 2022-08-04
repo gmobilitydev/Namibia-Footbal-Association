@@ -10,7 +10,7 @@ class Team extends Model
     use HasFactory;
     protected $table = 'teams';
 
-    protected $fillabe =[
+    protected $fillabe = [
         'name',
         'country',
         'date_founded',
@@ -21,5 +21,8 @@ class Team extends Model
         'manager'
 
     ];
-    
+    public function team()
+    {
+        return $this->belongsTo(Team::class, 'player_id, fixture_id');
+    }
 }

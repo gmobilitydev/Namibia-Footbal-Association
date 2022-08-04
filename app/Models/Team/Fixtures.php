@@ -18,5 +18,8 @@ class Fixtures extends Model
         'score',
 
     ];
-    
+    public function team()
+    {
+        return $this->belongsTo(Fixtures::class, 'team_id');
+    }
 }
