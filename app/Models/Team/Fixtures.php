@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Fixtures extends Model
 {
     use HasFactory;
+
     protected $table = 'fixtures';
 
     protected $fillable = [
@@ -22,4 +23,5 @@ class Fixtures extends Model
     {
         return $this->belongsTo(Fixtures::class, 'team_id');
     }
+
 }

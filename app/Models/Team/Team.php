@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Team extends Model
 {
     use HasFactory;
+
     protected $table = 'teams';
 
     protected $fillabe = [
@@ -25,4 +26,5 @@ class Team extends Model
     {
         return $this->belongsTo(Team::class, 'player_id, fixture_id');
     }
+
 }
