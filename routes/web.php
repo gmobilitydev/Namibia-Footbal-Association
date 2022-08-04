@@ -51,9 +51,7 @@ Route::get('/procurement', function(){
     return view('Site.Procurement.index');
 });
 
-Route::get('/vacancies', function(){
-    return view('Site.vacancies.index');
-});
+Route::get('/vacancies',[WebsiteController::class, 'vacancies']);
 
 
 

@@ -27,6 +27,7 @@ class Post extends Model
         'published_at',
         'seo_title',
         'seo_description',
+        'image'
     ];
 
     /**
