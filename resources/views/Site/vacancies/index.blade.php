@@ -24,27 +24,38 @@
         </div>
     </header>
     <section class="bg-gray-50">
-        <div class="max-w-screen-xl px-4 py-32 mx-auto lg:h-screen lg:items-center lg:flex">
+        <div class="max-w-screen-xl px-4 py-32 mx-auto  lg:items-center lg:flex">
 
             <div class="max-w-xl mx-auto text-center">
 
                 @forelse ($vacancyList as $vacancy)
-                    <a class="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-yellow-500/30 hover:border-yellow-500"
-                        href="/services/digital-campaigns">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-yellow-500" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                            <path
-                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
-                        </svg>
+                    <!-- component -->
+                    <div class="lg:flex shadow rounded-lg border  border-gray-400">
 
-                        <h3 class="mt-4 text-xl font-bold text-grey-900">{{ $vacancy->job_title }}</h3>
+                        <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
+                            <div class="flex flex-row lg:justify-start justify-center">
+                                <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
+                                    <i class="far fa-clock"></i> {{ $vacancy->end_date }}
+                                </div>
 
+                            </div>
+                            <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
+                                {{ $vacancy->job_title }}
+                            </div>
 
-                    </a>
+                            <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
+                                {{ $vacancy->job_description }}
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-row items-center w-full lg:w-1/3 bg-white lg:justify-end justify-center px-2 py-4 lg:px-0">
+                            <span
+                                class="tracking-wider text-gray-600 bg-gray-200 px-2 text-sm rounded leading-loose mx-2 font-semibold">
+                                {{ $vacancy->status }}
+                            </span>
 
+                        </div>
+                    </div>
                 @empty
                     <h1 class="text-3xl font-extrabold sm:text-5xl">
                         No Vacancies Available
