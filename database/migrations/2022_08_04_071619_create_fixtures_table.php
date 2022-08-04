@@ -18,6 +18,7 @@ return new class extends Migration
             $table->varchar('name');
             $table->int('time_played');
             $table->date('date');
+            $table->string('league');
             $table->timestamps();
         });
     }
