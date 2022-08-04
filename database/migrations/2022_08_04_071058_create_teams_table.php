@@ -17,7 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('country');
-            $table->int('date_founded');
+            $table->date('date_founded');
+            $table->foreignId('player_id');
+            $table->foreignId('fixture_id');
             $table->string('league');
             $table->int('points');
             $table->string('manager');
