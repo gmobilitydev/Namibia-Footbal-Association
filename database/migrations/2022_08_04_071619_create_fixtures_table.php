@@ -19,6 +19,7 @@ return new class extends Migration
             $table->int('time_played');
             $table->date('date');
             $table->string('league');
+            $table->varchar(10)('score')->default(0 - 0);
             $table->timestamps();
         });
     }
