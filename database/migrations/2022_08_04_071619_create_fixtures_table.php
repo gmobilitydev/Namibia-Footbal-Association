@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('fixtures', function (Blueprint $table) {
             $table->id();
+            $table->varchar('name');
+            $table->int('time_played');
+            $table->date('date');
             $table->timestamps();
         });
     }
