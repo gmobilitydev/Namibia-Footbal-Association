@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class PlayerController extends Controller
 {
     public function index(){
-        $list_players = Player::all();
+        $list_players = Player::all(); 
     }
 }

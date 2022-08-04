@@ -15,7 +15,7 @@ class Player extends Model
         'firstname',
         'surname',
         'DOB',
-        'team_id',
+        'team_id', 
         'gender',
         'positions',
         'nationality',
