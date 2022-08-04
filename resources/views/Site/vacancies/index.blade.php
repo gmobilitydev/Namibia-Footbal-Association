@@ -1,3 +1,4 @@
+require('')
 @extends('layouts.app')
 
 @section('content')
