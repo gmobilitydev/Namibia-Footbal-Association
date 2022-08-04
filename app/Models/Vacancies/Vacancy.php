@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Vacancies;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Vacancies extends Model
+class Vacancy extends Model
 {
     use HasFactory;
     protected $table = 'vacancies';
