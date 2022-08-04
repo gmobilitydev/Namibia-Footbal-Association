@@ -20,7 +20,7 @@ return new class extends Migration
             $table->date('DOB');
             $table->foreignId('team_id')->nullable()->nullOnDelete();
             $table->enum('gender',['male', 'female', 'other']);
-            $table->string('positions', ['Goalkeeper', 'Right Fullback', 'Left Fullback', 'Center Back', 'Sweeper', 'Defending/Holding Midfielder', 'Right Midfielder/Winger', 'Central/Box-to-Box Midfielder','Striker', 'Attacking Midfielder/Playmaker', 'Left Midfielder/Wingers']);
+            $table->string('position');
             $table->string('nationality');
             $table->float('height');
             $table->timestamps();
