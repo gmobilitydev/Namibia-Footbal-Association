@@ -30,12 +30,12 @@
 
                 @forelse ($vacancyList as $vacancy)
                     <!-- component -->
-                    <div class="lg:flex shadow rounded-lg border  border-gray-400">
+                    <div class="lg:flex block shadow-xl rounded-xl border  border-gray-400">
 
                         <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
                             <div class="flex flex-row lg:justify-start justify-center">
-                                <div class="text-gray-700 font-medium text-sm text-center lg:text-left px-2">
-                                    <i class="far fa-clock"></i> {{ $vacancy->end_date }}
+                                <div class="text-gray-700 font-medium text-sm text-right lg:text-right px-2">
+                                    <i class="far fa-clock">Closing on</i> {{ $vacancy->end_date }}
                                 </div>
 
                             </div>

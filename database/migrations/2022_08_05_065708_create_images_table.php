@@ -13,15 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('fixtures', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->id();
-
-            $table->varchar('name');
-            $table->int('time_played');
-            $table->date('date');
-            $table->string('league');
-            $table->foreignId('team_id');
-            $table->varchar(10)('score')->default(0 - 0);
+            $table->string('name');
+            $table->string('size');
             $table->timestamps();
         });
     }
@@ -33,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fixtures');
+        Schema::dropIfExists('images');
     }
 };
