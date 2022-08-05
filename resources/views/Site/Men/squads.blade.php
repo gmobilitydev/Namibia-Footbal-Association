@@ -23,24 +23,24 @@
             </div>
         </header>
 
-        <!-- Content -->
-        <!-- <div class="py-5 bg-gray-700 flex items-center justify-center px-1"> -->
-            <!-- component -->
-        
-        <div>
-        @for ($i = 0; $i < 5; $i++)
-            <div x-data="{ open: false }" class="bg-gray-50 items-center justify-center flex flex-col md:flex-row">
-                <!-- <div   class="p-4 bg-blue-100 w-1/2 rounded flex justify-between items-center"> -->
-                    <!-- Teams List Item -->
+        <div x-data="{ 
+            open: false, 
+            openClasses: 'w-96 h-24 relative space-y-1 p-4', 
+            closedClasses: 'w-96 h-24 relative space-y-1 p-4'
+             
+        }" 
+            class="content-center container justify-between items-center mr-5 sm:w-full lg:w-5/8 mx-5 px-6 sm:py-1 lg:py-1 flex flex-col md:flex-row">
+            <div @click="open = ! open" class="flex flex-col">
+            @for ($i = 0; $i < 5; $i++)
                 
-                <div @click="open = ! open" class="container justify-between items-center mr-5 sm:w-full lg:w-1/2 mx-5 px-6 sm:py-1 lg:py-1">
+                <div class="container justify-between items-center mr-5 sm:w-45 md:w-full mx-2 px-10 sm:py-1 lg:py-1">
 
                     <div class="mt-4">
                         <div class="relative flex flex-col justify-end overflow-hidden rounded-b-xl pt-6">
-                            <div class="group relative flex cursor-pointer justify-between rounded-xl bg-amber-200 before:absolute before:inset-y-0 before:right-0 before:w-1/2 before:rounded-r-xl before:bg-gradient-to-r before:from-transparent before:to-amber-600 before:opacity-0 before:transition before:duration-500 hover:before:opacity-100">
-                            <div class="relative space-y-1 p-4">
-                                <h4 class="text-lg text-amber-900">Brave Warriors</h4>
-                                <div class="relative h-6 text-amber-800 text-sm">
+                            <div class="group relative flex cursor-pointer justify-between rounded-xl bg-blue-100 before:absolute before:inset-y-0 before:right-0 before:w-full before:rounded-r-xl before:bg-gradient-to-r before:from-transparent before:to-blue-400 before:opacity-0 before:transition before:duration-500 hover:before:opacity-100">
+                            <div :class="w-96 h-24 relative space-y-1 p-4">
+                                <h4 class="text-lg text-gray-900 text-left">Brave Warriors</h4>
+                                <div class="relative h-6 text-gray-800 text-sm">
                                 <!-- <span class="transition duration-300 group-hover:invisible group-hover:opacity-0">Captain: Team Captain</span> -->
                                 <a href="" class="flex items-center gap-3 lg:invisible absolute left-1 top-0 translate-y-3 transition duration-300 group-hover:visible group-hover:translate-y-0">
                                     <span>See the team </span>
@@ -52,21 +52,24 @@
                                 </div>
                             </div>
                             <!-- <img class="absolute bottom-0 right-6 w-[6rem] transition duration-300 group-hover:scale-[1.4]" src="https://raw.githubusercontent.com/Meschacirung/Tailus-website/main/public/images/singers/Michael-Jackson.png" alt="" /> -->
-                            <img class="absolute bottom-0 right-6 w-[4rem] transition duration-300 lg:group-hover:scale-[1.4]" src="{{ asset('assets/logos/logo.jpg') }}" alt="logo">
+                            <img class="absolute bottom-0 right-6 w-[6rem] transition duration-300 lg:group-hover:scale-[1.1]" src="{{ asset('assets/logos/logo.jpg') }}" alt="logo">
                             </div>
                         </div>
                     </div>
                             
                 </div>
                 
-                <!-- </div> -->
-                <div x-show="open" @click.outside="open = false" class="xs:w-full lg:w-3/4 xs:h-45 lg:h-screen bg-white p-4 bg-slate-100">
-                    <h4 class="p-4 align-center text-lg text-slate-400">Brave Warriors</h4>
-                                
+                @endfor 
+                
 
-                    <!-- Tabs Component -->
-                    <!-- component -->
-                    
+            </div>
+            <!-- <div x-show="!open" @click.outside="open = true" class="xs:w-full lg:w-3/4 xs:h-45 lg:h-5/6 bg-white p-4"><h4 class="p-4 text-center text-lg text-slate-400"> CLICK on team to see details</h4> </div> -->
+            <div x-show="open" @click.outside="open = false" class="xs:w-full lg:w-3/4 xs:h-45 lg:h-5/6 bg-white p-4 bg-slate-100">
+                <h4 class="p-4 align-center text-lg text-slate-400">Brave Warriors</h4>
+                
+                <!-- Tabs Component -->
+                <!-- component -->
+                
                 <div x-data="
                     {
                     openTab: 1,
@@ -83,30 +86,51 @@
                         </a>
                         
                     </div>
+                    <!-- Tab Content -->
                     <div>
-                        <div x-show="openTab === 1" class="rounded bg-white h-96 w-7/8 text-body-color text-base leading-relaxed p-6" style="display: none;">
-                            <div>
-                                Team
+                        <div x-show="openTab === 1" class="rounded bg-white h-48 md:h-screen w-full text-body-color text-base leading-relaxed p-6 overflow-auto" style="display: none;">
+                            <div class="grid gap-4 grid-cols-3 grid-rows-3">
+                                
+                                @for ($i = 0; $i < 8; $i++)
+                                <div>
+                                    <div class="group relative w-96">
+                                        <img class="w-3/4 h-full object-cover"
+                                            src="https://www.kindacode.com/wp-content/uploads/2022/06/t-shirt-example.png" />
+
+                                        <div
+                                            class="absolute top-0 left-0 w-3/4 h-0 flex flex-col justify-center items-center bg-gray-300 opacity-0 group-hover:h-full group-hover:opacity-70 duration-500">
+                                            <div class="flex flex-row">
+                                                <div class="flex flex-col p-1">
+                                                    <h3 class="font-bold text-sm">SENIOR CAPS</h3>
+                                                    <p class="text-3xl text-center text-amber-500">10</p>
+                                                </div>
+                                                <div class="flex flex-col p-1">
+                                                    <h3 class="font-bold text-sm">SENIOR GOALS</h3>
+                                                    <p class="text-3xl text-center text-amber-500">11</p>
+                                                </div>
+                                            </div>
+                                            <a class="text-black hover:text-white mt-5 px-8 py-3 rounded-full bg-slate-400 hover:bg-amber-500 duration-300" href="#">View Full Stats</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-4xl text-amber-500 font-bold">Player Name</h3>
+                                        <p class="text-2xl text-slate-500">Position</p>
+                                    </div>
+                                </div>
+                                @endfor
+
                             </div>
                         </div>
-                        <div x-show="openTab === 2" class="rounded bg-white  h-96 w-7/8 text-body-color text-base leading-relaxed p-6" style="display: none;">
+                        <div x-show="openTab === 2" class="rounded bg-white h-96 w-full text-body-color text-base leading-relaxed p-6" style="display: none;">
                             <div>
                                 Stats
                             </div>
                         </div>
-                        
                     </div>
-                    </div>                
-                            <!-- End of Tabs Component -->
-                        </div>
-                    </div>
-                
-            
-                </div>
-                
-
-            <script src="//unpkg.com/alpinejs" defer></script>
-            <!-- </div> -->
-            @endfor
+                    <script src="//unpkg.com/alpinejs" defer></script>
+                </div> 
+            </div>
         </div>
+        
+    </div>
 @endsection
