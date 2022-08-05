@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Documents\Documents;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Vacancies\Vacancy;
@@ -16,6 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        Documents::factory(10)->create();
         Vacancy::factory(10)->create();
 
         // \App\Models\User::factory()->create([
