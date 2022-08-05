@@ -13,17 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('teams', function (Blueprint $table) {
+        Schema::create('player', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('country');
-            $table->date('date_founded');
-            $table->foreignId('player_id');
-            $table->foreignId('fixture_id');
-            $table->string('league');
-            $table->int('points') ->default(0);
-            $table->string('manager');
-
             $table->timestamps();
         });
     }
@@ -35,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('teams');
+        Schema::dropIfExists('player');
     }
 };
