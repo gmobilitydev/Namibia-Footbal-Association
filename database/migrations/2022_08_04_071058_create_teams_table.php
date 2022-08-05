@@ -21,7 +21,7 @@ return new class extends Migration
             $table->foreignId('player_id');
             $table->foreignId('fixture_id');
             $table->string('league');
-            $table->int('points') ->default(0);
+            $table->tinyInteger('points')->default(0);
             $table->string('manager');
             $table->timestamps();
         });
