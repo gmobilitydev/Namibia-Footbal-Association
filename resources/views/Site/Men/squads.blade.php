@@ -26,10 +26,9 @@
         <div x-data="{ 
             open: false, 
             openClasses: 'w-96 h-24 relative space-y-1 p-4', 
-            closedClasses: 'w-96 h-24 relative space-y-1 p-4'
-             
+            closedClasses: 'w-screen h-24 relative space-y-1 p-4' 
         }" 
-            class="content-center container justify-between items-center mr-5 sm:w-full lg:w-5/8 mx-5 px-6 sm:py-1 lg:py-1 flex flex-col md:flex-row">
+            class="container justify-between items-center mr-5 sm:w-full lg:w-5/8 mx-5 px-6 sm:py-1 lg:py-1 flex flex-col md:flex-row">
             <div @click="open = ! open" class="flex flex-col">
             @for ($i = 0; $i < 5; $i++)
                 
@@ -38,7 +37,7 @@
                     <div class="mt-4">
                         <div class="relative flex flex-col justify-end overflow-hidden rounded-b-xl pt-6">
                             <div class="group relative flex cursor-pointer justify-between rounded-xl bg-blue-100 before:absolute before:inset-y-0 before:right-0 before:w-full before:rounded-r-xl before:bg-gradient-to-r before:from-transparent before:to-blue-400 before:opacity-0 before:transition before:duration-500 hover:before:opacity-100">
-                            <div :class="w-96 h-24 relative space-y-1 p-4">
+                            <div :class="open === true ? openClasses : closedClasses">
                                 <h4 class="text-lg text-gray-900 text-left">Brave Warriors</h4>
                                 <div class="relative h-6 text-gray-800 text-sm">
                                 <!-- <span class="transition duration-300 group-hover:invisible group-hover:opacity-0">Captain: Team Captain</span> -->
@@ -63,7 +62,7 @@
                 
 
             </div>
-            <!-- <div x-show="!open" @click.outside="open = true" class="xs:w-full lg:w-3/4 xs:h-45 lg:h-5/6 bg-white p-4"><h4 class="p-4 text-center text-lg text-slate-400"> CLICK on team to see details</h4> </div> -->
+            <div x-show="!open" @click.outside="open = true" class="xs:w-full lg:w-3/4 xs:h-45 lg:h-5/6 bg-white p-4"><h4 class="p-4 text-center text-lg text-slate-400"> CLICK on team to see details</h4> </div>
             <div x-show="open" @click.outside="open = false" class="xs:w-full lg:w-3/4 xs:h-45 lg:h-5/6 bg-white p-4 bg-slate-100">
                 <h4 class="p-4 align-center text-lg text-slate-400">Brave Warriors</h4>
                 
