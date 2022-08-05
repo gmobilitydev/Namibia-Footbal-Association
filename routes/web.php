@@ -31,9 +31,7 @@ Route::get('/competitions', function () {
     return view('Site.Competitions.competitions');
 });
 
-Route::get('/docs', function () {
-    return view('Site.AboutUs.docs');
-});
+
 
 Route::get('/store', function(){
     return view('shop.index');
@@ -52,6 +50,7 @@ Route::get('/procurement', function(){
 });
 
 Route::get('/vacancies',[WebsiteController::class, 'vacancies']);
+Route::get('/docs',[WebsiteController::class, 'documents']);
 
 
 

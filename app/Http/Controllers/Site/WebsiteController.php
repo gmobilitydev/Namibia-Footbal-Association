@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Blog\Post;
 use App\Models\Vacancies\Vacancy;
+use App\Models\Documents\Documents;
 class WebsiteController extends Controller
 {
     public function latestPosts(){
@@ -18,4 +19,11 @@ class WebsiteController extends Controller
         return view('Site.vacancies.index',['vacancyList'=>$vacancyList]);
 
     }
+
+    public function documents(){
+        $documentlist = Documents::all();
+        return view('Site.AboutUs.docs',['documentlist'=>$documentlist]);
+
+    }
+
 }
