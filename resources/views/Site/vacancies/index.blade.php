@@ -33,12 +33,6 @@
                     <div class="lg:flex block shadow-xl rounded-xl border  border-gray-400">
 
                         <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
-                            <div class="flex flex-row lg:justify-start justify-center">
-                                <div class="text-gray-700 font-medium text-sm text-right lg:text-right px-2">
-                                    <i class="far fa-clock">Closing on</i> {{ $vacancy->end_date }}
-                                </div>
-
-                            </div>
                             <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
                                 {{ $vacancy->job_title }}
                             </div>
@@ -46,13 +40,34 @@
                             <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
                                 {{ $vacancy->job_description }}
                             </div>
+                            <div class="flex flex-row lg:justify-start justify-center p-2">
+                                <div class="text-gray-700 font-medium text-sm text-right lg:text-right px-2">
+                                    <i class="far fa-clock">Closing on</i> {{ $vacancy->end_date }}
+                                </div>
+
+                            </div>
                         </div>
                         <div
-                            class="flex flex-row items-center w-full lg:w-1/3 bg-white lg:justify-end justify-center px-2 py-4 lg:px-0">
+                            class="flex flex-row items-end w-50 lg:w-1/3 lg:justify-end justify-center px-2 py-4 lg:px-0 m-3">
+
                             <span
-                                class="tracking-wider text-gray-600 bg-gray-200 px-2 text-sm rounded leading-loose mx-2 font-semibold">
-                                {{ $vacancy->status }}
+                                class="tracking-wider text-green-600 bg-gray-200 px-2 text-sm rounded leading-loose mx-2 font-semibold">
+
+
+                                @if ($vacancy->status != '1')
+                                    {{ "Open" }}
+                                @else
+                                    {{"Close"}}
+                                @endif
+
+
+
                             </span>
+                            <button
+                                class="block w-50 h-7 transition px-7 text-sm text-center lg:text-center px-2font-medium bg-gray-300 rounded-xl hover:bg-yellow-500"
+                                type="button">
+                                Apply
+                            </button>
 
                         </div>
                     </div>
