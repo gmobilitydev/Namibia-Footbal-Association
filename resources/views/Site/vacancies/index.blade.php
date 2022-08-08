@@ -78,7 +78,7 @@
                                 Apply
                             </button>
                             </div>
-sdfdfddfdf
+
                         </div>
                     </a>
 
