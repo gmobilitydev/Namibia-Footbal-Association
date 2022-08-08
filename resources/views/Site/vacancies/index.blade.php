@@ -1,18 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="relative px-4 py-3 text-white bg-zinc-900 pr-14 space-x-8 text-sm font-medium text-left sm:text-center">
+
+
+
+    </div>
     <header class="bg-yellow-300">
         <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
             <div class="sm:justify-between sm:items-center sm:flex">
+
                 <div class="text-center sm:text-left">
 
-                    <h1 class="text-2xl font-extrabold sm:text-5xl">
+                    <h1 class="text-white text-2xl font-extrabold sm:text-5xl">
 
                         Careers
 
 
                     </h1>
-                    <h2><strong class="text-1xl font-extrabold text-yellow-700 sm:block">
+                    <h2><strong class="text-1xl text-yellow-700 sm:block">
                             Do you think your educational background and professional expertise will help NFA regain its
                             reputation and raise itself to the highest levels of international standards?
 
@@ -26,11 +32,13 @@
     <section class="bg-gray-50">
         <div class="max-w-screen-xl px-4 py-32 mx-auto  lg:items-center lg:flex">
 
-            <div class="max-w-xl mx-auto text-center">
+            <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
 
                 @forelse ($vacancyList as $vacancy)
                     <!-- component -->
-                    <div class="lg:flex block shadow-xl rounded-xl border  border-gray-400">
+                    <a
+                        class="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-yellow-500/30 hover:border-yellow-500">
+                        <div class="lg:flex block shadow-xl rounded-xl border  border-gray-400">
 
                         <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
                             <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
@@ -68,9 +76,6 @@
                                 type="button">
                                 Apply
                             </button>
-
-                        </div>
-                    </div>
                 @empty
                     <h1 class="text-3xl font-extrabold sm:text-5xl">
                         No Vacancies Available
@@ -81,9 +86,7 @@
                 @endforelse
 
 
-
             </div>
-        </div>
         </div>
     </section>
 @endsection
