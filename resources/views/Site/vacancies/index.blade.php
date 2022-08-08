@@ -35,48 +35,56 @@
             <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
 
                 @forelse ($vacancyList as $vacancy)
-                    <!-- component -->
                     <a
                         class="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-yellow-500/30 hover:border-yellow-500">
                         <div class="lg:flex block shadow-xl rounded-xl border  border-gray-400">
 
-                        <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
-                            <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
-                                {{ $vacancy->job_title }}
-                            </div>
+                            <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
+                                <div class="flex flex-row lg:justify-start justify-center">
+                                    <div class="text-gray-700 font-medium text-sm text-right lg:text-right px-2">
+                                        <i class="far fa-clock">Closing on</i> {{ $vacancy->end_date }}
+                                    </div>
 
-                            <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
-                                {{ $vacancy->job_description }}
-                            </div>
-                            <div class="flex flex-row lg:justify-start justify-center p-2">
-                                <div class="text-gray-700 font-medium text-sm text-right lg:text-right px-2">
-                                    <i class="far fa-clock">Closing on</i> {{ $vacancy->end_date }}
+                                </div>
+                                <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
+                                    {{ $vacancy->job_title }}
                                 </div>
 
+                                <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
+                                    {{ $vacancy->job_description }}
+                                </div>
                             </div>
-                        </div>
-                        <div
-                            class="flex flex-row items-end w-50 lg:w-1/3 lg:justify-end justify-center px-2 py-4 lg:px-0 m-3">
+                            <div
+                                class="flex flex-row items-center w-full lg:w-1/3 bg-white lg:justify-end justify-center px-2 py-4 lg:px-0">
+                                <span
+                                    class="tracking-wider text-green-600 bg-gray-200 px-2 text-sm rounded leading-loose mx-2 font-semibold">
 
-                            <span
-                                class="tracking-wider text-green-600 bg-gray-200 px-2 text-sm rounded leading-loose mx-2 font-semibold">
+                                    @if ($vacancy->status != '1')
+                                        {{ 'Open' }}
+                                    @else
+                                        {{ 'Close' }}
+                                    @endif
 
-
-                                @if ($vacancy->status != '1')
-                                    {{ "Open" }}
-                                @else
-                                    {{"Close"}}
-                                @endif
-
+                                </span>
 
 
-                            </span>
-                            <button
-                                class="block w-50 h-7 transition px-7 text-sm text-center lg:text-center px-2font-medium bg-gray-300 rounded-xl hover:bg-yellow-500"
+
+                            </div>
+
+                            <div class= "flex flex-row items-center w-full lg:w-1/3 bg-white lg:justify-end justify-center px-2 py-4 lg:px-0" >
+                                <button
+                                class="items-center justify-center block w-50 h-8 justify transition px-5 py-1 position-center text-sm text-center lg:text-center px-2font-medium bg-gray-300 rounded-xl hover:bg-yellow-500"
                                 type="button">
                                 Apply
                             </button>
+                            </div>
+
+
+                        </div>
+                    </a>
+
                 @empty
+
                     <h1 class="text-3xl font-extrabold sm:text-5xl">
                         No Vacancies Available
                         <strong class="font-extrabold text-yellow-700 sm:block">
