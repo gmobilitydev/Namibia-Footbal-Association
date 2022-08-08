@@ -8,7 +8,7 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/js/app.js',
                 'resources/css/filament.css',
-
+                'public/js/galleryApp.js',
             ],
             refresh: true,
         }),

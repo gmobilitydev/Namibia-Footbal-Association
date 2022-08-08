@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@vite(['resources/js/galleryApp.js'])
 
 @section('content')
     <div class="relative px-4 py-3 text-white bg-zinc-900 pr-14 space-x-8 text-sm font-medium text-left sm:text-center w-50">
@@ -20,6 +20,7 @@
         </div>
     </header>
     <!-- Container for demo purpose -->
+   <body>
     <div class="container px-6 mx-auto">
 
         <!-- Section: Design Block -->
@@ -56,7 +57,7 @@
                                 <div class="mb-1 mr-1 ml-4">
                                     <div class="relative overflow-hidden bg-no-repeat bg-cover max-w-xs">
                                       <div class="pop-up-gallery-container">
-                                        <div class="image-container">
+                                        <div class="image-container" data-modal="true" data-gallery="Gallery">
                                           <button class="image-item">
                                             <img src="{{ asset('assets/images/caf.jpeg') }}"
                                                 class="w-full h-full object-cover max-w-xs hover:scale-110 transition duration-300 ease-in-out hover:opacity-80 transition duration-300 ease-in-out bg-slate-900 rounded-md hover: rounded-md"
@@ -86,12 +87,13 @@
             </section>
         </section>
     </div>
-
-    <!-- Pop Up Gallery Slider -->
-
-
-
+</body>
 
 
     <!-- Container for demo purpose -->
+    <script type="module" src="{{ url('js/galleryApp.js' )}}"></script>
 @endsection
+
+
+
+
