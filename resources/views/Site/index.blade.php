@@ -18,66 +18,66 @@
                         aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner relative w-full overflow-hidden">
-                    @foreach ($latestPostList as $post)
+                    @forelse ($latestPostList as $post)
+                        <div class="carousel-item active float-left w-full">
+                            <div class="relative overflow-hidden bg-no-repeat bg-cover"
+                                style="background-position: 50%; background-image: url({{ URL::asset('$post->image') }}); height: 500px;">
+                            </div>
 
+                            <div class="container mx-auto px-6 md:px-12 xl:px-32">
+                                <div class="text-center text-gray-800">
+                                    <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
+                                        style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
+                                        <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">
+                                            {{ $post->title }}
+                                            <br />
+                                        </h1>
 
-                    <div class="carousel-item active float-left w-full">
-                        <div class="relative overflow-hidden bg-no-repeat bg-cover"
-                            style="background-position: 50%; background-image: url({{ $post->image }}); height: 500px;">
-                        </div>
-
-                        <div class="container mx-auto px-6 md:px-12 xl:px-32">
-                            <div class="text-center text-gray-800">
-                                <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
-                                    style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
-                                    <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">
-                                        {{$post->title}}
-                                        <br />
-                                    </h1>
-
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    @endforeach
+                    @empty
+                    @endforelse
+
                     <!--<div class="carousel-item float-left w-full">
-                            <div class="relative overflow-hidden bg-no-repeat bg-cover"
-                                style="background-position: 50%; background-image: url({{ asset('assets/images/team.jpg') }}); height: 500px;">
-                            </div>
+                                                                                                                                                                            <div class="relative overflow-hidden bg-no-repeat bg-cover"
+                                                                                                                                                                                style="background-position: 50%; background-image: url({{ asset('assets/images/team.jpg') }}); height: 500px;">
+                                                                                                                                                                            </div>
 
-                            <div class="container mx-auto px-6 md:px-12 xl:px-32">
-                                <div class="text-center text-gray-800">
-                                    <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
-                                        style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
-                                        <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">Magaia brace
-                                            hands South
-                                            Africa first WAFCON trophy
-                                            <br />
-                                        </h1>
+                                                                                                                                                                            <div class="container mx-auto px-6 md:px-12 xl:px-32">
+                                                                                                                                                                                <div class="text-center text-gray-800">
+                                                                                                                                                                                    <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
+                                                                                                                                                                                        style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
+                                                                                                                                                                                        <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">Magaia brace
+                                                                                                                                                                                            hands South
+                                                                                                                                                                                            Africa first WAFCON trophy
+                                                                                                                                                                                            <br />
+                                                                                                                                                                                        </h1>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item float-left w-full">
-                            <div class="relative overflow-hidden bg-no-repeat bg-cover"
-                                style="background-position: 50%; background-image: url({{ asset('assets/images/galler.jpeg') }}); height: 500px;">
-                            </div>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                </div>
+                                                                                                                                                                            </div>
+                                                                                                                                                                        </div>
+                                                                                                                                                                        <div class="carousel-item float-left w-full">
+                                                                                                                                                                            <div class="relative overflow-hidden bg-no-repeat bg-cover"
+                                                                                                                                                                                style="background-position: 50%; background-image: url({{ asset('assets/images/galler.jpeg') }}); height: 500px;">
+                                                                                                                                                                            </div>
 
-                            <div class="container mx-auto px-6 md:px-12 xl:px-32">
-                                <div class="text-center text-gray-800">
-                                    <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
-                                        style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
-                                        <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">Magaia brace
-                                            hands South
-                                            Africa first WAFCON trophy
-                                            <br />
-                                        </h1>
+                                                                                                                                                                            <div class="container mx-auto px-6 md:px-12 xl:px-32">
+                                                                                                                                                                                <div class="text-center text-gray-800">
+                                                                                                                                                                                    <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
+                                                                                                                                                                                        style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
+                                                                                                                                                                                        <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">Magaia brace
+                                                                                                                                                                                            hands South
+                                                                                                                                                                                            Africa first WAFCON trophy
+                                                                                                                                                                                            <br />
+                                                                                                                                                                                        </h1>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                </div>
+                                                                                                                                                                            </div>
+                                                                                                                                                                        </div>-->
                 </div>
                 <button
                     class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
