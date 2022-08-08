@@ -35,7 +35,6 @@
             <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
 
                 @forelse ($vacancyList as $vacancy)
-                    <!-- component -->
                     <a
                         class="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-yellow-500/30 hover:border-yellow-500">
                         <div class="lg:flex block shadow-xl rounded-xl border  border-gray-400">
@@ -58,16 +57,33 @@
                             <div
                                 class="flex flex-row items-center w-full lg:w-1/3 bg-white lg:justify-end justify-center px-2 py-4 lg:px-0">
                                 <span
-                                    class="tracking-wider text-gray-600 bg-gray-200 px-2 text-sm rounded leading-loose mx-2 font-semibold">
-                                    {{ $vacancy->status }}
+                                    class="tracking-wider text-green-600 bg-gray-200 px-2 text-sm rounded leading-loose mx-2 font-semibold">
+
+                                    @if ($vacancy->status != '1')
+                                        {{ 'Open' }}
+                                    @else
+                                        {{ 'Close' }}
+                                    @endif
+
                                 </span>
 
+
+
+                            </div>
+
+                            <div class= "flex flex-row items-center w-full lg:w-1/3 bg-white lg:justify-end justify-center px-2 py-4 lg:px-0" >
+                                <button
+                                class="items-center justify-center block w-50 h-8 justify transition px-5 py-1 position-center text-sm text-center lg:text-center px-2font-medium bg-gray-300 rounded-xl hover:bg-yellow-500"
+                                type="button">
+                                Apply
+                            </button>
                             </div>
 
                         </div>
                     </a>
 
                 @empty
+
                     <h1 class="text-3xl font-extrabold sm:text-5xl">
                         No Vacancies Available
                         <strong class="font-extrabold text-yellow-700 sm:block">
