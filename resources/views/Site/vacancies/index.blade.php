@@ -36,28 +36,31 @@
 
                 @forelse ($vacancyList as $vacancy)
                     <a
-                        class="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-yellow-500/30 hover:border-yellow-500">
-                        <div class="lg:flex block shadow-xl rounded-xl border  border-gray-400">
+                        class="block p-8 transition h-1/2 border border-gray-300 border-8 border-double shadow-xl rounded-xl hover:shadow-yellow-900/40 hover:border-yellow-500 hover:border-solid">
+                        <div class="block h-4/4 shadow-xl rounded-xl border w-full border-gray-00">
 
-                            <div class="w-full  lg:w-11/12 xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
-                                <div class="flex flex-row lg:justify-start justify-center">
-                                    <div class="text-gray-700 font-medium text-sm text-right lg:text-right px-2">
-                                        <i class="far fa-clock">Closing on</i> {{ $vacancy->end_date }}
-                                    </div>
+                            <div class="w-full h-40 lg:w-full xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
 
-                                </div>
-                                <div class="font-semibold text-gray-800 text-xl text-center lg:text-left px-2">
+                                <div class="font-semibold text-gray-800 text-4xl text-center">
                                     {{ $vacancy->job_title }}
-                                </div>
-
-                                <div class="text-gray-600 font-medium text-sm pt-1 text-center lg:text-left px-2">
-                                    {{ $vacancy->job_description }}
                                 </div>
                             </div>
                             <div
-                                class="flex flex-row items-center w-full lg:w-1/3 bg-white lg:justify-end justify-center px-2 py-4 lg:px-0">
+                                class=" items-center w-1 bg-yellow-500 lg:px-20">
                                 <span
-                                    class="tracking-wider text-green-600 bg-gray-200 px-2 text-sm rounded leading-loose mx-2 font-semibold">
+                                    class=" text-gray-600 bg-gray-400 px-3 py-5 text-sm rounded leading-loose mx-2 font-semibold">
+
+                                </span>
+                            </div>
+
+                            <div class= "items-center w-90 h-1/2 m-2 bg-gray-300 lg:justify-center px-2 py-2 rounded-xl" >
+                                <button
+                                class="items-center justify-center block w-full h-8 transition px-5 py-1 text-sm text-center px-2font-medium bg-gray-100 rounded-xl hover:bg-yellow-500"
+                                type="button">
+                                Apply
+                                </button>
+                                <span
+                                    class="flex flex-1 text-center text-green-600 text-sm rounded leading-loose mx-2 font-semibold">
 
                                     @if ($vacancy->status != '1')
                                         {{ 'Open' }}
@@ -67,17 +70,11 @@
 
                                 </span>
 
-
-
+                                    <div class="text-gray-700 font-medium text-sm text-right lg:text-right px-2">
+                                    <i>Closing on</i> {{ $vacancy->end_date }}
+                                    </div>
                             </div>
 
-                            <div class= "flex flex-row items-center w-full lg:w-1/3 bg-white lg:justify-end justify-center px-2 py-4 lg:px-0" >
-                                <button
-                                class="items-center justify-center block w-50 h-8 justify transition px-5 py-1 position-center text-sm text-center lg:text-center px-2font-medium bg-gray-300 rounded-xl hover:bg-yellow-500"
-                                type="button">
-                                Apply
-                            </button>
-                            </div>
 
                         </div>
                     </a>
