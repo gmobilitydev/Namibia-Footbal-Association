@@ -37,18 +37,18 @@
 
             <nav class="items-center justify-center hidden space-x-8 text-sm font-medium lg:flex lg:flex-1 lg:w-0">
 
-                <a class="text-gray-900" href="{{ url('/') }}">Home</a>
+                <a class="text-gray-900 w-10"><img src="{{ asset('assets/logos/logo.jpg') }}"></a>
 
-                <a class="text-gray-900" href="{{ url('/news') }}">News Center</a>
-                <a class="text-gray-900" href="{{ url('/warriors') }}">Brave Warriors</a>
-                <a class="text-gray-900" href="{{ url('/gladiators') }}">Brave Gladiators</a>
-                <a class="text-gray-900" href="{{ url('/competitions') }}">Competitions</a>
-                <a class="text-gray-900" href="{{ url('/docs') }}">Official Documents</a>
-                <a class="text-gray-900" href="{{ url('/store') }}">Store</a>
-                <a class="text-gray-900" href="{{ url('/gallery') }}">Gallery</a>
-                <a class="text-gray-900" href="{{ url('/about') }}">About Us</a>
-                <a class="text-gray-900" href="{{ url('/procurement') }}">Procurement</a>
-                <a class="text-gray-900" href="{{ url('/vacancies') }}">Vacancies</a>
+                <a class="text-gray-900 hover:text-amber-300" href="{{ url('/news') }}">News Center</a>
+                <a class="text-gray-900 hover:text-amber-300" href="{{ url('/warriors') }}">Brave Warriors</a>
+                <a class="text-gray-900 hover:text-amber-300" href="{{ url('/gladiators') }}">Brave Gladiators</a>
+                <a class="text-gray-900 hover:text-amber-300" href="{{ url('/competitions') }}">Competitions</a>
+                <a class="text-gray-900 hover:text-amber-300" href="{{ url('/docs') }}">Official Documents</a>
+                <a class="text-gray-900 hover:text-amber-300" href="{{ url('/store') }}">Store</a>
+                <a class="text-gray-900 hover:text-amber-300" href="{{ url('/gallery') }}">Gallery</a>
+                <a class="text-gray-900 hover:text-amber-300" href="{{ url('/about') }}">About Us</a>
+                <a class="text-gray-900 hover:text-amber-300" href="{{ url('/procurement') }}">Procurement</a>
+                <a class="text-gray-900 hover:text-amber-300" href="{{ url('/vacancies') }}">Vacancies</a>
 
             </nav>
 
@@ -57,6 +57,7 @@
 
         <div class="border-t border-gray-100 lg:hidden">
             <nav class="flex items-center justify-center p-4 overflow-x-auto text-sm font-medium">
+                <a class="flex-shrink-0 pl-4 text-gray-900"><img src="logo.png"></a>
                 <a class="flex-shrink-0 pl-4 text-gray-900" href="">About</a>
                 <a class="flex-shrink-0 pl-4 text-gray-900" href="">Blog</a>
                 <a class="flex-shrink-0 pl-4 text-gray-900" href="">Projects</a>
