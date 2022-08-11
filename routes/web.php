@@ -34,6 +34,10 @@ Route::get('/warriors-squads', function(){
     return view('Site.Men.squads');
 });
 
+Route::get('/warriors-team', function(){
+    return view('Site.Men.team');
+});
+
 // ------------------------------------ End of Men's/Brave Warriors Routes -------------------------------------
 
 Route::get('/gladiators', function(){
