@@ -41,7 +41,8 @@
 
             <nav class="items-center justify-center hidden space-x-8 text-sm font-medium lg:flex lg:flex-1 lg:w-0">
 
-                <a class="text-gray-900 w-10"><img src="{{ asset('assets/logos/logo.jpg') }}"></a>
+                <a class="text-gray-900 w-10" href="{{ url('/') }}"><img
+                        src="{{ asset('assets/logos/logo.jpg') }}"></a>
 
                 <a class="text-gray-900 hover:text-amber-300" href="{{ url('/news') }}">News Center</a>
                 <a class="text-gray-900 hover:text-amber-300" href="{{ url('/warriors') }}">Brave Warriors</a>
