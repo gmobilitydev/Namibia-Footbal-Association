@@ -6,7 +6,7 @@
             <div class="max-w-xl mx-auto text-center">
                 <h1 class="text-3xl font-extrabold sm:text-5xl">
                     No Bids Available
-                    <strong class="font-extrabold text-red-700 sm:block">
+                    <strong class="font-extrabold text-yellow-500 sm:block">
                         Coming Soon
                     </strong>
                 </h1>

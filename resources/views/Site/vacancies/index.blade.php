@@ -13,12 +13,10 @@
                 <div class="text-center sm:text-left">
 
                     <h1 class="text-white text-2xl font-extrabold sm:text-5xl">
-
                         Careers
 
-
                     </h1>
-                    <h2><strong class="text-1xl text-yellow-700 sm:block">
+                    <h2><strong class="text-1xl text-yellow-900 sm:block">
                             Do you think your educational background and professional expertise will help NFA regain its
                             reputation and raise itself to the highest levels of international standards?
 
@@ -30,60 +28,40 @@
         </div>
     </header>
     <section class="bg-gray-50">
-        <div class="max-w-screen-xl px-4 py-32 mx-auto  lg:items-center lg:flex">
+        <div class="max-w-screen-xl px-4 py-18 pb-18 mx-auto  lg:items-center lg:flex">
 
             <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
 
+
                 @forelse ($vacancyList as $vacancy)
-                    <a
-                        class="block p-8 transition h-1/2 border border-gray-300 border-8 border-double shadow-xl rounded-xl hover:shadow-yellow-900/40 hover:border-yellow-500 hover:border-solid">
-                        <div class="block h-4/4 shadow-xl rounded-xl border w-full border-gray-00">
+                    <a class="relative block p-8 border border-gray-100 shadow-xl rounded-xl" href="">
+                        <span
+                            class="absolute right-4 top-4 rounded-full px-3 py-1.5 bg-green-100 text-green-600 font-medium text-xs">
+                            @if ($vacancy->status != '1')
+                                {{ 'Open' }}
+                            @else
+                                {{ 'Close' }}
+                            @endif
 
-                            <div class="w-full h-40 lg:w-full xl:w-full px-1 bg-white py-5 lg:px-2 lg:py-2 tracking-wide">
+                        </span>
 
-                                <div class="font-semibold text-gray-800 text-4xl text-center">
-                                    {{ $vacancy->job_title }}
-                                </div>
-                            </div>
-                            <div
-                                class=" items-center w-1 bg-yellow-500 lg:px-20">
-                                <span
-                                    class=" text-gray-600 bg-gray-400 px-3 py-5 text-sm rounded leading-loose mx-2 font-semibold">
-
-                                </span>
-                            </div>
-
-                            <div class= "items-center w-90 h-1/2 m-2 bg-gray-300 lg:justify-center px-2 py-2 rounded-xl" >
-                                <button
-                                class="items-center justify-center block w-full h-8 transition px-5 py-1 text-sm text-center px-2font-medium bg-gray-100 rounded-xl hover:bg-yellow-500"
-                                type="button">
-                                Apply
-                                </button>
-                                <span
-                                    class="flex flex-1 text-center text-green-600 text-sm rounded leading-loose mx-2 font-semibold">
-
-                                    @if ($vacancy->status != '1')
-                                        {{ 'Open' }}
-                                    @else
-                                        {{ 'Close' }}
-                                    @endif
-
-                                </span>
-
-                                    <div class="text-gray-700 font-medium text-sm text-right lg:text-right px-2">
-                                    <i>Closing on</i> {{ $vacancy->end_date }}
-                                    </div>
-                            </div>
+                        <div class="mt-4 text-gray-500 sm:pr-8">
 
 
+                            <h5 class="mt-4 text-xl font-bold text-gray-900"> {{ $vacancy->job_title }}</h5>
+
+                            <p class="hidden mt-2 text-sm sm:block">
+                                <i>Closing on</i> {{ $vacancy->end_date }}
+                            </p>
                         </div>
                     </a>
+
 
                 @empty
 
                     <h1 class="text-3xl font-extrabold sm:text-5xl">
                         No Vacancies Available
-                        <strong class="font-extrabold text-yellow-700 sm:block">
+                        <strong class="font-extrabold text-yellow-500 sm:block">
                             Coming Soon
                         </strong>
                     </h1>

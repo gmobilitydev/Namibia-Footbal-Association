@@ -64,5 +64,7 @@ Route::get('/vacancies',[WebsiteController::class, 'vacancies']);
 Route::get('/docs',[WebsiteController::class, 'documents']);
 
 
-
+Route::get('/org', function(){
+    return view('Site.AboutUs.org');
+});
 
