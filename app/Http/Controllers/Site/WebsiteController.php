@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Site;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Blog\Post;
+use App\Gallery;
+
 use App\Models\Vacancies\Vacancy;
 use App\Models\Documents\Documents;
 class WebsiteController extends Controller
@@ -13,6 +15,7 @@ class WebsiteController extends Controller
         $latestPostList = Post::all();
         return view('Site.index',['latestPostList'=>$latestPostList]);
     }
+
 
     public function vacancies(){
         $vacancyList = Vacancy::all();
