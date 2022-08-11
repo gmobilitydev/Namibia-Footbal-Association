@@ -29,9 +29,7 @@
             <h2 class="text-3xl font-bold mb-12 pb-4 text-center">Latest News</h2>
 
             <div class="grid lg:grid-cols-4 gap-2">
-
-
-                @for ($i = 0; $i < 10; $i++)
+                @forelse ($latestPostList as $post)
                     <article class="flex flex-col dark:bg-gray-200">
                         <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
                             <img alt="" class="object-cover w-full h-52 dark:bg-gray-500"
@@ -51,10 +49,16 @@
                         </div>
 
                     </article>
-                @endfor
+                @empty
+                @endforelse
+
+
 
 
             </div>
+            {{ $latestPostList->onEachSide(5)->links() }}
+
+
 
     </div>
 

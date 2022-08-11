@@ -8,70 +8,27 @@
         <section class="mb-40">
 
 
-            <div id="carouselExampleIndicators" class="carousel slide relative" data-bs-ride="carousel">
-                <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
+            <div id="carouselExampleSlidesOnly" class="carousel slide relative" data-bs-ride="carousel">
                 <div class="carousel-inner relative w-full overflow-hidden">
-                    @forelse ($latestPostList as $post)
-                        <div class="carousel-item active float-left w-full">
-                            <div class="relative overflow-hidden bg-no-repeat bg-cover"
-                                style="background-position: 50%; background-image: url({{ $post->image }}); height: 500px;">
-                            </div>
+                    <div class="relative overflow-hidden bg-no-repeat bg-cover"
+                        style="background-position: 50%; background-image: url({{ asset('assets/images/caf.jpeg') }}); height: 500px;">
+                    </div>
 
-                            <div class="container mx-auto px-6 md:px-12 xl:px-32">
-                                <div class="text-center text-gray-800">
-                                    <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
-                                        style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
-                                        <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">
-                                            {{ $post->title }}
-                                            <br />
-                                        </h1>
+                    <div class="container mx-auto px-6 md:px-12 xl:px-32">
+                        <div class="text-center text-gray-800">
+                            <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
+                                style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
+                                <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">Magaia brace
+                                    hands South
+                                    Africa first WAFCON trophy
+                                    <br />
+                                </h1>
 
-                                    </div>
-                                </div>
                             </div>
                         </div>
-                    @empty
-                        <div class="carousel-item active float-left w-full">
-                            <div class="relative overflow-hidden bg-no-repeat bg-cover"
-                                style="background-position: 50%; background-image: url({{ asset('assets/images/caf.jpeg') }}); height: 500px;">
-                            </div>
-
-                            <div class="container mx-auto px-6 md:px-12 xl:px-32">
-                                <div class="text-center text-gray-800">
-                                    <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
-                                        style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
-                                        <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">
-                                            Test Title
-                                            <br />
-                                        </h1>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endforelse
-
+                    </div>
 
                 </div>
-                <button
-                    class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-                    type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button
-                    class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-                    type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
 
             <section class="dark:bg-zinc-900 dark:text-gray-100">

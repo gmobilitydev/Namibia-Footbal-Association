@@ -15,9 +15,7 @@ use App\Http\Controllers\Site\WebsiteController;
 
 Route::get('/', [WebsiteController::class, 'latestPosts']);
 
-Route::get('/news', function(){
-    return view('Site.NewsCenter.news');
-});
+Route::get('/news',[WebsiteController::class, 'newsCenter']);
 
 //---------------------------------------- Men's/Brave Warriors Routes ----------------------------------------
 Route::get('/warriors', function(){

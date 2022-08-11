@@ -9,6 +9,8 @@ use App\Gallery;
 
 use App\Models\Vacancies\Vacancy;
 use App\Models\Documents\Documents;
+use Illuminate\Support\Facades\DB;
+
 class WebsiteController extends Controller
 {
     public function latestPosts(){
@@ -27,6 +29,11 @@ class WebsiteController extends Controller
         $documentlist = Documents::all();
         return view('Site.AboutUs.docs',['documentlist'=>$documentlist]);
 
+    }
+    public function newsCenter(){
+
+        $latestPostList = DB::table('blog_posts')->paginate(20);
+        return view('Site.NewsCenter.news',['latestPostList'=>$latestPostList]);
     }
 
 }
