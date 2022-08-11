@@ -32,7 +32,8 @@ class WebsiteController extends Controller
     }
     public function newsCenter(){
 
-        $latestPostList = DB::table('blog_posts')->paginate(20);
+        $latestPostList = Post::paginate(20);
+        $latestPostList->setCollection($latestPostList->sortByDesc('created_at'));
         return view('Site.NewsCenter.news',['latestPostList'=>$latestPostList]);
     }
 
