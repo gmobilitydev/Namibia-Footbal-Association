@@ -27,34 +27,41 @@
         <section class="mb-32 text-gray-800 text-center">
 
             <h2 class="text-3xl font-bold mb-12 pb-4 text-center">Latest News</h2>
-
             <div class="grid lg:grid-cols-4 gap-2">
-
-
-                @for ($i = 0; $i < 10; $i++)
+                @forelse ($latestPostList as $post)
                     <article class="flex flex-col dark:bg-gray-200">
-                        <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
+                        <a rel="noopener noreferrer" href="./news/{{ $post->id }}"
+                            aria-label="Te nulla oportere reprimique his dolorum">
                             <img alt="" class="object-cover w-full h-52 dark:bg-gray-500"
-                                src="{{ asset('assets/images/caf.jpeg') }}">
+                                src="{{ asset('storage') }}/{{ $post->image }}">
                         </a>
                         <div class="flex flex-col flex-1 p-6">
                             <a rel="noopener noreferrer" href="#"
                                 aria-label="Te nulla oportere reprimique his dolorum"></a>
                             <a rel="noopener noreferrer" href="#"
-                                class="text-xs tracking-wider uppercase hover:underline dark:text-slate-900">Convenire</a>
-                            <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">Te nulla oportere reprimique his
-                                dolorum</h3>
+                                class="text-xs tracking-wider uppercase hover:underline dark:text-slate-900">{{ $post->category->name }}</a>
+                            <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">{{ $post->title }}</h3>
                             <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-400">
-                                <span>June 1, 2020</span>
-                                <span>2.1K views</span>
+                                <span>{{ $post->published_at->format('m/d/y') }}</span>
                             </div>
                         </div>
-
                     </article>
-                @endfor
+                @empty
+                    <h1 class="text-3xl font-extrabold sm:text-5xl">
+                        No Posts Found
+                        <strong class="font-extrabold text-yellow-500 sm:block">
+                            Stay Posted
+                        </strong>
+                    </h1>
+                @endforelse
+
+
 
 
             </div>
+
+            {{ $latestPostList->onEachSide(5)->links() }}
+
 
     </div>
 
