@@ -15,7 +15,11 @@ use App\Http\Controllers\Site\WebsiteController;
 
 Route::get('/', [WebsiteController::class, 'latestPosts']);
 
+//---------------------------------------- News Center Routes ----------------------------------------
+
 Route::get('/news',[WebsiteController::class, 'newsCenter']);
+Route::get('/news/{post}',[WebsiteController::class, 'showPost']);
+
 
 //---------------------------------------- Men's/Brave Warriors Routes ----------------------------------------
 Route::get('/warriors', function(){

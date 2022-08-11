@@ -30,11 +30,19 @@ class WebsiteController extends Controller
         return view('Site.AboutUs.docs',['documentlist'=>$documentlist]);
 
     }
+    /**
+     *
+     * News Center Code
+     */
     public function newsCenter(){
 
         $latestPostList = Post::paginate(20);
         $latestPostList->setCollection($latestPostList->sortByDesc('created_at'));
         return view('Site.NewsCenter.news',['latestPostList'=>$latestPostList]);
+    }
+
+    public function showPost(Post $post){
+        return view('Site.NewsCenter.post',['post'=>$post]);
     }
 
 }
