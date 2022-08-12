@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\DB;
 class WebsiteController extends Controller
 {
     public function latestPosts(){
-        $latestPostList = Post::all();
+        $latestPostList = Post::orderBy('created_at','desc')->limit(5)->get();
+
         return view('Site.index',['latestPostList'=>$latestPostList]);
     }
 

@@ -76,6 +76,32 @@
 </body>
 <footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-100">
     <div class="mx-auto max-w-screen-xl text-center">
+        <!-- component -->
+        <div class="py-16 bg-white">
+            <div class="container m-auto px-6 space-y-8 md:px-12 lg:px-56">
+                <div class="m-auto text-center lg:w-7/12">
+                    <h2 class="text-2xl text-gray-800 font-bold md:text-4xl"> Our partners
+                    </h2>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+                    <div class="p-4">
+                        <img src="{{ asset('assets/logos/nfa-sponsors/coca.png') }}" class="w-38" alt="">
+                    </div>
+
+                    <div class="p-4">
+                        <img src="{{ asset('assets/logos/nfa-sponsors/namibian.png') }}" class="w-38 " alt="">
+                    </div>
+                    <div class="p-4">
+                        <img src="{{ asset('assets/logos/nfa-sponsors/standard.png') }}" class="w-38 " alt="">
+                    </div>
+                    <div class="p-4">
+                        <img src="{{ asset('assets/logos/nfa-sponsors/govenrment.png') }}" class="w-24"
+                            alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
         <p class="my-6 text-gray-500 dark:text-gray-800">The Home of Namibian Football</p>
         <ul class="flex flex-wrap justify-center space-x-8 items-center mb-6 dark:text-gray-900">
@@ -96,7 +122,8 @@
             </li>
         </ul>
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-800">©2022 <a href="#"
-                class="hover:underline">The Namibian Football Asscociation</a>. All Rights Reserved.</span>
+                class="hover:underline">The Namibian Football Asscociation</a>. All Rights Reserved. Powered By <a
+                href="https://gmobility.co.na">GMobility</a></span>
     </div>
 </footer>
 
