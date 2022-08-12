@@ -59,8 +59,11 @@
 
 
             </div>
+            <div class="container py-6">
+                {{ $latestPostList->onEachSide(5)->links() }}
 
-            {{ $latestPostList->onEachSide(5)->links() }}
+            </div>
+
 
 
     </div>
