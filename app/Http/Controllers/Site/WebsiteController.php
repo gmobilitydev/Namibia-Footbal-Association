@@ -9,6 +9,7 @@ use App\Gallery;
 
 use App\Models\Vacancies\Vacancy;
 use App\Models\Documents\Documents;
+use App\Models\Competitions\Competition;
 use Illuminate\Support\Facades\DB;
 
 class WebsiteController extends Controller
@@ -44,6 +45,15 @@ class WebsiteController extends Controller
 
     public function showPost(Post $post){
         return view('Site.NewsCenter.post',['post'=>$post]);
+    }
+
+    /**
+     *
+     * Competitions Page
+     */
+    public function competitions(){
+        $competitions = Competition::all();
+        return view('Site.Competitions.competitions',['competitions'=>$competitions]);
     }
 
 }

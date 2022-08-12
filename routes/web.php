@@ -39,10 +39,8 @@ Route::get('/warriors-squads', function(){
 Route::get('/gladiators', function(){
     return view('Site.Women.women');
 });
-
-Route::get('/competitions', function () {
-    return view('Site.Competitions.competitions');
-});
+//------------------------------------Competitions Routes--------------------------------------------------
+Route::get('/competitions', [WebsiteController::class, 'competitions']);
 
 
 

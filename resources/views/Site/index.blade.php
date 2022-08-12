@@ -145,12 +145,9 @@
                         <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-12">NFA COMPETITIONS &
                             EVENTS</h1>
                         <h1>
-                            FIFA’s iconic competitions inspire billions of football fans and provide opportunities to have a
-                            wider positive social and environmental impact.
-
-                            By the global nature of the tournaments it organises, FIFA strives to set the benchmark in the
-                            delivery of global sporting events as an inspiration for all audience groups, from fans
-                            attending the competition to the general public.
+                            The NFA’s competitions offer chances to make a larger, positive social impact. The NFA aims to
+                            establish a standard for national athletic events and be an inspiration for all audience groups,
+                            both competition enthusiasts and the general public.
                         </h1>
                     </div>
                     <div class="box row-end-auto col-start-5 col-span-6">
