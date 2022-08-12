@@ -44,6 +44,18 @@ Route::get('/gladiators', function(){
     return view('Site.Women.women');
 });
 
+Route::get('/gladiators-fixtures', function(){
+    return view('Site.Men.fixtures-results');
+});
+
+Route::get('/gladiators-squads', function(){
+    return view('Site.Men.squads');
+});
+
+Route::get('/gladiators-team', function(){
+    return view('Site.Men.team');
+});
+
 Route::get('/competitions', function () {
     return view('Site.Competitions.competitions');
 });
