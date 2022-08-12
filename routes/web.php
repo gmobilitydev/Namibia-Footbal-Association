@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Site\WebsiteController;
+use App\Http\Controllers\Shop\ShopController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,9 +45,6 @@ Route::get('/competitions', [WebsiteController::class, 'competitions']);
 
 
 
-Route::get('/store', function(){
-    return view('shop.index');
-});
 
 Route::get('/gallery', function(){
     return view('Site.Gallery.gallery');
@@ -68,3 +66,9 @@ Route::get('/org', function(){
     return view('Site.AboutUs.org');
 });
 
+/**
+ *
+ * Shop Routes
+ */
+
+Route::get('/store', [ShopController::class,'index']);

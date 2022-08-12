@@ -22,7 +22,7 @@
 
     <div class="container my-24 px-6 mx-auto">
         <section class="mb-32 text-gray-800">
-            <img src=" {{ asset('storage') }}/{{ $post->image }}" class="w-full shadow-lg rounded-lg mb-6" alt="" />
+            <img src=" {{ asset('storage') }}/{{ $post->image }}" class="w-full shadow-lg mb-6" alt="" />
 
 
             <div class="max-w-2xl px-6 py-16 mx-auto space-y-12">
