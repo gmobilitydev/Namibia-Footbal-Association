@@ -21,11 +21,9 @@
 
             </div>
         </div>
-        <div class="pl-45">
 
-        </div>
     </section>
-    <div class="grid overflow-hidden grid-cols-6 grid-rows-2 gap-2">
+    <div class="grid overflow-hidden grid-cols-6 grid-rows-2 gap-2 mt-6">
         <div class="box row-start-1 row-end-auto col-start-2 col-end-5">
             <div class="grid grid-cols-4 gap-6">
                 @forelse ($productList as $product)
