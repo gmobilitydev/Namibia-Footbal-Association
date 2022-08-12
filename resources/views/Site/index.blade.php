@@ -43,7 +43,7 @@
                             <h3 class="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">
                                 {{ $latestPostList[1]->title }}</h3>
                             <span
-                                class="text-xs dark:text-gray-400">{{ $latestPostList[1]->published_at->format('m/d/y') }}</span>
+                                class="text-xs dark:text-gray-400">{{ $latestPostList[1]->published_at->format('m/d/ygit ') }}</span>
                             <p>{{ $latestPostList[1]->content }}</p>
                         </div>
                     </a>
@@ -133,69 +133,80 @@
                         </div>
                     </div>
                 </div>
-                <section>
 
-                    <div class="flex justify-center items-center min-h-500 bg-gray-200">
-                        <div class="space-y-2 text-align-left pr-36">
-                            <h2 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">Competitions</h2>
-                        </div>
-                        <div aria-details="card"
-                            class="relative flex w-[300px] hover:w-[600px] transition-all duration-1000 ease-in-out h-96 overflow-hidden bg-white shadow-2xl"">
-                            <div aria-details="image"
-                                class="relative min-w-xm w-[300px] scale-50 h-full bg-white flex justify-center items-center">
-                                <img class="h-93 max-w-xs transition duration-300 ease-out hover:-rotate-12 hover:-translate-x-5"
-                                    src="{{ asset('assets/logos/DR. Hage cup logo.jpg') }}" />
-                            </div>
-                            <div aria-details="details"
-                                class="bg-slate-200 relative min-w-sm h-full flex p-5 flex-col justify-center transition delay-700 ease-in-out">
-                                <h1 class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">Dr. Hage
-                                    Geingob Cup</h1>
-                                <h4 class="text-sm font-medium mt-2">Competition details</h4>
-                                <p class="text-md font-normal text-left">Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing elit. Placeat qui aliquid error.</p>
-
-                            </div>
-                        </div>
-                        <div aria-details="card"
-                            class="relative flex w-[300px] hover:w-[600px] transition-all duration-1000 ease-in-out h-96 overflow-hidden bg-white shadow-2xl"">
-                            <div aria-details="image"
-                                class="relative min-w-xm w-[300px] scale-50 h-full bg-white flex justify-center items-center">
-                                <img class="h-93 max-w-xs transition duration-300 ease-out hover:-rotate-12 hover:-translate-x-5"
-                                    src="{{ asset('assets/logos/namibian-logo-main.png') }}" />
-                            </div>
-                            <div aria-details="details"
-                                class="bg-slate-200 relative min-w-sm h-full flex p-5 flex-col justify-center transition delay-700 ease-in-out">
-                                <h1 class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">The Newspaper
-                                    Cup</h1>
-                                <h4 class="text-sm font-medium mt-2">Competition details</h4>
-                                <p class="text-md font-normal text-left">Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing elit. Placeat qui aliquid error.</p>
-
-                            </div>
-                        </div>
-                        <div aria-details="card"
-                            class="relative flex w-[300px] hover:w-[600px] transition-all duration-1000 ease-in-out h-96 overflow-hidden bg-white shadow-2xl"">
-                            <div aria-details="image"
-                                class="relative min-w-xm w-[300px] scale-50 h-full bg-white flex justify-center items-center">
-                                <img class="h-96 max-w-xs transition duration-300 ease-out hover:-rotate-12 hover:-translate-x-5"
-                                    src="{{ asset('assets/logos/npfl.png') }}" />
-                            </div>
-                            <div aria-details="details"
-                                class="bg-slate-200 relative min-w-sm h-full flex p-5 flex-col justify-center transition delay-700 ease-in-out">
-                                <h1 class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">The Namibian
-                                    Premier Football League</h1>
-                                <h4 class="text-sm font-medium mt-2">Competition details</h4>
-                                <p class="text-md font-normal text-left">Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing elit. Placeat qui aliquid error.</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
 
 
             </section>
+            <section>
+
+                <div class="grid overflow-hidden grid-cols-12 grid-rows-2 gap-2">
+                    <div class="box row-start-1 row-end-3 col-start-3 col-end-5">
+                        <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-12">NFA COMPETITIONS &
+                            EVENTS</h1>
+                        <h1>
+                            FIFA’s iconic competitions inspire billions of football fans and provide opportunities to have a
+                            wider positive social and environmental impact.
+
+                            By the global nature of the tournaments it organises, FIFA strives to set the benchmark in the
+                            delivery of global sporting events as an inspiration for all audience groups, from fans
+                            attending the competition to the general public.
+                        </h1>
+                    </div>
+                    <div class="box row-end-auto col-start-5 col-span-6">
+                        <div class="grid overflow-hidden grid-cols-6 grid-rows-2 gap-2">
+                            <div class="box row-start-1 row-end-auto col-start-2 col-end-4"><a href=""
+                                    class="relative block overflow-hidden bg-center bg-no-repeat bg-cover  rounded-xl"
+                                    style="background-image: url(https://www.hyperui.dev/photos/beach-1.jpeg)">
+                                    <span
+                                        class="absolute z-10 inline-flex items-center px-3 py-1 text-xs font-semibold text-white bg-black rounded-full  right-4 top-4">
+                                        4.5
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1.5 text-yellow-300"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                    </span>
+
+                                    <div class="relative p-8 pt-40 text-white bg-black bg-opacity-40">
+                                        <h5 class="text-2xl font-bold">Rome</h5>
+
+                                        <p class="text-sm">Italy</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="box col-start-4 col-end-7"><a href=""
+                                    class="relative block overflow-hidden bg-center bg-no-repeat bg-cover  rounded-xl"
+                                    style="background-image: url(https://www.hyperui.dev/photos/beach-1.jpeg)">
+                                    <span
+                                        class="absolute z-10 inline-flex items-center px-3 py-1 text-xs font-semibold text-white bg-black rounded-full  right-4 top-4">
+                                        4.5
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1.5 text-yellow-300"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                    </span>
+
+                                    <div class="relative p-8 pt-40 text-white bg-black bg-opacity-40">
+                                        <h5 class="text-2xl font-bold">Rome</h5>
+
+                                        <p class="text-sm">Italy</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="box col-start-2 col-end-3">3</div>
+                            <div class="box col-start-3 col-end-5">4</div>
+                            <div class="box col-start-5 col-end-7">5</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
 
 
         </section>
@@ -235,7 +246,9 @@
                                         style="color: hsl(54, 81%, 75%);">Team Kit </span></h1>
                                 <a class="inline-block px-7 py-3 mr-2 bg-gray-200 text-zinc-900 font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out"
                                     data-mdb-ripple="true" data-mdb-ripple-color="light" href="#!"
-                                    role="button">Go to store</a>
+                                    role="button">Go
+                                    to
+                                    store</a>
 
                             </div>
 
