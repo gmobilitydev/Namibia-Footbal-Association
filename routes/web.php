@@ -23,9 +23,8 @@ Route::get('/news/{post}',[WebsiteController::class, 'showPost']);
 
 
 //---------------------------------------- Men's/Brave Warriors Routes ----------------------------------------
-Route::get('/warriors', function(){
-    return view('Site.Men.men');
-});
+Route::get('/warriors', [WebsiteController::class, 'warriorsNews']);
+Route::get('/warriors/{post}',[WebsiteController::class, 'showWarriorsPost']);
 
 Route::get('/warriors-fixtures', function(){
     return view('Site.Men.fixtures-results');

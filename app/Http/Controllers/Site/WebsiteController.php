@@ -43,10 +43,21 @@ class WebsiteController extends Controller
         return view('Site.NewsCenter.news',['latestPostList'=>$latestPostList]);
     }
 
+    public function warriorsNews(){
+
+        // $latestPostList = Post::where('blog_category_id', 1);
+        $latestPostList = Post::where('blog_category_id', 1)->paginate(4);
+        $latestPostList->setCollection($latestPostList->sortByDesc('created_at'));
+        return view('Site.Men.men',['latestPostList'=>$latestPostList]);
+    }
+
+    public function showWarriorsPost(Post $post){
+        return view('Site.Men.post',['post'=>$post]);
+    }
+
     public function showPost(Post $post){
         return view('Site.NewsCenter.post',['post'=>$post]);
     }
-
     /**
      *
      * Competitions Page
