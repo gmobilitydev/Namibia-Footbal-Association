@@ -4,8 +4,6 @@ const colors = require('tailwindcss/colors')
 module.exports = {
     content: [
         "./resources/**/*.blade.php",
-        "./resources/**/*.js",
-        "./resources/**/*.vue",
         './src/**/*.{html,js}',
         './node_modules/tw-elements/dist/js/**/*.js'
     ],
@@ -22,8 +20,7 @@ module.exports = {
             },
         },
         plugins: [
-            require('tw-elements/dist/plugin'),
-            require('flowbite/plugin')
+            require('tw-elements/dist/plugin')
         ],
     }
 }

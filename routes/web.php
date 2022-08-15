@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Site\WebsiteController;
+use App\Http\Controllers\Shop\ShopController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,13 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('Site.index');
-});
+Route::get('/', [WebsiteController::class, 'latestPosts']);
 
-Route::get('/news', function(){
-    return view('Site.NewsCenter.news');
-});
+//---------------------------------------- News Center Routes ----------------------------------------
+
+Route::get('/news',[WebsiteController::class, 'newsCenter']);
+Route::get('/news/{post}',[WebsiteController::class, 'showPost']);
+
 
 //---------------------------------------- Men's/Brave Warriors Routes ----------------------------------------
 Route::get('/warriors', function(){
@@ -43,6 +44,9 @@ Route::get('/warriors-team', function(){
 Route::get('/gladiators', function(){
     return view('Site.Women.women');
 });
+//------------------------------------Competitions Routes--------------------------------------------------
+Route::get('/competitions', [WebsiteController::class, 'competitions']);
+
 
 Route::get('/gladiators-fixtures', function(){
     return view('Site.Men.fixtures-results');
@@ -60,13 +64,8 @@ Route::get('/competitions', function () {
     return view('Site.Competitions.competitions');
 });
 
-Route::get('/docs', function () {
-    return view('Site.AboutUs.docs');
-});
 
-Route::get('/store', function(){
-    return view('shop.index');
-});
+
 
 Route::get('/gallery', function(){
     return view('Site.Gallery.gallery');
@@ -80,10 +79,17 @@ Route::get('/procurement', function(){
     return view('Site.Procurement.index');
 });
 
-Route::get('/vacancies', function(){
-    return view('Site.vacancies.index');
+Route::get('/vacancies',[WebsiteController::class, 'vacancies']);
+Route::get('/docs',[WebsiteController::class, 'documents']);
+
+
+Route::get('/org', function(){
+    return view('Site.AboutUs.org');
 });
 
+/**
+ *
+ * Shop Routes
+ */
 
-
-
+Route::get('/store', [ShopController::class,'index']);

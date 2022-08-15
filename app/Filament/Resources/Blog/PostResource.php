@@ -6,7 +6,6 @@ use App\Filament\Resources\Blog\PostResource\Pages;
 use App\Filament\Resources\Blog\PostResource\RelationManagers;
 use App\Models\Blog\Post;
 use Filament\Forms;
-use Filament\Forms\Components\SpatieTagsInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -58,8 +57,7 @@ class PostResource extends Resource
                             ->required(),
                         Forms\Components\DatePicker::make('published_at')
                             ->label('Published Date'),
-                        SpatieTagsInput::make('tags')
-                            ->required(),
+
                     ])
                     ->columns([
                         'sm' => 2,

@@ -59,17 +59,17 @@
             <div class="mt-8 lg:col-span-2 lg:mx-0">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        @for ($i = 0; $i < 10; $i++)
+                        @forelse ($competitions as $comp)
                             <div class="swiper-slide">
 
                                 <div class="w-full">
                                     <a href=""
                                         class="relative block overflow-hidden bg-center bg-no-repeat bg-cover  rounded w-full rounded-lg shadow-lg hover:scale-110 transition duration-300 ease-in-out"
-                                        style="background-image: url({{ asset('assets/images/competition.jpeg') }})">
+                                        style="background-image: url({{ asset('storage') }}/{{ $comp->image }})">
 
 
                                         <div class="relative p-8 pt-40 text-white bg-black bg-opacity-40">
-                                            <h5 class="text-2xl font-bold">Competition Name</h5>
+                                            <h5 class="text-2xl font-bold">{{ $comp->name }}</h5>
 
                                             <p class="text-sm">Competition Date</p>
                                         </div>
@@ -77,7 +77,10 @@
 
                                 </div>
                             </div>
-                        @endfor
+                        @empty
+                        @endforelse
+
+
 
 
                     </div>
