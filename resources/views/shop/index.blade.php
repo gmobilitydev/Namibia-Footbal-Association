@@ -21,14 +21,12 @@
 
             </div>
         </div>
-        <div class="pl-45">
 
-        </div>
     </section>
-    <div class="grid overflow-hidden grid-cols-6 grid-rows-2 gap-2">
+    <div class="grid overflow-hidden grid-cols-6 grid-rows-2 gap-2 mt-6">
         <div class="box row-start-1 row-end-auto col-start-2 col-end-5">
             <div class="grid grid-cols-4 gap-6">
-                @for ($i = 0; $i < 10; $i++)
+                @forelse ($productList as $product)
                     <div class="card">
                         <a class="relative block border border-gray-100" href="#">
                             <button class="absolute p-2 text-white bg-black rounded-full right-4 top-4" type="button">
@@ -40,8 +38,8 @@
                                 </svg>
                             </button>
 
-                            <img class="object-contain w-full h-56 lg:h-72" src="{{ asset('assets/images/nfa.png') }}"
-                                alt="Build Your Own Drone" loading="lazy" />
+                            <img class="object-contain w-full h-56 lg:h-72"
+                                src="{{ asset($product->getFirstMediaUrl('product-images')) }}" loading="eager" />
 
                             <div class="p-6">
                                 <strong class="inline-block px-3 py-1 text-xs font-medium bg-yellow-400">
@@ -49,11 +47,11 @@
                                 </strong>
 
                                 <h5 class="mt-4 text-lg font-bold">
-                                    Brave Warriors Training Kit
+                                    {{ $product->name }}
                                 </h5>
 
                                 <p class="mt-2 text-sm text-gray-700">
-                                    N$554.99
+                                    N${{ $product->price }}
                                 </p>
 
                                 <button class="block w-full p-4 mt-4 text-sm font-medium bg-yellow-500 rounded-sm"
@@ -63,21 +61,22 @@
                             </div>
                         </a>
                     </div>
-                @endfor
+                @empty
+                @endforelse
+
+
             </div>
+            <div class="container py-6">
+                {{ $productList->onEachSide(5)->links() }}
+
+            </div>
+
 
 
         </div>
         <div class="box row-start-1 row-end-auto col-start-5 col-end-6">
             <div class="">
-                <!--
-                                                          This component uses @tailwindcss/forms
 
-                                                          yarn add @tailwindcss/forms
-                                                          npm install @tailwindcss/forms
-
-                                                          plugins: [require('@tailwindcss/forms')]
-                                                        -->
 
                 <details open class="overflow-hidden border border-gray-200 rounded">
                     <summary class="flex items-center justify-between px-5 py-3 bg-gray-100 lg:hidden">
