@@ -143,7 +143,66 @@ img.hover-shadow {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.thumbnail-image {
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+}
 
+.demo {
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.modal-image {
+    width: auto;
+    height: auto;
+}
+
+
+/* Pagination of Lightbox Thumbnail */
+
+.pagination_section {
+    position: relative;
+}
+
+/* pagination styling */
+.pagination_section a {
+    color: black;
+    padding: 10px 18px;
+    text-decoration: none;
+}
+
+/* pagination hover effect on non-active */
+.pagination_section a:hover:not(.active) {
+    background-color: rgb(256, 228, 68);
+    color: black;
+    font-weight: bold;
+}
+
+
+.gradient-overlay {
+    position: relative;
+}
+#alertlist .gradient-overlay:hover:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to bottom, grey to blue);
+    }
+
+
+
+
+
+
+
+/* pagination hover effect on active*/
 
 
 
