@@ -17,9 +17,8 @@ return new class extends Migration
             $table->id();
 
             $table->string('name');
-            $table->tinyInteger('time_played');
             $table->date('date');
-            $table->string('league');
+            $table->foreignId('league_id');
             $table->foreignId('team_id');
             $table->tinyInteger('home_score')->default(0);
             $table->tinyInteger('away_score')->default(0);

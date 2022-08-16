@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Models\Blog;
+namespace App\Models\Leagues;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Team extends Model
+class League extends Model
 {
     use HasFactory;
-
-    
 }
