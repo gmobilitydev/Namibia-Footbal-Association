@@ -38,7 +38,7 @@
                     <div class="flex justify-center items-center h-full">
                         <div class="text-center text-white px-6 py-6 md:py-0 md:px-12 max-w-[800px]">
                             <h2 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight leading-tight mb-12">
-                                Our<br /><span>Visual Stories</span>
+                                View Our<br /><span>Visual Stories</span>
                             </h2>
                         </div>
                     </div>
@@ -66,21 +66,24 @@
                     <div class="row">
                         <div class="column">
                             <img src="{{ asset('assets/images/caf.jpeg') }}" onclick="openModal();currentSlide(1)"
-                                class="hover-shadow">
+                                class="hover-shadow thumbnail-image">
                         </div>
                         <div class="column">
-                            <img src="{{ asset('assets/images/nfa.png') }}" onclick="openModal();currentSlide(2)"
-                                class="hover-shadow">
+                            <img src="{{ asset('assets/images/competition.jpeg') }}" onclick="openModal();currentSlide(2)"
+                                class="hover-shadow thumbnail-image">
                         </div>
                         <div class="column">
-                            <img src="{{ asset('assets/images/caf.jpeg') }}" onclick="openModal();currentSlide(3)"
-                                class="hover-shadow">
+                            <img src="{{ asset('assets/images/galler.jpeg') }}" onclick="openModal();currentSlide(3)"
+                                class="hover-shadow thumbnail-image">
                         </div>
                         <div class="column">
-                            <img src="{{ asset('assets/images/caf.jpeg') }}" onclick="openModal();currentSlide(4)"
-                                class="hover-shadow">
+                            <div class="gradient-overlay">
+                                <img src="{{ asset('assets/images/team.jpg') }}" onclick="openModal();currentSlide(4)"
+                                    class="hover-shadow thumbnail-image">
+                            </div>
                         </div>
                     </div>
+
 
 
 
@@ -99,22 +102,23 @@
 
                             <div class="mySlides">
                                 <div class="numbertext">1 / 4</div>
-                                <img src="{{ asset('assets/images/caf.jpeg') }}" style="width:100%">
+                                <img src="{{ asset('assets/images/caf.jpeg') }}" style="width:100%" class="modal-image">
                             </div>
 
                             <div class="mySlides">
                                 <div class="numbertext">2 / 4</div>
-                                <img src="{{ asset('assets/images/nfa.png') }}" style="width:100%">
+                                <img src="{{ asset('assets/images/competition.jpeg') }}" style="width:100%"
+                                    class="modal-image">
                             </div>
 
                             <div class="mySlides">
                                 <div class="numbertext">3 / 4</div>
-                                <img src="{{ asset('assets/images/caf.jpeg') }}" style="width:100%">
+                                <img src="{{ asset('assets/images/galler.jpeg') }}" style="width:100%" class="modal-image">
                             </div>
 
                             <div class="mySlides">
                                 <div class="numbertext">4 / 4</div>
-                                <img src="{{ asset('assets/images/caf.jpeg') }}" style="width:100%">
+                                <img src="{{ asset('assets/images/team.jpg') }}" style="width:100%" class="modal-image">
                             </div>
 
                             <!-- Next/previous controls -->
@@ -133,18 +137,18 @@
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="{{ asset('assets/images/nfa.png') }}" onclick="currentSlide(2)"
-                                    alt="Snow">
+                                <img class="demo" src="{{ asset('assets/images/competition.jpeg') }}"
+                                    onclick="currentSlide(2)" alt="Snow">
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="{{ asset('assets/images/caf.jpeg') }}" onclick="currentSlide(3)"
-                                    alt="Mountains">
+                                <img class="demo" src="{{ asset('assets/images/galler.jpeg') }}"
+                                    onclick="currentSlide(3)" alt="Mountains">
                             </div>
 
                             <div class="column">
-                                <img class="demo" src="{{ asset('assets/images/caf.jpeg') }}" onclick="currentSlide(4)"
-                                    alt="Lights">
+                                <img class="demo" src="{{ asset('assets/images/team.jpg') }}"
+                                    onclick="currentSlide(4)" alt="Lights">
                             </div>
                         </div>
                     </div>
