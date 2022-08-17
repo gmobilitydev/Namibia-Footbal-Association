@@ -122,56 +122,54 @@
                         <h2 class="text-3xl font-bold">Latest News</h2>
 
                     </div>
-                    <a rel="noopener noreferrer" href="#"
+                    <a rel="noopener noreferrer" href="./news/{{ $latestPostList[1]->id }}"
                         class="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-900">
-                        <img src="{{ asset('assets/images/galler.jpeg') }}" alt=""
+                        <img src="{{ asset('storage') }}/{{ $latestPostList[1]->image }}" alt=""
                             class="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500">
                         <div class="p-6 space-y-2 lg:col-span-5">
                             <h3 class="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">
-                                Noster tincidunt reprimique ad pro</h3>
-                            <span class="text-xs dark:text-gray-400">February 19, 2021</span>
-                            <p>Ei delenit sensibus liberavisse pri. Quod suscipit no nam. Est in graece fuisset, eos affert
-                                putent doctus id.</p>
+                                {{ $latestPostList[1]->title }}</h3>
+                            <span
+                                class="text-xs dark:text-gray-400">{{ $latestPostList[1]->published_at->format('m/d/ygit ') }}</span>
+                            <p>{{ $latestPostList[1]->content }}</p>
                         </div>
                     </a>
                     <div class="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                        <a rel="noopener noreferrer" href="#"
+
+                        <a rel="noopener noreferrer" href="./news/{{ $latestPostList[2]->id }}"
                             class="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
                             <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500"
-                                src="{{ asset('assets/images/caf.jpeg') }}">
+                                src="{{ asset('storage') }}/{{ $latestPostList[2]->image }}">
                             <div class="p-6 space-y-2">
-                                <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu
-                                    laoreet repudiare legendos</h3>
-                                <span class="text-xs dark:text-gray-400">January 21, 2021</span>
-                                <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas
-                                    percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea,
-                                    ei vocent delicata indoctum pri.</p>
+                                <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">
+                                    {{ $latestPostList[2]->title }}</h3>
+                                <span
+                                    class="text-xs dark:text-gray-400">{{ $latestPostList[2]->published_at->format('m/d/y') }}</span>
+                                <p>{{ $latestPostList[2]->content }}</p>
                             </div>
                         </a>
-                        <a rel="noopener noreferrer" href="#"
+                        <a rel="noopener noreferrer" href="./news/{{ $latestPostList[3]->id }}"
                             class="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
                             <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500"
-                                src="{{ asset('assets/images/team.jpg') }}">
+                                src="{{ asset('storage') }}/{{ $latestPostList[3]->image }}">
                             <div class="p-6 space-y-2">
-                                <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu
-                                    laoreet repudiare legendos</h3>
-                                <span class="text-xs dark:text-gray-400">January 22, 2021</span>
-                                <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas
-                                    percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea,
-                                    ei vocent delicata indoctum pri.</p>
+                                <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">
+                                    {{ $latestPostList[3]->title }}</h3>
+                                <span
+                                    class="text-xs dark:text-gray-400">{{ $latestPostList[3]->published_at->format('m/d/y') }}</span>
+                                <p>{{ $latestPostList[3]->content }}</p>
                             </div>
                         </a>
-                        <a rel="noopener noreferrer" href="#"
+                        <a rel="noopener noreferrer" href="./news/{{ $latestPostList[4]->id }}"
                             class="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
                             <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500"
-                                src="{{ asset('assets/images/caf.jpeg') }}">
+                                src="{{ asset('storage') }}/{{ $latestPostList[4]->image }}">
                             <div class="p-6 space-y-2">
-                                <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu
-                                    laoreet repudiare legendos</h3>
-                                <span class="text-xs dark:text-gray-400">January 23, 2021</span>
-                                <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas
-                                    percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea,
-                                    ei vocent delicata indoctum pri.</p>
+                                <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">
+                                    {{ $latestPostList[4]->title }}</h3>
+                                <span
+                                    class="text-xs dark:text-gray-400">{{ $latestPostList[4]->published_at->format('m/d/y') }}</span>
+                                <p>{{ $latestPostList[4]->content }}</p>
                             </div>
                         </a>
 
