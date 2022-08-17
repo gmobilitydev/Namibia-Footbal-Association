@@ -85,18 +85,21 @@
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
                     <div class="p-4">
-                        <img src="{{ asset('assets/logos/nfa-sponsors/coca.png') }}" class="w-38" alt="">
+                        <img src="{{ asset('assets/logos/nfa-sponsors/coca-cola.png') }}" class="w-38 mx-2"
+                            alt="" href="https://www.coca-colacompany.com/">
                     </div>
 
                     <div class="p-4">
-                        <img src="{{ asset('assets/logos/nfa-sponsors/namibian.png') }}" class="w-38 " alt="">
+                        <img src="{{ asset('assets/logos/nfa-sponsors/thenamibian.png') }}" class="w-38 mx-2"
+                            alt="" href="https://www.namibian.com.na/">
                     </div>
                     <div class="p-4">
-                        <img src="{{ asset('assets/logos/nfa-sponsors/standard.png') }}" class="w-38 " alt="">
+                        <img src="{{ asset('assets/logos/nfa-sponsors/standardbank.png') }}" class="w-38 mx-2"
+                            alt="" href="https://www.standardbank.com.na/">
                     </div>
                     <div class="p-4">
-                        <img src="{{ asset('assets/logos/nfa-sponsors/govenrment.png') }}" class="w-24"
-                            alt="">
+                        <img src="{{ asset('assets/logos/nfa-sponsors/government.png') }}" class="w-38"
+                            alt="" href="https://www.gov.na/">
                     </div>
 
                 </div>

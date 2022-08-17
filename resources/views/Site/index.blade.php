@@ -7,28 +7,117 @@
         <!-- Section: Design Block -->
         <section class="mb-40">
 
-            <div id="carouselExampleSlidesOnly" class="carousel slide relative" data-bs-ride="carousel">
+
+            <div id="carouselExampleIndicators" class="carousel slide relative" data-bs-ride="carousel">
+                <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
                 <div class="carousel-inner relative w-full overflow-hidden">
+<<<<<<< HEAD
 
                     <div class="relative overflow-hidden bg-no-repeat bg-cover"
                         style="background-position: 50%; background-image: url({{ asset('/storage') }}/{{ $latestPostList->first()->image }}); height: 500px;">
                         <a href="./news/{{ $latestPostList->first->id }}"></a>
                     </div>
+=======
+                    @forelse ($latestPostList as $post)
+                        <div class="carousel-item active float-left w-full">
+                            <div class="relative overflow-hidden bg-no-repeat bg-cover"
+                                style="background-position: 50%; background-image: url({{ $post->image }}); height: 500px;">
+                            </div>
+>>>>>>> fd2c3d1717df54ef2ee466281a5a2616b61ac084
 
-                    <div class="container mx-auto px-6 md:px-12 xl:px-32">
-                        <div class="text-center text-gray-800">
-                            <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
-                                style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
-                                <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">
-                                    {{ $latestPostList->first()->title }}
-                                    <br />
-                                </h1>
+                            <div class="container mx-auto px-6 md:px-12 xl:px-32">
+                                <div class="text-center text-gray-800">
+                                    <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
+                                        style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
+                                        <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">
+                                            {{ $post->title }}
+                                            <br />
+                                        </h1>
 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @empty
+                        <div class="carousel-item active float-left w-full">
+                            <div class="relative overflow-hidden bg-no-repeat bg-cover"
+                                style="background-position: 50%; background-image: url({{ asset('assets/images/caf.jpeg') }}); height: 500px;">
+                            </div>
+
+                            <div class="container mx-auto px-6 md:px-12 xl:px-32">
+                                <div class="text-center text-gray-800">
+                                    <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
+                                        style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
+                                        <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">
+                                            Test Title
+                                            <br />
+                                        </h1>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforelse
+
+
+                    <div class="carousel-item float-left w-full">
+                        <div class="relative overflow-hidden bg-no-repeat bg-cover"
+                            style="background-position: 50%; background-image: url({{ asset('assets/images/team.jpg') }}); height: 500px;">
+                        </div>
+
+                        <div class="container mx-auto px-6 md:px-12 xl:px-32">
+                            <div class="text-center text-gray-800">
+                                <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
+                                    style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
+                                    <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">Magaia brace
+                                        hands South
+                                        Africa first WAFCON trophy
+                                        <br />
+                                    </h1>
+
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="carousel-item float-left w-full">
+                        <div class="relative overflow-hidden bg-no-repeat bg-cover"
+                            style="background-position: 50%; background-image: url({{ asset('assets/images/galler.jpeg') }}); height: 500px;">
+                        </div>
 
+                        <div class="container mx-auto px-6 md:px-12 xl:px-32">
+                            <div class="text-center text-gray-800">
+                                <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
+                                    style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
+                                    <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">Magaia brace
+                                        hands South
+                                        Africa first WAFCON trophy
+                                        <br />
+                                    </h1>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
                 </div>
+                <button
+                    class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                    type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                    type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
 
             <section class="dark:bg-zinc-900 dark:text-gray-100">
@@ -37,54 +126,56 @@
                         <h2 class="text-3xl font-bold">Latest News</h2>
 
                     </div>
-                    <a rel="noopener noreferrer" href="./news/{{ $latestPostList[1]->id }}"
+                    <a rel="noopener noreferrer" href="#"
                         class="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-900">
-                        <img src="{{ asset('storage') }}/{{ $latestPostList[1]->image }}" alt=""
+                        <img src="{{ asset('assets/images/galler.jpeg') }}" alt=""
                             class="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500">
                         <div class="p-6 space-y-2 lg:col-span-5">
                             <h3 class="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">
-                                {{ $latestPostList[1]->title }}</h3>
-                            <span
-                                class="text-xs dark:text-gray-400">{{ $latestPostList[1]->published_at->format('m/d/ygit ') }}</span>
-                            <p>{{ $latestPostList[1]->content }}</p>
+                                Noster tincidunt reprimique ad pro</h3>
+                            <span class="text-xs dark:text-gray-400">February 19, 2021</span>
+                            <p>Ei delenit sensibus liberavisse pri. Quod suscipit no nam. Est in graece fuisset, eos affert
+                                putent doctus id.</p>
                         </div>
                     </a>
                     <div class="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-
-                        <a rel="noopener noreferrer" href="./news/{{ $latestPostList[2]->id }}"
+                        <a rel="noopener noreferrer" href="#"
                             class="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
                             <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500"
-                                src="{{ asset('storage') }}/{{ $latestPostList[2]->image }}">
+                                src="{{ asset('assets/images/caf.jpeg') }}">
                             <div class="p-6 space-y-2">
-                                <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">
-                                    {{ $latestPostList[2]->title }}</h3>
-                                <span
-                                    class="text-xs dark:text-gray-400">{{ $latestPostList[2]->published_at->format('m/d/y') }}</span>
-                                <p>{{ $latestPostList[2]->content }}</p>
+                                <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu
+                                    laoreet repudiare legendos</h3>
+                                <span class="text-xs dark:text-gray-400">January 21, 2021</span>
+                                <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas
+                                    percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea,
+                                    ei vocent delicata indoctum pri.</p>
                             </div>
                         </a>
-                        <a rel="noopener noreferrer" href="./news/{{ $latestPostList[3]->id }}"
+                        <a rel="noopener noreferrer" href="#"
                             class="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
                             <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500"
-                                src="{{ asset('storage') }}/{{ $latestPostList[3]->image }}">
+                                src="{{ asset('assets/images/team.jpg') }}">
                             <div class="p-6 space-y-2">
-                                <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">
-                                    {{ $latestPostList[3]->title }}</h3>
-                                <span
-                                    class="text-xs dark:text-gray-400">{{ $latestPostList[3]->published_at->format('m/d/y') }}</span>
-                                <p>{{ $latestPostList[3]->content }}</p>
+                                <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu
+                                    laoreet repudiare legendos</h3>
+                                <span class="text-xs dark:text-gray-400">January 22, 2021</span>
+                                <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas
+                                    percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea,
+                                    ei vocent delicata indoctum pri.</p>
                             </div>
                         </a>
-                        <a rel="noopener noreferrer" href="./news/{{ $latestPostList[4]->id }}"
+                        <a rel="noopener noreferrer" href="#"
                             class="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
                             <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500"
-                                src="{{ asset('storage') }}/{{ $latestPostList[4]->image }}">
+                                src="{{ asset('assets/images/caf.jpeg') }}">
                             <div class="p-6 space-y-2">
-                                <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">
-                                    {{ $latestPostList[4]->title }}</h3>
-                                <span
-                                    class="text-xs dark:text-gray-400">{{ $latestPostList[4]->published_at->format('m/d/y') }}</span>
-                                <p>{{ $latestPostList[4]->content }}</p>
+                                <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu
+                                    laoreet repudiare legendos</h3>
+                                <span class="text-xs dark:text-gray-400">January 23, 2021</span>
+                                <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas
+                                    percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea,
+                                    ei vocent delicata indoctum pri.</p>
                             </div>
                         </a>
 
@@ -135,7 +226,9 @@
                         </div>
                     </div>
                 </div>
+                <section>
 
+<<<<<<< HEAD
 
 
 
@@ -199,13 +292,69 @@
                             <div class="box col-start-2 col-end-3">3</div>
                             <div class="box col-start-3 col-end-5">4</div>
                             <div class="box col-start-5 col-end-7">5</div>
+=======
+                    <div class="flex justify-center items-center min-h-500 bg-gray-200">
+                        <div class="space-y-2 text-align-left pr-36">
+                            <h2 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">Competitions</h2>
+>>>>>>> fd2c3d1717df54ef2ee466281a5a2616b61ac084
                         </div>
+                        <div aria-details="card"
+                            class="relative flex w-[300px] hover:w-[600px] transition-all duration-1000 ease-in-out h-96 overflow-hidden bg-white shadow-2xl"">
+                            <div aria-details="image"
+                                class="relative min-w-xm w-[300px] scale-50 h-full bg-white flex justify-center items-center">
+                                <img class="h-93 max-w-xs transition duration-300 ease-out hover:-rotate-12 hover:-translate-x-5"
+                                    src="{{ asset('assets/logos/DR. Hage cup logo.jpg') }}" />
+                            </div>
+                            <div aria-details="details"
+                                class="bg-slate-200 relative min-w-sm h-full flex p-5 flex-col justify-center transition delay-700 ease-in-out">
+                                <h1 class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">Dr. Hage
+                                    Geingob Cup</h1>
+                                <h4 class="text-sm font-medium mt-2">Competition details</h4>
+                                <p class="text-md font-normal text-left">Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing elit. Placeat qui aliquid error.</p>
 
+                            </div>
+                        </div>
+                        <div aria-details="card"
+                            class="relative flex w-[300px] hover:w-[600px] transition-all duration-1000 ease-in-out h-96 overflow-hidden bg-white shadow-2xl"">
+                            <div aria-details="image"
+                                class="relative min-w-xm w-[300px] scale-50 h-full bg-white flex justify-center items-center">
+                                <img class="h-93 max-w-xs transition duration-300 ease-out hover:-rotate-12 hover:-translate-x-5"
+                                    src="{{ asset('assets/logos/namibian-logo-main.png') }}" />
+                            </div>
+                            <div aria-details="details"
+                                class="bg-slate-200 relative min-w-sm h-full flex p-5 flex-col justify-center transition delay-700 ease-in-out">
+                                <h1 class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">The Newspaper
+                                    Cup</h1>
+                                <h4 class="text-sm font-medium mt-2">Competition details</h4>
+                                <p class="text-md font-normal text-left">Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing elit. Placeat qui aliquid error.</p>
+
+                            </div>
+                        </div>
+                        <div aria-details="card"
+                            class="relative flex w-[300px] hover:w-[600px] transition-all duration-1000 ease-in-out h-96 overflow-hidden bg-white shadow-2xl"">
+                            <div aria-details="image"
+                                class="relative min-w-xm w-[300px] scale-50 h-full bg-white flex justify-center items-center">
+                                <img class="h-96 max-w-xs transition duration-300 ease-out hover:-rotate-12 hover:-translate-x-5"
+                                    src="{{ asset('assets/logos/npfl.png') }}" />
+                            </div>
+                            <div aria-details="details"
+                                class="bg-slate-200 relative min-w-sm h-full flex p-5 flex-col justify-center transition delay-700 ease-in-out">
+                                <h1 class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">The Namibian
+                                    Premier Football League</h1>
+                                <h4 class="text-sm font-medium mt-2">Competition details</h4>
+                                <p class="text-md font-normal text-left">Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing elit. Placeat qui aliquid error.</p>
+
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </section>
+
+
 
             </section>
-
 
 
         </section>
@@ -245,9 +394,7 @@
                                         style="color: hsl(54, 81%, 75%);">Team Kit </span></h1>
                                 <a class="inline-block px-7 py-3 mr-2 bg-gray-200 text-zinc-900 font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out"
                                     data-mdb-ripple="true" data-mdb-ripple-color="light" href="#!"
-                                    role="button">Go
-                                    to
-                                    store</a>
+                                    role="button">Go to store</a>
 
                             </div>
 
