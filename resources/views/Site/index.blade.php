@@ -9,8 +9,10 @@
 
             <div id="carouselExampleSlidesOnly" class="carousel slide relative" data-bs-ride="carousel">
                 <div class="carousel-inner relative w-full overflow-hidden">
+
                     <div class="relative overflow-hidden bg-no-repeat bg-cover"
                         style="background-position: 50%; background-image: url({{ asset('/storage') }}/{{ $latestPostList->first()->image }}); height: 500px;">
+                        <a href="./news/{{ $latestPostList->first->id }}"></a>
                     </div>
 
                     <div class="container mx-auto px-6 md:px-12 xl:px-32">
@@ -138,7 +140,7 @@
 
 
             </section>
-            <section>
+            <section class="mb-10">
 
                 <div class="grid overflow-hidden grid-cols-12 grid-rows-2 gap-2">
                     <div class="box row-start-1 row-end-3 col-start-3 col-end-5">
