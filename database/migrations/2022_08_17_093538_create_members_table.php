@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->id();
-            $table->foreignID('commitee_id')->onDelete('cascade');
+            $table->foreignID('committee_id')->onDelete('cascade');
 
             $table->string('first_names');
             $table->string('last_name');
