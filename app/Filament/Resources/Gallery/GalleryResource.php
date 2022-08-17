@@ -22,24 +22,59 @@ class GalleryResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-            ->schema([
-                //
+           ->schema([
+            Forms\Components\Card::make()
+                    ->schema([
+                        Forms\Components\TextInput::make('title')
+                            ->required(),
+                        Forms\Components\MarkdownEditor::make('content')
+                            ->required()
+                            ->columnSpan([
+                                'sm' => 2,
+                            ]),
+                        Forms\Components\Select::make('category')
+                            ->searchable()
+                            ->required(),
+
+
+                    ])
+                    ->columns([
+                        'sm' => 2,
+                    ])
+                    ->columnSpan([
+                        'sm' => 2,
+                    ]),
+                Forms\Components\Card::make()
+                    ->schema([
+                        Forms\Components\FileUpload::make('image')
+                            ->label('Image')
+                            ->image(),
+
+
+                    ])
+                    ->columnSpan(1),
+            ])
+            ->columns([
+                'sm' => 3,
+                'lg' => null,
             ]);
     }
+
+
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
+                  Tables\Columns\ImageColumn::make('image')
+                    ->label('Image'),
+
                 Tables\Columns\TextColumn::make('title')
                     ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('category')
                     ->searchable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('content')
-                    ->label('Image Description'),
-                Tables\Columns\FileUpload::make('image')
             ])
             ->filters([
                 //

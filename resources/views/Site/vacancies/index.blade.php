@@ -27,7 +27,7 @@
             </div>
         </div>
     </header>
-    <section class="bg-gray-50">
+    <section class="m-20">
         <div class="max-w-screen-xl px-4 py-18 pb-18 mx-auto  lg:items-center lg:flex">
 
             <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">

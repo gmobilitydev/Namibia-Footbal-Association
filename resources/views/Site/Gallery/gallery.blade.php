@@ -84,15 +84,16 @@
                         </div>
                     </div>
 
-                    <div class="pagination_section">
-                        <a href="#">❮</a>
-                                <a href="#" title="Page 1">1</a>
-                                <a href="#" title="Page 2">2</a>
-                                <a href="#" title="Page 3">3</a>
-                                <a href="#" title="Page 4">4</a>
-                                <a href="#" title="Page 5">5</a>
-                        <a href="#">❯</a>
-                    </div>
+
+
+
+
+
+
+
+
+
+
 
                     <!-- The Modal/Lightbox -->
                     <div id="myModal" class="modal">

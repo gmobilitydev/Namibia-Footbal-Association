@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('country');
             $table->date('date_founded');
-            $table->foreignId('player_id');
             $table->foreignId('fixture_id');
             $table->string('league');
             $table->tinyInteger('points')->default(0);

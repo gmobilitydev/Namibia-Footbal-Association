@@ -15,16 +15,19 @@ class Team extends Model
         'name',
         'country',
         'date_founded',
-        'player_id',
         'fixture_id',
         'leagure',
         'points',
         'manager'
 
     ];
-    public function team()
+    public function player()
     {
-        return $this->belongsTo(Team::class, 'player_id, fixture_id');
+        return $this->hasMany(Player::class,'team_id');
+    }
+    public function fixtures()
+    {
+        return $this->hasMany(fixtures::class,'fixture_id');
     }
 
 }
