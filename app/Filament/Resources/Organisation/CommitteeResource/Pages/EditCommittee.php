@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\Oragnisation\CommitteeResource\Pages;
+namespace App\Filament\Resources\Organisation\CommitteeResource\Pages;
 
-use App\Filament\Resources\Oragnisation\CommitteeResource;
+use App\Filament\Resources\Organisation\CommitteeResource;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\EditRecord;
 

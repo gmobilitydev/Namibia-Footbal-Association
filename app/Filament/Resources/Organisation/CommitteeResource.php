@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Filament\Resources\Oragnisation;
+namespace App\Filament\Resources\Organisation;
 
-use App\Filament\Resources\Oragnisation\CommitteeResource\Pages;
-use App\Filament\Resources\Oragnisation\CommitteeResource\RelationManagers;
-use App\Models\Oragnisation\Committee;
+use App\Filament\Resources\Organisation\CommitteeResource\Pages;
+use App\Filament\Resources\Organisation\CommitteeResource\RelationManagers;
+use App\Models\Organisation\Committee;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -18,8 +18,6 @@ class CommitteeResource extends Resource
     protected static ?string $model = Committee::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
-    protected static ?string $navigationGroup = 'Organisation';
-
 
     public static function form(Form $form): Form
     {
@@ -45,14 +43,14 @@ class CommitteeResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-
+    
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-
+    
     public static function getPages(): array
     {
         return [
@@ -60,5 +58,5 @@ class CommitteeResource extends Resource
             'create' => Pages\CreateCommittee::route('/create'),
             'edit' => Pages\EditCommittee::route('/{record}/edit'),
         ];
-    }
+    }    
 }
