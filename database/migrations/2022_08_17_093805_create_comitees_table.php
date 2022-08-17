@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('comitees', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->longText('decsription');
+            $table->longText('description');
             $table->timestamps();
         });
     }
