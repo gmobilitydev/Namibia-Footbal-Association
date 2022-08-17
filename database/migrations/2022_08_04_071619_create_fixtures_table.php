@@ -18,10 +18,11 @@ return new class extends Migration
 
             $table->string('name');
             $table->date('date');
+            $table->string('time_played')->nullable();
             $table->foreignId('league_id');
             $table->foreignId('team_id');
-            $table->tinyInteger('home_score')->default(0);
-            $table->tinyInteger('away_score')->default(0);
+            $table->tinyInteger('home_score')->default(0)->nullable();
+            $table->tinyInteger('away_score')->default(0)->nullable();
 
             $table->timestamps();
         });

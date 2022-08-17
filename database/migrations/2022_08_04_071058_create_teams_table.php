@@ -16,13 +16,15 @@ return new class extends Migration
         Schema::create('teams', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('slug');
             $table->string('country');
             $table->date('date_founded');
-            $table->foreignId('player_id');
+            // $table->foreignId('player_id');
             $table->foreignId('fixture_id');
-            $table->string('league');
+            $table->foreignId('league_id');
             $table->tinyInteger('points')->default(0);
             $table->string('manager');
+            $table->string('logo')->nullable();
             $table->timestamps();
         });
     }

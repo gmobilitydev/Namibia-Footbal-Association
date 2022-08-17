@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('surname');
             $table->date('DOB');
             $table->foreignId('team_id')->nullable()->nullOnDelete();
-            $table->enum('gender',['male', 'female', 'other']);
+            $table->enum('gender',['male', 'female']);
 
             $table->string('position');
             $table->string('nationality');

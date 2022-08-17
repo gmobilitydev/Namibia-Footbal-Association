@@ -30,34 +30,35 @@ Route::get('/warriors-fixtures', function(){
     return view('Site.Men.fixtures-results');
 });
 
+// Route::get('/warriors-squads', [WebsiteController::class, 'mensTeams']);
 Route::get('/warriors-squads', function(){
     return view('Site.Men.squads');
 });
 
-Route::get('/warriors-team', function(){
-    return view('Site.Men.team');
-});
+
+Route::get('/warriors-squads/{team}', [WebsiteController::class, 'showMensTeam']);
 
 // ------------------------------------ End of Men's/Brave Warriors Routes -------------------------------------
 
-Route::get('/gladiators', function(){
-    return view('Site.Women.women');
-});
+
+
 //------------------------------------Competitions Routes--------------------------------------------------
 Route::get('/competitions', [WebsiteController::class, 'competitions']);
 
+//---------------------------------------- Women's/Brave Warriors Routes ----------------------------------------
+
+Route::get('/gladiators', [WebsiteController::class, 'gladiatorsNews']);
+Route::get('/gladiators/{post}',[WebsiteController::class, 'showGladiatorsPost']);
 
 Route::get('/gladiators-fixtures', function(){
     return view('Site.Men.fixtures-results');
 });
 
-Route::get('/gladiators-squads', function(){
-    return view('Site.Men.squads');
-});
+Route::get('/gladiators-squads', [WebsiteController::class, 'womensTeams']);
 
-Route::get('/gladiators-team', function(){
-    return view('Site.Men.team');
-});
+Route::get('/gladiators-team', [WebsiteController::class, 'showWomensTeams']);
+// ------------------------------------ End of Woomen's/Brave Warriors Routes -------------------------------------
+
 
 Route::get('/competitions', function () {
     return view('Site.Competitions.competitions');

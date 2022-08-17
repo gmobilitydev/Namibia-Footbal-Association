@@ -87,7 +87,7 @@
             <a href="#">
                 <div
                     class="h-44 w-32 my-5 bg-white-100 shadow-sm border border-grey rounded-xl flex flex-col justify-center shadow duration-300 hover:bg-gray-300 hover:shadow-xl">
-                    <img src="{{ asset('assets/images/Skw_logo.jpg') }}" alt="SKW" class="w-20 mx-auto">
+                    <img src="{{ asset('assets/logos/squads/Skw_logo.jpg') }}" alt="SKW" class="w-20 mx-auto">
                     <span class="mt-6 text-sm ?leading-5 font-semibold text-center">SKW<br></span>
                 </div>
             </a>
@@ -95,7 +95,7 @@
             <a href="#">
                 <div
                     class="h-44 w-32 my-5 bg-white-100 shadow-sm border border-grey rounded-xl flex flex-col justify-center shadow duration-300 hover:bg-gray-300 hover:shadow-xl">
-                    <img src="{{ asset('assets/images/eleven arrows.jpg') }}" alt="Eleven Arrows" class="w-20 mx-auto">
+                    <img src="{{ asset('assets/logos/squads/eleven arrows.jpg') }}" alt="Eleven Arrows" class="w-20 mx-auto">
                     <span class="mt-6 text-sm ?leading-5 font-semibold text-center">Eleven<br>arrows</span>
                 </div>
             </a>
@@ -103,7 +103,7 @@
             <a href="#">
                 <div
                     class="h-44 w-32 my-5 bg-white-100 shadow-sm border border-grey rounded-xl flex flex-col justify-center shadow duration-300 hover:bg-gray-300 hover:shadow-xl">
-                    <img src="{{ asset('assets/images/UNAM.png') }}" alt="Blue Waters" class="w-24 mx-auto">
+                    <img src="{{ asset('assets/logos/squads/UNAM.png') }}" alt="Blue Waters" class="w-24 mx-auto">
                     <span class="mt-6 text-sm ?leading-5 font-semibold text-center">FC<br>UNAM</span>
                 </div>
             </a>
@@ -111,7 +111,7 @@
             <a href="#">
                 <div
                     class="h-44 w-32 my-5 bg-white-100 shadow-sm border border-grey rounded-xl flex flex-col justify-center shadow duration-300 hover:bg-gray-300 hover:shadow-xl">
-                    <img src="{{ asset('assets/images/tura magic.jpg') }}" alt="Blue Waters" class="w-24 mx-auto">
+                    <img src="{{ asset('assets/logos/squads/tura magic.jpg') }}" alt="Blue Waters" class="w-24 mx-auto">
                     <span class="mt-6 text-sm ?leading-5 font-semibold text-center">tura<br>Magic</span>
                 </div>
             </a>
@@ -119,7 +119,7 @@
             <a href="#">
                 <div
                     class="h-44 w-32 my-5 bg-white-100 shadow-sm border border-grey rounded-xl flex flex-col justify-center shadow duration-300 hover:bg-gray-300 hover:shadow-xl">
-                    <img src="{{ asset('assets/images/citizens.jpg') }}" alt="Blue Waters" class="w-24 mx-auto">
+                    <img src="{{ asset('assets/logos/squads/citizens.jpg') }}" alt="Blue Waters" class="w-24 mx-auto">
                     <span class="mt-6 text-sm ?leading-5 font-semibold text-center">tura<br>Magic</span>
                 </div>
             </a>
