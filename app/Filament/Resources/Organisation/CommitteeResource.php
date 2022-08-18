@@ -18,12 +18,21 @@ class CommitteeResource extends Resource
     protected static ?string $model = Committee::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
-
+    protected static ?string $navigationGroup = 'Organisation';
     public static function form(Form $form): Form
     {
         return $form
-            ->schema([
-                //
+
+                ->schema([
+                    Forms\Components\TextInput::make('name')
+                        ->required()
+                        ->reactive(),
+                       Forms\Components\MarkdownEditor::make('description')
+                        ->required()
+                        ->columnSpan([
+                            'sm' => 2,
+                        ]),
+
             ]);
     }
 
@@ -32,6 +41,10 @@ class CommitteeResource extends Resource
         return $table
             ->columns([
                 //
+                Tables\Columns\TextColumn::make('id'),
+                Tables\Columns\TextColumn::make('name'),
+
+
             ])
             ->filters([
                 //
@@ -43,14 +56,14 @@ class CommitteeResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -58,5 +71,5 @@ class CommitteeResource extends Resource
             'create' => Pages\CreateCommittee::route('/create'),
             'edit' => Pages\EditCommittee::route('/{record}/edit'),
         ];
-    }    
+    }
 }

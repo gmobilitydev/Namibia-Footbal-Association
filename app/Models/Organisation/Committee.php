@@ -4,8 +4,10 @@ namespace App\Models\Organisation;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Comitee extends Model
+
+class Committee extends Model
 {
     use HasFactory;
 
@@ -14,7 +16,8 @@ class Comitee extends Model
         'description'
     ];
 
-    public function member(){
+    public function member(): HasMany
+    {
         return $this->hasMany(Member::class,'committee_id');
     }
 }
