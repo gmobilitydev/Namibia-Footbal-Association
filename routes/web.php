@@ -42,6 +42,7 @@ Route::get('/gladiators', function(){
 });
 //------------------------------------Competitions Routes--------------------------------------------------
 Route::get('/competitions', [WebsiteController::class, 'competitions']);
+Route::get('competitions/{comp}',[WebsiteController::class,'showCompetition']);
 
 
 

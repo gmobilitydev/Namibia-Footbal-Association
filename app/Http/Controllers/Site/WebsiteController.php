@@ -55,4 +55,8 @@ class WebsiteController extends Controller
         return view('Site.Competitions.competitions',['competitions'=>$competitions]);
     }
 
+    public function showCompetition(Competition $comp){
+        return view('Site.Competitions.show',['comp'=>$comp]);
+    }
+
 }

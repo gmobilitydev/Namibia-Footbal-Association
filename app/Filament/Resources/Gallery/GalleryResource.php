@@ -32,8 +32,7 @@ class GalleryResource extends Resource
                             ->columnSpan([
                                 'sm' => 2,
                             ]),
-                        Forms\Components\Select::make('category')
-                            ->searchable()
+                        Forms\Components\TextInput::make('category')
                             ->required(),
 
 
@@ -47,8 +46,7 @@ class GalleryResource extends Resource
                 Forms\Components\Card::make()
                     ->schema([
                         Forms\Components\FileUpload::make('image')
-                            ->label('Image')
-                            ->image(),
+                        ->label('Image')
 
 
                     ])

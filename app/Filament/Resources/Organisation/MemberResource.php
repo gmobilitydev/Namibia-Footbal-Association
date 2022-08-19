@@ -12,6 +12,7 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\Select;
 
 class MemberResource extends Resource
 {
@@ -27,7 +28,8 @@ class MemberResource extends Resource
                     Forms\Components\Card::make()
                         ->schema([
 
-                            Forms\Components\Select::make('committee_id')
+
+                            Select::make('committee_id')
                             ->relationship('committees', 'name')
                             ->required(),
                             Forms\Components\TextInput::make('first_names')
