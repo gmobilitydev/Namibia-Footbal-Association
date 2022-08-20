@@ -12,6 +12,8 @@ class Competition extends Model
     protected $fillable = [
         'name',
         'image',
-        'content'
+        'content',
+        'launch_date',
+        'status'
     ];
 }
