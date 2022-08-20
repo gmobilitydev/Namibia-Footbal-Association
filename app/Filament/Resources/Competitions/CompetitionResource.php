@@ -13,6 +13,9 @@ use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
+use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\DateTimePicker;
+
 
 
 class CompetitionResource extends Resource
@@ -38,6 +41,11 @@ class CompetitionResource extends Resource
                         ->required()
                         ->reactive()
                         ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
+                        DateTimePicker::make('launch_date'),
+                        Toggle::make('status')->label('Activate Countdown'),
+
+
+
 
                     Forms\Components\MarkdownEditor::make('content')
                         ->required()
@@ -59,8 +67,10 @@ class CompetitionResource extends Resource
                         ->image(),
 
 
-                ])
-                ->columnSpan(1),
+
+                ])->columnSpan(1),
+
+
         ])
         ->columns([
             'sm' => 3,

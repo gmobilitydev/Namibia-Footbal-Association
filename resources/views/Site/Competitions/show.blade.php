@@ -19,6 +19,39 @@
             </div>
         </div>
     </header>
+    <header class="bg-red-300">
+        <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
+            <div class="sm:justify-between sm:items-center sm:flex">
+                <div class="flex gap-5">
+                    <div>
+                        <span class="countdown font-mono text-4xl">
+                            <span style="--value:15;"></span>
+                        </span>
+                        days
+                    </div>
+                    <div>
+                        <span class="countdown font-mono text-4xl">
+                            <span style="--value:10;"></span>
+                        </span>
+                        hours
+                    </div>
+                    <div>
+                        <span class="countdown font-mono text-4xl">
+                            <span style="--value:24;"></span>
+                        </span>
+                        min
+                    </div>
+                    <div>
+                        <span class="countdown font-mono text-4xl">
+                            <span style="--value:47;"></span>
+                        </span>
+                        sec
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
 
     <div class="container my-24 px-6 mx-auto">
         <section class="mb-32 text-gray-800">

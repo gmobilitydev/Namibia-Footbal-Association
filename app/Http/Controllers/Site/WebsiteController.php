@@ -4,12 +4,14 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
 use App\Models\Blog\Post;
 use App\Gallery;
-
 use App\Models\Vacancies\Vacancy;
 use App\Models\Documents\Documents;
 use App\Models\Competitions\Competition;
+use App\Models\Organisation\Committee;
+
 use Illuminate\Support\Facades\DB;
 
 class WebsiteController extends Controller
@@ -57,6 +59,16 @@ class WebsiteController extends Controller
 
     public function showCompetition(Competition $comp){
         return view('Site.Competitions.show',['comp'=>$comp]);
+    }
+
+    /**
+     *
+     * About Us Module
+     */
+
+    public function organisation(){
+        $committeeList = Committee::with('member')->get();
+        return view('Site.AboutUs.org',['committeeList'=>$committeeList]);
     }
 
 }

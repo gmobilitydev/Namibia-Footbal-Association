@@ -39,6 +39,8 @@ class MemberResource extends Resource
                                 ->required(),
                             Forms\Components\TextInput::make('position')
                                 ->required(),
+                                Forms\Components\TextInput::make('nationality')
+                                ->required(),
 
                             Forms\Components\MarkdownEditor::make('description')
                                 ->required()
@@ -77,6 +79,12 @@ class MemberResource extends Resource
         return $table
             ->columns([
                 //
+                Tables\Columns\TextColumn::make('id'),
+                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\TextColumn::make('first_names'),
+                Tables\Columns\TextColumn::make('last_name'),
+                Tables\Columns\TextColumn::make('position'),
+                Tables\Columns\TextColumn::make('nationality'),
             ])
             ->filters([
                 //

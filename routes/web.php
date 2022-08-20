@@ -51,9 +51,7 @@ Route::get('/gallery', function(){
     return view('Site.Gallery.gallery');
 });
 
-Route::get('/about', function () {
-    return view('Site.AboutUs.about');
-});
+
 
 Route::get('/procurement', function(){
     return view('Site.Procurement.index');
@@ -73,3 +71,9 @@ Route::get('/org', function(){
  */
 
 Route::get('/store', [ShopController::class,'index']);
+
+/**
+ *
+ * About Us Routes
+ */
+Route::get('/about', [WebsiteController::class,'organisation']);

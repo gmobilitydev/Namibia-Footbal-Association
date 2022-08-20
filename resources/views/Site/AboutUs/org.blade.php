@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-
 @section('content')
     <div class="relative px-4 py-3 text-white bg-zinc-900 pr-14 space-x-8 text-sm font-medium text-left sm:text-center">
 
@@ -8,59 +7,79 @@
         <a class="text-white" href="{{ url('/org') }}">Organisation</a>
 
     </div>
-    <header class="bg-yellow-300">
-        <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
-            <div class="sm:justify-between sm:items-center sm:flex">
-                <div class="text-center sm:text-left">
-                    <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">
-                        FIFA Normalisation Commitee
-                    </h1>
-                </div>
+    <section class="bg-yellow-300">
+        <!-- Page Container -->
+        <div class="flex items-center justify-center min-h-screen bg-white py-48">
+            <div class="flex flex-col">
+                <!-- Notes -->
+                <span class="text-center font-bold my-10 opacity-30">
+                    Meet the Namibian Football Association Team
+                    <hr class="my-4">
+                    The NFA consists of a permanent staff, predominantly based at its headquarters Windhoek, Namibia.
 
+
+
+                </span>
+                @forelse ($committeeList as $committee)
+                    <div class="flex flex-col mt-8">
+                        <!-- Meet the Team -->
+                        <div class="container max-w-7xl px-4">
+                            <!-- Section Header -->
+                            <div class="flex flex-wrap justify-center text-center mb-24">
+                                <div class="w-full lg:w-6/12 px-4">
+                                    <!-- Header -->
+                                    <h1 class="text-gray-900 text-4xl font-bold mb-8">
+                                        {{ $committee->name }}
+                                    </h1>
+
+                                    <!-- Description -->
+                                    <p class="text-gray-700 text-lg font-light">
+                                        {{ $committee->description }}
+                                    </p>
+                                </div>
+                            </div>
+                            @foreach ($committee->member as $member)
+                                <!-- Team Members -->
+                                <div class="flex flex-wrap">
+                                    <!-- Member #1 -->
+                                    <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                                        <div class="flex flex-col">
+                                            <!-- Avatar -->
+                                            <a href="#" class="mx-auto">
+                                                <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                                    src="{{ asset('storage') }}/{{ $member->image }}">
+                                            </a>
+
+                                            <!-- Details -->
+                                            <div class="text-center mt-6">
+                                                <!-- Name -->
+                                                <h1 class="text-gray-900 text-xl font-bold mb-1">
+                                                    {{ $member->first_names . $member->last_name }}
+                                                </h1>
+
+                                                <!-- Title -->
+                                                <div class="text-gray-700 font-light mb-2">
+                                                    {{ $member->position }}
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                            @endforeach
+
+
+
+
+
+
+                        </div>
+                    </div>
             </div>
-        </div>
-    </header>
-
-    <div class="container bg-gray-50 mb-50">
-
-        <div class="grid place-items-center ">
-            <img class="w-13" src="{{ asset('assets/images/organisation/Bisey.png') }}">
-        </div>
-
-        <div class="grid grid-cols-4 gap-4">
-            <img src="{{ asset('assets/images/organisation/Afra.png') }}">
-            <img src="{{ asset('assets/images/organisation/Willy.png') }}">
-            <img src="{{ asset('assets/images/organisation/Esmerelda.png') }}">
-            <img src="{{ asset('assets/images/organisation/Cassius.png') }}">
-
-
+        @empty
+            @endforelse
 
         </div>
-
-    </div>
-
-
-    <section class="bg-yellow-300 mb-8 ">
-        <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8 ">
-            <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">
-                Secretariat Management Team
-            </h1>
         </div>
-
     </section>
-    </div>
-    <div class="container bg-gray-50">
-        <div class="grid grid-cols-4 gap-4">
-            <img src="{{ asset('assets/images/organisation/Afra.png') }}">
-            <img src="{{ asset('assets/images/organisation/Willy.png') }}">
-            <img src="{{ asset('assets/images/organisation/Esmerelda.png') }}">
-            <img src="{{ asset('assets/images/organisation/Cassius.png') }}">
-            <img src="{{ asset('assets/images/organisation/Cyril.png') }}">
-            <img src="{{ asset('assets/images/organisation/Jacqueline.png') }}">
-            <img src="{{ asset('assets/images/organisation/Jacquiline.png') }}">
-            <img src="{{ asset('assets/images/organisation/Titus.png') }}">
-
-        </div>
-
-    </div>
 @endsection
