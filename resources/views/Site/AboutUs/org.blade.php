@@ -9,7 +9,7 @@
     </div>
     <section class="bg-yellow-300">
         <!-- Page Container -->
-        <div class="flex items-center justify-center min-h-screen bg-white py-48">
+        <div class="flex items-center justify-center min-h-screen bg-white py-20">
             <div class="flex flex-col">
                 <!-- Notes -->
                 <span class="text-center font-bold my-10 opacity-30">
