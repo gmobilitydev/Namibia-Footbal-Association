@@ -29,5 +29,8 @@ class Team extends Model
     {
         return $this->hasMany(fixtures::class,'fixture_id');
     }
+    public function competition(){
+        return $this->belongsToMany(Competition::class,'competition_id');
+    }
 
 }

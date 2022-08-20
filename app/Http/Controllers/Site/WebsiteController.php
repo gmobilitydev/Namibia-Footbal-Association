@@ -16,19 +16,28 @@ use Illuminate\Support\Facades\DB;
 
 class WebsiteController extends Controller
 {
+    /**
+     * Home Module
+     */
     public function latestPosts(){
         $latestPostList = Post::orderBy('created_at','desc')->limit(5)->get();
 
         return view('Site.index',['latestPostList'=>$latestPostList]);
     }
 
-
+/**
+ *
+ * Vacancy Module
+ */
     public function vacancies(){
         $vacancyList = Vacancy::all();
         return view('Site.vacancies.index',['vacancyList'=>$vacancyList]);
 
     }
-
+    /**
+     *
+     * Documents Module
+     */
     public function documents(){
         $documentlist = Documents::all();
         return view('Site.AboutUs.docs',['documentlist'=>$documentlist]);
@@ -50,7 +59,7 @@ class WebsiteController extends Controller
 
     /**
      *
-     * Competitions Page
+     * Competitions Module
      */
     public function competitions(){
         $competitions = Competition::all();
@@ -58,6 +67,9 @@ class WebsiteController extends Controller
     }
 
     public function showCompetition(Competition $comp){
+        $categoryName =$comp->name;
+        $posts = Post::where('category', $categoryName)->get();
+
         return view('Site.Competitions.show',['comp'=>$comp]);
     }
 
