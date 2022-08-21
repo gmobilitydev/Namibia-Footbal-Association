@@ -25,8 +25,47 @@ class TeamResource extends Resource
     {
         return $form
             ->schema([
-                //
-            ]);
+                    // Forms\Components\Card::make()
+                    Forms\Components\Card::make()
+                    ->schema([
+                        Forms\Components\TextInput::make('name')
+                            ->required(),
+                        Forms\Components\TextInput::make('country')
+                            ->required(),
+                        Forms\Components\DatePicker::make('date_founded'),
+
+
+                        Forms\Components\TextInput::make('manager')
+                        ->required(),
+
+
+
+
+
+                    ])
+                    ->columns([
+                        'sm' => 2,
+                    ])
+                    ->columnSpan([
+                        'sm' => 2,
+                    ]),
+                Forms\Components\Card::make()
+                    ->schema([
+                        Forms\Components\FileUpload::make('image')
+                            ->label('Team Badge')
+                            ->image(),
+
+
+
+                    ])->columnSpan(1),
+
+
+            ])
+            ->columns([
+                'sm' => 3,
+                'lg' => null
+                ]);
+
     }
 
     public static function table(Table $table): Table

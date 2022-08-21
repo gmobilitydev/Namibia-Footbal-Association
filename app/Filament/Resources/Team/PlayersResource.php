@@ -39,6 +39,8 @@ class PlayersResource extends Resource
                         'female' => 'Female',
 
                     ]),
+                    Forms\Components\Select::make('team_id')->relationship('team','name'),
+
                     Forms\Components\TextInput::make('position')
                     ->required(),
                     Forms\Components\TextInput::make('nationality')

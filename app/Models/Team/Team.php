@@ -11,13 +11,10 @@ class Team extends Model
 
     protected $table = 'teams';
 
-    protected $fillabe = [
+    protected $fillable = [
         'name',
         'country',
         'date_founded',
-        'fixture_id',
-        'leagure',
-        'points',
         'manager'
 
     ];
@@ -25,12 +22,6 @@ class Team extends Model
     {
         return $this->hasMany(Player::class,'team_id');
     }
-    public function fixtures()
-    {
-        return $this->hasMany(fixtures::class,'fixture_id');
-    }
-    public function competition(){
-        return $this->belongsToMany(Competition::class,'competition_id');
-    }
+
 
 }

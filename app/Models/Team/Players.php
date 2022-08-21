@@ -23,7 +23,7 @@ class Players extends Model
         'height',
     ];
 
-    public function player()
+    public function team()
     {
         return $this->belongsTo(Team::class, 'team_id');
     }
