@@ -85,34 +85,45 @@
                         <h2 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-12">Latest News</h2>
 
                     </div>
-                    <a rel="noopener noreferrer" href="#"
+                    @forelse($latestPostList as $post)
+                    @if($loop->first)
+                    <a rel="noopener noreferrer" href="./warriors/ {{ $post->id }}"
                         class="relative overflow-hidden bg-no-repeat bg-cover max-w-xs block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-white">
-                        <img src="{{ asset('assets/images/caf.jpeg') }}" alt=""
+                        <img src="{{ asset('storage') }}/{{ $post->image }}" alt=""
                             class="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500 hover:scale-110 transition duration-300 ease-in-out">
                         <div class="p-6 space-y-2 lg:col-span-5">
                             <h3 class="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">
-                                Noster tincidunt reprimique ad pro</h3>
-                            <span class="text-xs dark:text-gray-400">February 19, 2021</span>
-                            <p>Ei delenit sensibus liberavisse pri. Quod suscipit no nam. Est in graece fuisset, eos affert
-                                putent doctus id.</p>
+                            {{ $post->title }}</h3>
+                            <span class="text-xs dark:text-gray-400">{{ $post->published_at->format('m/d/y') }}</span>
+                            <p>{{ $post->content}}</p>
                         </div>
                     </a>
-                    <div class="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                        @for ($i = 0; $i < 3; $i++)
-                            <a rel="noopener noreferrer" href="#"
-                                class="relative overflow-hidden bg-no-repeat bg-cover max-w-xs max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-white">
+                    @else
+                    <!-- <div class="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"> -->
+                    <div class="flex justify-center flex-row">
+                            <a rel="noopener noreferrer" href="./warriors/ {{ $post->id }}"
+                                class="relative mx-2 overflow-hidden bg-no-repeat bg-cover max-w-xs max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-white">
                                 <img role="presentation"
                                     class="object-cover w-full rounded h-44 dark:bg-white  hover:scale-110 transition duration-300 ease-in-out"
-                                    src="{{ asset('assets/images/Thumbnail.png') }}">
+                                    src="{{ asset('storage') }}/{{ $post->image }}">
                                 <div class="p-6 space-y-2">
-                                    <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu
-                                        laoreet repudiare legendos</h3>
-                                    <span class="text-xs dark:text-gray-400">January 23, 2021</span>
+                                    <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">
+                                    {{ $post->title }} </h3>
+                                    <span class="text-xs dark:text-gray-400">{{ $post->published_at->format('m/d/y') }}</span>
 
                                 </div>
                             </a>
-                        @endfor
+                    <!-- </div> -->
+                    @endif
 
+                    @empty
+                    <h1 class="text-3xl font-extrabold sm:text-5xl">
+                        No Posts Found
+                        <strong class="font-extrabold text-yellow-500 sm:block">
+                            Stay Posted
+                        </strong>
+                    </h1>
+                    @endforelse
 
                     </div>
 

@@ -27,13 +27,13 @@
             </div>
         </div>
     </header>
-    <section class="m-20">
-        <div class="max-w-screen-xl px-4 py-18 pb-18 mx-auto  lg:items-center lg:flex">
+    @forelse ($vacancyList as $vacancy)
+        <section class="m-20">
+            <div class="max-w-screen-xl px-4 py-18 pb-18 mx-auto  lg:items-center lg:flex">
 
-            <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
+                <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
 
 
-                @forelse ($vacancyList as $vacancy)
                     <a class="relative block p-8 border border-gray-100 shadow-xl rounded-xl" href="">
                         <span
                             class="absolute right-4 top-4 rounded-full px-3 py-1.5 bg-green-100 text-green-600 font-medium text-xs">
@@ -58,17 +58,22 @@
 
 
                 @empty
+                    <div class="max-w-screen-xl px-4 py-32 mx-auto lg:h-screen lg:items-center lg:flex">
+                        <div class="max-w-xl mx-auto text-center">
+                            <h1 class="text-3xl font-extrabold sm:text-5xl">
+                                No Bids Available
+                                <strong class="font-extrabold text-yellow-500 sm:block">
+                                    Coming Soon
+                                </strong>
+                            </h1>
 
-                    <h1 class="text-3xl font-extrabold sm:text-5xl">
-                        No Vacancies Available
-                        <strong class="font-extrabold text-yellow-500 sm:block">
-                            Coming Soon
-                        </strong>
-                    </h1>
-                @endforelse
+
+                        </div>
+                    </div>
+    @endforelse
 
 
-            </div>
-        </div>
+    </div>
+    </div>
     </section>
 @endsection

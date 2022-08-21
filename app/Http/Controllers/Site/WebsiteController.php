@@ -12,6 +12,8 @@ use App\Models\Documents\Documents;
 use App\Models\Competitions\Competition;
 use App\Models\Organisation\Committee;
 
+use App\Models\Team\Player;
+use App\Models\Team\Team;
 use Illuminate\Support\Facades\DB;
 
 class WebsiteController extends Controller
@@ -57,6 +59,34 @@ class WebsiteController extends Controller
         return view('Site.NewsCenter.post',['post'=>$post]);
     }
 
+    // Warriors
+    public function warriorsNews(){
+
+        // $latestPostList = Post::where('blog_category_id', 1);
+        $latestPostList = Post::where('blog_category_id', 1)->paginate(4);
+        $latestPostList->setCollection($latestPostList->sortByDesc('created_at'));
+        return view('Site.Men.men',['latestPostList'=>$latestPostList]);
+    }
+
+    public function showWarriorsPost(Post $post){
+        return view('Site.Men.post',['post'=>$post]);
+    }
+
+    // Gladiators
+    public function gladiatorsNews(){
+
+        // $latestPostList = Post::where('blog_category_id', 1);
+        $latestPostList = Post::where('blog_category_id', 2)->paginate(4);
+        $latestPostList->setCollection($latestPostList->sortByDesc('created_at'));
+        return view('Site.Women.women',['latestPostList'=>$latestPostList]);
+    }
+
+    public function showGladiatorsPost(Post $post){
+        return view('Site.Women.post',['post'=>$post]);
+    }
+
+    // end of news center ---------------------------------------------------------------------
+
     /**
      *
      * Competitions Module
@@ -65,13 +95,10 @@ class WebsiteController extends Controller
         $competitions = Competition::all();
         return view('Site.Competitions.competitions',['competitions'=>$competitions]);
     }
-
     public function showCompetition(Competition $comp){
-        $categoryName =$comp->name;
-        $posts = Post::where('category', $categoryName)->get();
-
         return view('Site.Competitions.show',['comp'=>$comp]);
     }
+
 
     /**
      *
@@ -82,5 +109,21 @@ class WebsiteController extends Controller
         $committeeList = Committee::with('member')->get();
         return view('Site.AboutUs.org',['committeeList'=>$committeeList]);
     }
+    public function aboutUs(){
+        return view('Site.AboutUs.about');
+    }
 
+    public function showMensTeam(Team $team){
+        return view('Site.Men.team', ['team'=>$team]);
+    }
+
+    public function womensTeams(){
+
+        $teams = Team::where('league_id', 2);
+        return view('Site.Women.squads', ['teams'=>$teams]);
+    }
+
+    public function showWomensTeam(Team $team){
+        return view('Site.Women.team', ['team'=>$team]);
+    }
 }

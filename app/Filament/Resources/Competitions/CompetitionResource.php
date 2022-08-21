@@ -17,8 +17,8 @@ class CompetitionResource extends Resource
 {
     protected static ?string $model = Competition::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
-
+    protected static ?string $navigationIcon = 'heroicon-o-globe';
+    protected static ?string $navigationGroup = "Football Center";
     public static function form(Form $form): Form
     {
         return $form
@@ -72,6 +72,9 @@ class CompetitionResource extends Resource
         return $table
             ->columns([
                 //
+                Tables\Columns\TextColumn::make('id'),
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('launch_date'),
             ])
             ->filters([
                 //

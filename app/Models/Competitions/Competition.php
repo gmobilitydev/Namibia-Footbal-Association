@@ -16,4 +16,15 @@ class Competition extends Model
         'launch_date',
         'status'
     ];
+
+    public function fixtures(){
+
+    }
+    public function teams(){
+
+    }
+    public function posts(){
+
+    }
+
 }
