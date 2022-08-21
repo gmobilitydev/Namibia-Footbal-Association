@@ -73,6 +73,8 @@ class TeamResource extends Resource
         return $table
             ->columns([
                 //
+                Tables\Columns\TextColumn::make('id'),
+                Tables\Columns\TextColumn::make('name'),
             ])
             ->filters([
                 //

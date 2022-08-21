@@ -25,6 +25,18 @@ class FixturesResource extends Resource
         return $form
             ->schema([
                 //
+                Forms\Components\Select::make('home_team')
+                ->relationship('home', 'name')
+                ->required(),
+                Forms\Components\Select::make('away_team')
+                ->relationship('away', 'name')
+                ->required(),
+                Forms\Components\DateTimePicker::make('date')
+                ->required(),
+                Forms\Components\TextInput::make('home_result'),
+                Forms\Components\TextInput::make('away_result')
+
+
             ]);
     }
 
@@ -33,6 +45,13 @@ class FixturesResource extends Resource
         return $table
             ->columns([
                 //
+                Tables\Columns\TextColumn::make('id'),
+                Tables\Columns\TextColumn::make('date'),
+                Tables\Columns\TextColumn::make('home.name'),
+                Tables\Columns\TextColumn::make('home_result'),
+                Tables\Columns\TextColumn::make('away.name'),
+                Tables\Columns\TextColumn::make('away_result'),
+
             ])
             ->filters([
                 //

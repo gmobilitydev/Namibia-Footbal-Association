@@ -86,7 +86,7 @@ Route::get('/docs',[WebsiteController::class, 'documents']);
  * Shop Routes
  */
 
-Route::get('/store', [ShopController::class,'index']);
+Route::get('/store', [ShopController::class,'maintenance']);
 
 /**
  *

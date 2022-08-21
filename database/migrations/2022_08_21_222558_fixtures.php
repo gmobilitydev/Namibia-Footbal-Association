@@ -13,14 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-
-        Schema::create('leagues', function (Blueprint $table) {
+        //
+        Schema::create('fixtures', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('slug');
-            $table->foreignId('team_id');
+            $table->foreignId('home_team')->constrained('teams');
+            $table->foreignId('away_team')->constrained('teams');
+            $table->string('date');
+            $table->tinyInteger('home_result')->default(0);
+            $table->tinyInteger('away_result')->default(0);
             $table->timestamps();
+
         });
+
     }
 
     /**
@@ -30,7 +34,7 @@ return new class extends Migration
      */
     public function down()
     {
-
-        Schema::dropIfExists('leagues');
+        //
+        Schema::dropIfExists('fixtures');
     }
 };

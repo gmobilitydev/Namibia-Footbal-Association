@@ -12,4 +12,7 @@ class ShopController extends Controller
         $productList = Product::paginate(8);
         return view('shop.index',['productList'=>$productList]);
     }
+    public function maintenance(){
+        return view('shop.maintenance');
+    }
 }

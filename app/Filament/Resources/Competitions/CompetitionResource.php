@@ -35,6 +35,7 @@ class CompetitionResource extends Resource
 
 
 
+
                      Forms\Components\MarkdownEditor::make('content')
                          ->required()
                          ->columnSpan([
@@ -53,6 +54,10 @@ class CompetitionResource extends Resource
                      Forms\Components\FileUpload::make('image')
                          ->label('Image')
                          ->image(),
+                         Forms\Components\MultiSelect::make('teams')
+                         ->relationship('teams', 'name')
+                         ->required(),
+
 
 
 

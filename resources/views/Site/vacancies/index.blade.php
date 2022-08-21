@@ -27,13 +27,12 @@
             </div>
         </div>
     </header>
-    @forelse ($vacancyList as $vacancy)
-        <section class="m-20">
-            <div class="max-w-screen-xl px-4 py-18 pb-18 mx-auto  lg:items-center lg:flex">
+    <section class="m-20">
+        <div class="max-w-screen-xl px-4 py-18 pb-18 mx-auto  lg:items-center lg:flex">
 
-                <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
+            <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
 
-
+                @forelse ($vacancyList as $vacancy)
                     <a class="relative block p-8 border border-gray-100 shadow-xl rounded-xl" href="">
                         <span
                             class="absolute right-4 top-4 rounded-full px-3 py-1.5 bg-green-100 text-green-600 font-medium text-xs">
@@ -70,10 +69,10 @@
 
                         </div>
                     </div>
-    @endforelse
+                @endforelse
 
 
-    </div>
-    </div>
+            </div>
+        </div>
     </section>
 @endsection
