@@ -93,7 +93,11 @@
                                 <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">No Images
                                     Found.</h1>
                             @endforelse
-                            {{ $images->links() }}
+                            <div class="container py-6">
+                                {{ $images->onEachSide(5)->links() }}
+
+                            </div>
+
 
 
 
