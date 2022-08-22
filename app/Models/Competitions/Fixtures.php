@@ -20,7 +20,7 @@ class Fixtures extends Model
     ];
 
     public function competitions(){
-
+        return $this->belongsTo(Competition::class, 'competition_id');
     }
 
     public function home(){

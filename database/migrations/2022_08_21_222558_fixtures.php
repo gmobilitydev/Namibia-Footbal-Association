@@ -16,6 +16,7 @@ return new class extends Migration
         //
         Schema::create('fixtures', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('competition_id')->constrained('competitions');
             $table->foreignId('home_team')->constrained('teams');
             $table->foreignId('away_team')->constrained('teams');
             $table->string('date');

@@ -18,7 +18,7 @@ class Competition extends Model
     ];
 
     public function fixtures(){
-
+        return $this->hasMany(Fixtures::class, 'competition_id');
     }
     public function teams(){
         return $this->belongsToMany(Team::class,'competition_team');

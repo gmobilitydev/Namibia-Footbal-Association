@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        //
-        Schema::create('competition_fixtures', function (Blueprint $table) {
-            $table->foreignId('fixture_id')->constrained('fixtures');
-            $table->foreignId('competition_id')->constrained('competitions');
-        });    }
+        Schema::dropIfExists('competition_fixtures');
+
+    }
 
     /**
      * Reverse the migrations.
@@ -27,7 +25,6 @@ return new class extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('competition_fixtures');
 
     }
 };

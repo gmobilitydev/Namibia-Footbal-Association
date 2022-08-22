@@ -25,6 +25,8 @@ class FixturesResource extends Resource
         return $form
             ->schema([
                 //
+                Forms\Components\Select::make('competition_id')
+                ->relationship('competitions', 'name'),
                 Forms\Components\Select::make('home_team')
                 ->relationship('home', 'name')
                 ->required(),

@@ -55,9 +55,7 @@ class CompetitionResource extends Resource
                          ->label('Image')
                          ->image(),
                          Forms\Components\MultiSelect::make('teams')
-                         ->relationship('teams', 'name')
-                         ->required(),
-
+                         ->relationship('teams', 'name'),
 
 
 
