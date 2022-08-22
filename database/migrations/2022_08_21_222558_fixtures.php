@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('competition_id')->constrained('competitions');
             $table->foreignId('home_team')->constrained('teams');
             $table->foreignId('away_team')->constrained('teams');
-            $table->string('date');
+            $table->dateTime('date');
             $table->tinyInteger('home_result')->default(0);
             $table->tinyInteger('away_result')->default(0);
             $table->timestamps();

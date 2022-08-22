@@ -26,9 +26,7 @@ Route::get('/news/{post}',[WebsiteController::class, 'showPost']);
 Route::get('/warriors', [WebsiteController::class, 'warriorsNews']);
 Route::get('/warriors/{post}',[WebsiteController::class, 'showWarriorsPost']);
 
-Route::get('/warriors-fixtures', function(){
-    return view('Site.Men.fixtures-results');
-});
+Route::get('/warriors-fixtures', [WebsiteController::class, 'fixtures']);
 
 // Route::get('/warriors-squads', [WebsiteController::class, 'mensTeams']);
 Route::get('/warriors-squads', function(){
@@ -65,9 +63,7 @@ Route::get('/gladiators-team', [WebsiteController::class, 'showWomensTeams']);
 
 
 
-Route::get('/gallery', function(){
-    return view('Site.Gallery.gallery');
-});
+Route::get('/gallery', [WebsiteController::class, 'gallery']);
 
 
 

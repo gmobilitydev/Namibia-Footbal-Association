@@ -13,6 +13,7 @@ class Team extends Model
     protected $table = 'teams';
 
     protected $fillable = [
+        'image',
         'name',
         'country',
         'date_founded',

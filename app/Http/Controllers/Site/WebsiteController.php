@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\Blog\Post;
-use App\Gallery;
+use App\Models\Gallery\Gallery;
 use App\Models\Vacancies\Vacancy;
 use App\Models\Documents\Documents;
 use App\Models\Competitions\Competition;
@@ -14,6 +14,7 @@ use App\Models\Organisation\Committee;
 
 use App\Models\Team\Player;
 use App\Models\Team\Team;
+use App\Models\Competitions\Fixtures;
 use Illuminate\Support\Facades\DB;
 
 class WebsiteController extends Controller
@@ -99,6 +100,14 @@ class WebsiteController extends Controller
         return view('Site.Competitions.show',['comp'=>$comp]);
     }
 
+    /**
+     *
+     * Fixtures Module
+     */
+    public function fixtures(){
+        $fixturesList = Competition::with('fixtures')->get();
+        return view('Site.Men.fixtures-results',['fixturesList'=>$fixturesList]);
+    }
 
     /**
      *
@@ -125,5 +134,13 @@ class WebsiteController extends Controller
 
     public function showWomensTeam(Team $team){
         return view('Site.Women.team', ['team'=>$team]);
+    }
+
+    /**
+     * Gallery Module
+     */
+    public function gallery(){
+        $images = Gallery::paginate(4);
+        return view('Site.Gallery.gallery',['images'=>$images]);
     }
 }

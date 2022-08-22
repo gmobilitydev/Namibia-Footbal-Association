@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('manager')->nullable();
             $table->string('team_bio')->nullable();
 
-            $table->string('image')->nullable();
+            $table->string('image');
             $table->timestamps();
         });
     }

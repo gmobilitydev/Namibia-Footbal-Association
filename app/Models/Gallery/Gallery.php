@@ -12,6 +12,6 @@ class Gallery extends Model
         'title',
         'category',
         'content',
-        'imagename'
+        'image'
     ];
 }

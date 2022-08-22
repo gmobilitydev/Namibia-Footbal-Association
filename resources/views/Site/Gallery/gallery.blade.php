@@ -56,231 +56,57 @@
 
 
                 <!-- Gallery Lightbox -->
+                <!-- component -->
+                <section class="text-gray-600 body-font">
+                    <div class="container px-5 py-0 mx-auto">
+                        <div class="flex flex-col text-center w-full mb-20">
+                            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac
+                                Heirloom</h1>
+                            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon
+                                brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't
+                                heard of them man bun deep jianbing selfies heirloom.</p>
+                        </div>
+                        <div class="flex flex-wrap -m-4">
+                            @forelse ($images as $image)
+                                <div class="lg:w-1/3 sm:w-1/2 p-4">
+                                    <div class="flex relative">
+                                        <img alt="gallery"
+                                            class="absolute inset-0 w-full h-full object-cover object-center"
+                                            src="{{ asset('storage') }}/{{ $image->image }}">
+                                        <div
+                                            class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
+                                                {{ $image->category }}</h2>
+                                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
+                                                {{ $image->title }}
+                                            </h1>
+                                            <p class="leading-relaxed">{{ $image->content }}</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+
+                            @empty
+                                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">No Images
+                                    Found.</h1>
+                            @endforelse
+                            {{ $images->links() }}
+
+
+
+                        </div>
+
+
+
+                    </div>
+                </section>
 
             </section>
-            <div class="gallery-container">
-
-                <body class="gallery-body ">
-
-                    <!-- Images used to open the lightbox -->
-                    <div class="row">
-                        <div class="column">
-                            <img src="{{ asset('assets/images/caf.jpeg') }}" onclick="openModal();currentSlide(1)"
-                                class="hover-shadow thumbnail-image">
-                        </div>
-                        <div class="column">
-                            <img src="{{ asset('assets/images/competition.jpeg') }}" onclick="openModal();currentSlide(2)"
-                                class="hover-shadow thumbnail-image">
-                        </div>
-                        <div class="column">
-                            <img src="{{ asset('assets/images/galler.jpeg') }}" onclick="openModal();currentSlide(3)"
-                                class="hover-shadow thumbnail-image">
-                        </div>
-                        <div class="column">
-                            <div class="gradient-overlay">
-                                <img src="{{ asset('assets/images/team.jpg') }}" onclick="openModal();currentSlide(4)"
-                                    class="hover-shadow thumbnail-image">
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <!-- The Modal/Lightbox -->
-                    <div id="myModal" class="modal">
-                        <span class="close cursor" onclick="closeModal()">&times;</span>
-                        <div class="modal-content">
-
-                            <div class="mySlides">
-                                <div class="numbertext">1 / 4</div>
-                                <img src="{{ asset('assets/images/caf.jpeg') }}" style="width:100%" class="modal-image">
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">2 / 4</div>
-                                <img src="{{ asset('assets/images/competition.jpeg') }}" style="width:100%"
-                                    class="modal-image">
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">3 / 4</div>
-                                <img src="{{ asset('assets/images/galler.jpeg') }}" style="width:100%" class="modal-image">
-                            </div>
-
-                            <div class="mySlides">
-                                <div class="numbertext">4 / 4</div>
-                                <img src="{{ asset('assets/images/team.jpg') }}" style="width:100%" class="modal-image">
-                            </div>
-
-                            <!-- Next/previous controls -->
-                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                            <!-- Caption text -->
-                            <div class="caption-container">
-                                <p id="caption"></p>
-                            </div>
-
-                            <!-- Thumbnail image controls -->
-                            <div class="column">
-                                <img class="demo" src="{{ asset('assets/images/caf.jpeg') }}" onclick="currentSlide(1)"
-                                    alt="Nature">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="{{ asset('assets/images/competition.jpeg') }}"
-                                    onclick="currentSlide(2)" alt="Snow">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="{{ asset('assets/images/galler.jpeg') }}"
-                                    onclick="currentSlide(3)" alt="Mountains">
-                            </div>
-
-                            <div class="column">
-                                <img class="demo" src="{{ asset('assets/images/team.jpg') }}" onclick="currentSlide(4)"
-                                    alt="Lights">
-                            </div>
-                        </div>
-                    </div>
-                </body>
-            </div>
-
-
-            <!-- Lightbox Modal Javascript -->
-            <script>
-                // Open the Modal
-                function openModal() {
-                    document.getElementById("myModal").style.display = "block";
-                }
-
-                // Close the Modal
-                function closeModal() {
-                    document.getElementById("myModal").style.display = "none";
-                }
-
-                var slideIndex = 1;
-                showSlides(slideIndex);
-
-                // Next/previous controls
-                function plusSlides(n) {
-                    showSlides(slideIndex += n);
-                }
-
-                // Thumbnail image controls
-                function currentSlide(n) {
-                    showSlides(slideIndex = n);
-                }
-
-                function showSlides(n) {
-                    var i;
-                    var slides = document.getElementsByClassName("mySlides");
-                    var dots = document.getElementsByClassName("demo");
-                    var captionText = document.getElementById("caption");
-                    if (n > slides.length) {
-                        slideIndex = 1
-                    }
-                    if (n < 1) {
-                        slideIndex = slides.length
-                    }
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                    }
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                    }
-                    slides[slideIndex - 1].style.display = "block";
-                    dots[slideIndex - 1].className += " active";
-                    captionText.innerHTML = dots[slideIndex - 1].alt;
-                }
-            </script>
-
         </section>
+    </div>
 
     </html>
 @endsection
-
-
-
-
-
-
-<!-- Old Gallery Lightbox Code -->
-
-{{-- <div class="gallery-container grid grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-3">
-                    <div class="gallery-item" data-index="1"><img src="{{ asset('assets/images/caf.jpeg') }}"></div>
-                    <div class="gallery-item" data-index="2"><img src="{{ asset('assets/images/nfa.png') }}"></div>
-                    <div class="gallery-item" data-index="3"><img src="{{ asset('assets/images/caf.jpeg') }}"></div>
-                    <div class="gallery-item" data-index="4"><img src="{{ asset('assets/images/team.jpg') }}"></div>
-                    <div class="gallery-item" data-index="5"><img src="{{ asset('assets/images/caf.jpeg') }}"></div>
-                    <div class="gallery-item" data-index="6"><img src="{{ asset('assets/images/caf.jpeg') }}"></div>
-                    <div class="gallery-item" data-index="7"><img src="{{ asset('assets/images/caf.jpeg') }}"></div>
-                    <div class="gallery-item" data-index="8"><img src="{{ asset('assets/images/caf.jpeg') }}"></div>
-                    <div class="gallery-item" data-index="9"><img src="{{ asset('assets/images/caf.jpeg') }}"></div>
-                </div>
-
-                <!-- Javascript For Gallery Lightbox Model -->
-
-                <script type="text/javascript">
-                    const galleryItem = document.getElementsByClassName("gallery-item");
-                    const lightBoxContainer = document.createElement("div");
-                    const lightBoxContent = document.createElement("div");
-                    const lightBoxImg = document.createElement("img");
-                    const lightBoxPrev = document.createElement("div");
-                    const lightBoxNext = document.createElement("div");
-
-                    lightBoxContainer.classList.add("lightbox");
-                    lightBoxContent.classList.add("lightbox-content");
-                    lightBoxPrev.classList.add("fa", "fa-angle-left", "lightbox-prev");
-                    lightBoxNext.classList.add("fa", "fa-angle-right", "lightbox-next");
-
-                    lightBoxContainer.appendChild(lightBoxContent);
-                    lightBoxContent.appendChild(lightBoxImg);
-                    lightBoxContent.appendChild(lightBoxPrev);
-                    lightBoxContent.appendChild(lightBoxNext);
-                    document.body.appendChild(lightBoxContainer);
-
-                    let index = 1;
-
-                    function showLightBox(n) {
-                        if (n > galleryItem.length) {
-                            index = 1;
-                        } else if (n < 1) {
-                            index = galleryItem.length;
-                        }
-                        let imageLocation = galleryItem[index - 1].children[0].getAttribute("src");
-                        lightBoxImg.setAttribute("src", imageLocation);
-                    }
-
-                    function currentImage() {
-                        lightBoxContainer.style.display = "block";
-
-                        let imageIndex = parseInt(this.getAttribute("data-index"));
-                        showLightBox(index = imageIndex);
-                    }
-                    for (let i = 0; i < galleryItem.length; i++) {
-                        galleryItem[i].addEventListener("click", currentImage);
-                    }
-
-                    function slideImage(n) {
-                        showLightBox(index += n);
-                    }
-
-                    function prevImage() {
-                        slideImage(-1);
-                    }
-
-                    function nextImage() {
-                        slideImage(1);
-                    }
-                    lightBoxPrev.addEventListener("click", prevImage);
-                    lightBoxNext.addEventListener("click", nextImage);
-
-                    function closeLightBox() {
-                        if (this === event.target) {
-                            lightBoxContainer.style.display = "none";
-                        }
-                    }
-                    lightBoxContainer.addEventListener("click", closeLightBox);
-                </script> --}}
