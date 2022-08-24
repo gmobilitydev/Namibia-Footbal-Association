@@ -18,62 +18,19 @@
                         aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner relative w-full overflow-hidden">
-                    @forelse ($latestPostList as $post)
-                        <div class="carousel-item active float-left w-full">
-                            <div class="relative overflow-hidden bg-no-repeat bg-cover"
-                                style="background-position: 50%; background-image: url({{ asset('/storage') }}/{{ $latestPostList->first()->image }}); height: 500px;">
-                                <a href="./news/{{ $latestPostList->first->id }}"></a>
-                            </div>
-
-
-                            <div class="container mx-auto px-6 md:px-12 xl:px-32">
-                                <div class="text-center text-gray-800">
-                                    <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
-                                        style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
-                                        <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">
-                                            {{ $post->title }}
-                                            <br />
-                                        </h1>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @empty
-                        <div class="carousel-item active float-left w-full">
-                            <div class="relative overflow-hidden bg-no-repeat bg-cover"
-                                style="background-position: 50%; background-image: url({{ asset('assets/images/caf.jpeg') }}); height: 500px;">
-                            </div>
-
-                            <div class="container mx-auto px-6 md:px-12 xl:px-32">
-                                <div class="text-center text-gray-800">
-                                    <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
-                                        style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
-                                        <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">
-                                            Test Title
-                                            <br />
-                                        </h1>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endforelse
-
-
-                    <div class="carousel-item float-left w-full">
+                    <div class="carousel-item active float-left w-full">
                         <div class="relative overflow-hidden bg-no-repeat bg-cover"
-                            style="background-position: 50%; background-image: url({{ asset('assets/images/team.jpg') }}); height: 500px;">
+                            style="background-position: 50%; background-image: url({{ asset('/storage') }}/{{ $latestPostList->first()->image }}); height: 500px;">
+                            <a href="./news/{{ $latestPostList->first->id }}"></a>
                         </div>
+
 
                         <div class="container mx-auto px-6 md:px-12 xl:px-32">
                             <div class="text-center text-gray-800">
                                 <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
                                     style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
                                     <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">
-                                        Magaia brace
-                                        hands South
-                                        Africa first WAFCON trophy
+                                        {{ $latestPostList[0]->title }}
                                         <br />
                                     </h1>
 
@@ -81,26 +38,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item float-left w-full">
-                        <div class="relative overflow-hidden bg-no-repeat bg-cover"
-                            style="background-position: 50%; background-image: url({{ asset('assets/images/galler.jpeg') }}); height: 500px;">
-                        </div>
 
-                        <div class="container mx-auto px-6 md:px-12 xl:px-32">
-                            <div class="text-center text-gray-800">
-                                <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
-                                    style="margin-top: -170px; background: hsla(0, 0%, 100%, 0.7); backdrop-filter: blur(30px);">
-                                    <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">
-                                        Magaia brace
-                                        hands South
-                                        Africa first WAFCON trophy
-                                        <br />
-                                    </h1>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>-->
+
                 </div>
                 <button
                     class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
@@ -220,86 +160,107 @@
                         </div>
                     </div>
                 </div>
-                <section>
-
-                    <div class="flex justify-center items-center min-h-500 bg-gray-200">
-                        <div class="space-y-2 text-align-left pr-36">
-                            <h2 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">Competitions</h2>
-                        </div>
-                        <div aria-details="card"
-                            class="relative flex w-[300px] hover:w-[600px] transition-all duration-1000 ease-in-out h-96 overflow-hidden bg-white shadow-2xl"">
-                            <div aria-details="image"
-                                class="relative min-w-xm w-[300px] scale-50 h-full bg-white flex justify-center items-center">
-                                <img class="h-93 max-w-xs transition duration-300 ease-out hover:-rotate-12 hover:-translate-x-5"
-                                    src="{{ asset('assets/logos/DR. Hage cup logo.jpg') }}" />
-                            </div>
-                            <div aria-details="details"
-                                class="bg-slate-200 relative min-w-sm h-full flex p-5 flex-col justify-center transition delay-700 ease-in-out">
-                                <h1 class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">Dr. Hage
-                                    Geingob Cup</h1>
-                                <h4 class="text-sm font-medium mt-2">Competition details</h4>
-                                <p class="text-md font-normal text-left">Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing elit. Placeat qui aliquid error.</p>
 
 
-
-                </section>
 
 
 
 
             </section>
+            <section>
 
 
-        </section>
-        <!-- Container for demo purpose -->
-        <div class="container my-24 px-6 mx-auto">
-
-            <!-- Section: Design Block -->
-            <section class="mb-32 background-radial-gradient-2">
-                <style>
-                    .background-radial-gradient-2 {
-                        background-color: hsl(54, 100%, 50%);
-                        background-image: radial-gradient(650px circle at 0% 0%,
-                                hsl(56, 100%, 50%) 15%,
-                                hsl(54, 93%, 57%) 35%,
-                                hsl(51, 91%, 47%) 75%,
-                                hsl(46, 86%, 42%) 80%,
-                                transparent 100%),
-                            radial-gradient(1250px circle at 100% 100%,
-                                hsl(56, 100%, 50%) 15%,
-                                hsl(54, 88%, 46%) 35%,
-                                hsl(56, 100%, 55%) 75%,
-                                hsl(46, 71%, 47%) 80%,
-                                transparent 100%);
-                    }
-                </style>
-
-                <div class="px-6 py-12 md:px-12 text-center lg:text-left">
-                    <div class="container mx-auto xl:px-32">
-                        <div class="grid lg:grid-cols-2 gap-12 flex items-center">
-                            <div class="mb-12 lg:mb-0">
-                                <img src="{{ asset('assets/images/nfa.png') }}" class="w-full rounded-lg shadow-lg"
-                                    alt="" />
+                <div class="max-w-screen-xl p-5 mx-auto dark:bg-zinc-900 dark:text-gray-100">
+                    <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12"
+                        style="color: hsl(0, 0%, 100%)">
+                        Competitions
+                    </h1>
+                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-4 sm:grid-cols-2">
+                        @forelse ($competitions as $competition)
+                            <div class="relative flex items-end justify-start w-full text-left bg-center bg-cover h-96 dark:bg-gray-500"
+                                style="background-image: url({{ asset('storage') }}/{{ $competition->image }});">
+                                <div
+                                    class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b dark:via-transparent dark:from-gray-900 dark:to-gray-900">
+                                </div>
+                                <div class="absolute top-0 left-0 right-0 flex items-center justify-between mx-5 mt-3">
+                                    <a rel="noopener noreferrer" href="#"
+                                        class="px-3 py-2 text-xs font-semibold tracking-wider uppercase dark:text-gray-100 bgundefined">Politics</a>
+                                    <div class="flex flex-col justify-start text-center dark:text-gray-100">
+                                        <span
+                                            class="text-3xl font-semibold leading-none tracking-wide">{{ $competition->launch_date->format('d') }}</span>
+                                        <span
+                                            class="leading-none uppercase">{{ $competition->launch_date->format('m') }}</span>
+                                    </div>
+                                </div>
+                                <h2 class="z-10 p-5">
+                                    <a rel="noopener noreferrer" href="./competitions/{{ $competition->id }}"
+                                        class="font-medium text-md hover:underline dark:text-gray-100">{{ $competition->name }}</a>
+                                </h2>
                             </div>
-                            <div class="mt-12 lg:mt-0">
-                                <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12"
-                                    style="color: hsl(46, 84%, 95%);">Brave Warriors<br /><span
-                                        style="color: hsl(54, 81%, 75%);">Team Kit </span></h1>
-                                <a class="inline-block px-7 py-3 mr-2 bg-gray-200 text-zinc-900 font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out"
-                                    data-mdb-ripple="true" data-mdb-ripple-color="light" href="#!"
-                                    role="button">Go to store</a>
 
-                            </div>
+                        @empty
+                            <h2>No Competitions found</h2>
+                    </div>
+                    @endforelse
+
+
+
+
+                </div>
+    </div>
+
+    </section>
+
+
+    </section>
+    <!-- Container for demo purpose -->
+    <div class="container my-24 px-6 mx-auto">
+
+        <!-- Section: Design Block -->
+        <section class="mb-32 background-radial-gradient-2">
+            <style>
+                .background-radial-gradient-2 {
+                    background-color: hsl(54, 100%, 50%);
+                    background-image: radial-gradient(650px circle at 0% 0%,
+                            hsl(56, 100%, 50%) 15%,
+                            hsl(54, 93%, 57%) 35%,
+                            hsl(51, 91%, 47%) 75%,
+                            hsl(46, 86%, 42%) 80%,
+                            transparent 100%),
+                        radial-gradient(1250px circle at 100% 100%,
+                            hsl(56, 100%, 50%) 15%,
+                            hsl(54, 88%, 46%) 35%,
+                            hsl(56, 100%, 55%) 75%,
+                            hsl(46, 71%, 47%) 80%,
+                            transparent 100%);
+                }
+            </style>
+
+            <div class="px-6 py-12 md:px-12 text-center lg:text-left">
+                <div class="container mx-auto xl:px-32">
+                    <div class="grid lg:grid-cols-2 gap-12 flex items-center">
+                        <div class="mb-12 lg:mb-0">
+                            <img src="{{ asset('assets/images/nfa.png') }}" class="w-full rounded-lg shadow-lg"
+                                alt="" />
+                        </div>
+                        <div class="mt-12 lg:mt-0">
+                            <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12"
+                                style="color: hsl(46, 84%, 95%);">Brave Warriors<br /><span
+                                    style="color: hsl(54, 81%, 75%);">Team Kit </span></h1>
+                            <a class="inline-block px-7 py-3 mr-2 bg-gray-200 text-zinc-900 font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out"
+                                data-mdb-ripple="true" data-mdb-ripple-color="light" href="#!" role="button">Go to
+                                store</a>
 
                         </div>
+
                     </div>
                 </div>
-            </section>
-            <!-- Section: Design Block -->
+            </div>
+        </section>
+        <!-- Section: Design Block -->
 
-        </div>
-        <!-- Container for demo purpose -->
+    </div>
+    <!-- Container for demo purpose -->
 
 
     </div>

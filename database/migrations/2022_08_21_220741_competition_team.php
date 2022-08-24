@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('images', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('size');
-            $table->timestamps();
+        Schema::create('competition_team', function (Blueprint $table) {
+            $table->foreignId('team_id')->constrained('teams');
+            $table->foreignId('competition_id')->constrained('competitions');
         });
     }
 
@@ -28,6 +26,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('images');
+        //
+        Schema::dropIfExists('competition_team');
     }
 };

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('description');
-            $table->integer('category');
+            $table->string('category');
             $table->string('file');
             $table->timestamps();
         });

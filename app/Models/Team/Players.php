@@ -12,17 +12,18 @@ class Players extends Model
     protected $table = 'players';
 
     protected $fillable = [
-        'firstname',
-        'surname',
-        'DOB',
+        'first_names',
+        'last_name',
+        'dob',
         'team_id',
+        'image',
         'gender',
-        'positions',
+        'position',
         'nationality',
         'height',
     ];
 
-    public function player()
+    public function team()
     {
         return $this->belongsTo(Team::class, 'team_id');
     }

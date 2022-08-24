@@ -20,6 +20,7 @@
             </div>
         </div>
     </header>
+
     <link crossorigin="anonymous" href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <script crossorigin="anonymous" defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -57,34 +58,32 @@
             </div>
 
             <div class="mt-8 lg:col-span-2 lg:mx-0">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        @forelse ($competitions as $comp)
-                            <div class="swiper-slide">
+                <div class="grid grid-cols-3 gap-4">
 
-                                <div class="w-full">
-                                    <a href=""
-                                        class="relative block overflow-hidden bg-center bg-no-repeat bg-cover  rounded w-full rounded-lg shadow-lg hover:scale-110 transition duration-300 ease-in-out"
-                                        style="background-image: url({{ asset('storage') }}/{{ $comp->image }})">
+                    @forelse ($competitions as $comp)
+                        <div class="w-full">
+                            <a href="/competitions/{{ $comp->id }}"
+                                class="relative block overflow-hidden bg-center bg-no-repeat bg-cover  rounded w-full rounded-lg shadow-lg hover:scale-110 transition duration-300 ease-in-out"
+                                style="background-image: url({{ asset('storage') }}/{{ $comp->image }})">
 
 
-                                        <div class="relative p-8 pt-40 text-white bg-black bg-opacity-40">
-                                            <h5 class="text-2xl font-bold">{{ $comp->name }}</h5>
+                                <div class="relative p-8 pt-40 text-white bg-black bg-opacity-40">
+                                    <h5 class="text-2xl font-bold">{{ $comp->name }}</h5>
 
-                                            <p class="text-sm">Competition Date</p>
-                                        </div>
-                                    </a>
-
+                                    <p class="text-sm">Competition Date</p>
                                 </div>
-                            </div>
-                        @empty
-                        @endforelse
+                            </a>
 
-
-
-
-                    </div>
+                        </div>
+                    @empty
+                    @endforelse
                 </div>
+
+
+
+
+
+
             </div>
         </div>
     </section>

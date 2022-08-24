@@ -18,10 +18,10 @@ return new class extends Migration
             $table->string('name');
             $table->string('country');
             $table->date('date_founded');
-            $table->foreignId('fixture_id');
-            $table->string('league');
-            $table->tinyInteger('points')->default(0);
-            $table->string('manager');
+            $table->string('manager')->nullable();
+            $table->string('team_bio')->nullable();
+
+            $table->string('image');
             $table->timestamps();
         });
     }

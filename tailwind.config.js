@@ -9,6 +9,9 @@ module.exports = {
     ],
     theme: {
         extend: {
+            screens: {
+                xs: '375px',
+              },
             colors: {
                 danger: colors.rose,
                 primary: colors.blue,

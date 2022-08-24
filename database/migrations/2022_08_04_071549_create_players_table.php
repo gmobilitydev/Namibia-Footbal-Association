@@ -15,17 +15,20 @@ return new class extends Migration
     {
         Schema::create('players', function (Blueprint $table) {
             $table->id();
-            $table->string('firstname');
-            $table->string('surname');
-            $table->date('DOB');
-            $table->foreignId('team_id')->nullable()->nullOnDelete();
-            $table->enum('gender',['male', 'female', 'other']);
+            $table->foreignId('team_id')->nullable()->OnDelete('cascade');
+
+            $table->string('first_names');
+            $table->string('last_name');
+            $table->date('dob');
+            $table->string('gender');
 
             $table->string('position');
             $table->string('nationality');
             $table->float('height');
+
+            $table->string('image');
             $table->timestamps();
-        }); 
+        });
     }
 
     /**

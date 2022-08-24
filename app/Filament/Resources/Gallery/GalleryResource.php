@@ -19,6 +19,8 @@ class GalleryResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
+    protected static ?string $navigationGroup = 'Galleries';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -32,8 +34,7 @@ class GalleryResource extends Resource
                             ->columnSpan([
                                 'sm' => 2,
                             ]),
-                        Forms\Components\Select::make('category')
-                            ->searchable()
+                        Forms\Components\TextInput::make('category')
                             ->required(),
 
 
@@ -44,7 +45,7 @@ class GalleryResource extends Resource
                     ->columnSpan([
                         'sm' => 2,
                     ]),
-                Forms\Components\Card::make()
+                    Forms\Components\Card::make()
                     ->schema([
                         Forms\Components\FileUpload::make('image')
                             ->label('Image')

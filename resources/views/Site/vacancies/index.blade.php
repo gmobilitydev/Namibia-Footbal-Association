@@ -32,7 +32,6 @@
 
             <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
 
-
                 @forelse ($vacancyList as $vacancy)
                     <a class="relative block p-8 border border-gray-100 shadow-xl rounded-xl" href="">
                         <span
@@ -58,13 +57,18 @@
 
 
                 @empty
+                    <div class="max-w-screen-xl px-4 py-32 mx-auto lg:h-screen lg:items-center lg:flex">
+                        <div class="max-w-xl mx-auto text-center">
+                            <h1 class="text-3xl font-extrabold sm:text-5xl">
+                                No Bids Available
+                                <strong class="font-extrabold text-yellow-500 sm:block">
+                                    Coming Soon
+                                </strong>
+                            </h1>
 
-                    <h1 class="text-3xl font-extrabold sm:text-5xl">
-                        No Vacancies Available
-                        <strong class="font-extrabold text-yellow-500 sm:block">
-                            Coming Soon
-                        </strong>
-                    </h1>
+
+                        </div>
+                    </div>
                 @endforelse
 
 
