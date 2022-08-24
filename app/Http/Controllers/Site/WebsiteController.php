@@ -24,8 +24,8 @@ class WebsiteController extends Controller
      */
     public function latestPosts(){
         $latestPostList = Post::orderBy('created_at','desc')->limit(5)->get();
-
-        return view('Site.index',['latestPostList'=>$latestPostList]);
+        $competitions = Competition::all();
+        return view('Site.index',compact('latestPostList','competitions'));
     }
 
 /**

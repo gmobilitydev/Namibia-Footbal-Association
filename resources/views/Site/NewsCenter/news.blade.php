@@ -47,6 +47,8 @@
                         </div>
                     </article>
                 @empty
+                    <div class="container px-6 mx-auto"></div>
+
                     <h1 class="text-3xl font-extrabold sm:text-5xl">
                         No Posts Found
                         <strong class="font-extrabold text-yellow-500 sm:block">
@@ -58,7 +60,9 @@
 
 
 
+
             </div>
+
             <div class="container py-6">
                 {{ $latestPostList->onEachSide(5)->links() }}
 

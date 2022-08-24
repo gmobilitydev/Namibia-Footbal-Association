@@ -16,6 +16,9 @@ class Competition extends Model
         'launch_date',
         'status'
     ];
+    protected $casts = [
+        'launch_date' => 'date',
+    ];
 
     public function fixtures(){
         return $this->hasMany(Fixtures::class, 'competition_id');

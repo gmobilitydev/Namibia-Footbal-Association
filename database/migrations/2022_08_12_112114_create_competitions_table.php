@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('image');
             $table->string('content');
-            $table->string('launch_date');
+            $table->dateTime('launch_date');
             $table->boolean('status');
             $table->timestamps();
         });
