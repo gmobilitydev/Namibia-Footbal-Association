@@ -32,7 +32,7 @@
 
         <hr />
 
-        <div class="m-40 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
+        <div class="mx-20 my-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
 
             <a href="#">
                 <div

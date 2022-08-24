@@ -20,7 +20,8 @@ return new class extends Migration
             $table->date('date');
             $table->string('time_played')->nullable();
             $table->foreignId('league_id');
-            $table->foreignId('team_id');
+            $table->foreignId('home_team_id');
+            $table->foreignId('away_team_id');
             $table->tinyInteger('home_score')->default(0)->nullable();
             $table->tinyInteger('away_score')->default(0)->nullable();
 

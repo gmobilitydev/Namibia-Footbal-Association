@@ -51,10 +51,12 @@ Route::get('/gladiators', [WebsiteController::class, 'gladiatorsNews']);
 Route::get('/gladiators/{post}',[WebsiteController::class, 'showGladiatorsPost']);
 
 Route::get('/gladiators-fixtures', function(){
-    return view('Site.Men.fixtures-results');
+    return view('Site.Women.fixtures-results');
 });
-
-Route::get('/gladiators-squads', [WebsiteController::class, 'womensTeams']);
+Route::get('/gladiators-squads', function(){
+    return view('Site.Women.squads');
+});
+// Route::get('/gladiators-squads', [WebsiteController::class, 'womensTeams']);
 
 Route::get('/gladiators-team', [WebsiteController::class, 'showWomensTeams']);
 // ------------------------------------ End of Woomen's/Brave Warriors Routes -------------------------------------

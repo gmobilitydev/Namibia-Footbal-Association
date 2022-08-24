@@ -36,9 +36,9 @@ class Team extends Model
         return $this->belongsToMany(Fixture::class, 'fixture_id');
     }
 
-    // public function players(): HasMany
-    // {
-    //     return $this->hasMany(Player::class, 'player_id');
-    // }
+    public function players(): HasMany
+    {
+        return $this->hasMany(Player::class, 'player_id');
+    }
 
 }
