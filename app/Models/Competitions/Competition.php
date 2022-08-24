@@ -27,7 +27,7 @@ class Competition extends Model
         return $this->belongsToMany(Team::class,'competition_team');
     }
     public function posts(){
-
+        return $this->hasMany(Post::class, 'blog_competition_id');
     }
 
 }

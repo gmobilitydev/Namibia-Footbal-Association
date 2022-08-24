@@ -2,39 +2,69 @@
 
 
 @section('content')
-    <section class="mb-40">
+    <!-- Component Code -->
 
-
-        <div class="relative overflow-hidden bg-no-repeat bg-cover"
-            style="
-            background-position: 50%;
-            background-image: url('{{ asset('storage') }}/{{ $comp->image }}');
-            height: 250px;
-          ">
-            <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
-                style="background-color: rgba(0, 0, 0, 0.75)">
-                <div class="flex justify-center items-center h-full">
-                    <div class="text-center text-white px-6 md:px-12">
-                        <h1 class="text-4xl sm:text-2xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-12">
-                            {{ $comp->name }}
-                        </h1>
-
-                    </div>
+    <header class="competition-banner">
+        <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
+            <div class="sm:justify-between sm:items-center sm:flex">
+                <div class="text-center sm:text-left">
+                    <h1 class="text-2xl font-bold text-white sm:text-3xl">
+                        {{ $comp->name }}
+                    </h1>
                 </div>
+
+
+
             </div>
         </div>
-        <div
-            class="relative px-4 py-3 text-white bg-zinc-900 pr-14 space-x-8 text-sm font-medium text-left sm:text-center w-50">
+    </header>
+    <header class="">
+        <div class="flex items-center justify-between h-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
 
 
-        </div>
-    </section>
+            <div class="flex items-center justify-center flex-1">
+                <nav class=" lg:text-gray-900 lg:tracking-wide lg:font-bold lg:text-xs lg:space-x-4 lg:flex">
+                    <a href="/about"
+                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-yellow-600 hover:border-current">
+                        Home
+                    </a>
 
-    <!-- Section: Design Block -->
+                    <a href="/news"
+                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-yellow-600 hover:border-current">
+                        Matches
+                    </a>
+
+                    <a href="/products"
+                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-yellow-600 hover:border-current">
+                        Standings </a>
+
+                    <a href="/contact"
+                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-yellow-600 hover:border-current">
+                        Teams
+                    </a>
+                </nav>
+
+
+            </div>
+    </header>
 
 
 
-    <div class="container my-24 px-6 mx-auto">
+
+    <div class="relative h-screen w-full flex items-center justify-center text-center bg-cover bg-center"
+        style="background-image:url({{ asset('assets/images/nnc.jpeg') }});">
+
+        <main class="px-4 sm:px-6 lg:px-8 z-10">
+            <div class="text-center">
+                <h2
+                    class="text-4xl tracking-tight leading-10 font-medium sm:text-5xl text-white sm:leading-none md:text-6xl">
+                    <span class="text-white font-bold"></span>
+                </h2>
+                <p class="mt-3 text-white sm:mt-5 sm:text-md sm:max-w-xl sm:mx-auto md:mt-5">
+                </p>
+
+            </div>
+        </main>
 
     </div>
 @endsection

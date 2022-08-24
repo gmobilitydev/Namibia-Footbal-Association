@@ -39,7 +39,7 @@
                             <p class="flex-shrink-0 mt-3 text-sm md:mt-0">{{ $post->category->name }}</p>
                         </div>
                     </div>
-                    <div class="dark:text-gray-900">
+                    <div class="dark:text-gray-600 text-xl">
                         <p>{{ $post->content }}.</p>
                     </div>
                 </article>

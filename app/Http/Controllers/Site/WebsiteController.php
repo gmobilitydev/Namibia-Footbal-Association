@@ -94,10 +94,15 @@ class WebsiteController extends Controller
      */
     public function competitions(){
         $competitions = Competition::all();
+
+
         return view('Site.Competitions.competitions',['competitions'=>$competitions]);
     }
     public function showCompetition(Competition $comp){
-        return view('Site.Competitions.show',['comp'=>$comp]);
+        $postname = $comp->name;
+        $competitionPost = Post::with('category')->where('name',$postname)->get();
+
+        return view('Site.Competitions.show',compact('comp','competitionPost'));
     }
 
     /**

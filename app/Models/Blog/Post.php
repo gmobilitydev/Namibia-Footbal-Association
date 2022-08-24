@@ -3,6 +3,7 @@
 namespace App\Models\Blog;
 
 use App\Models\Comment;
+use App\Models\Competitions\Competition;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -37,9 +38,9 @@ class Post extends Model
         'published_at' => 'date',
     ];
 
-    public function author(): BelongsTo
+    public function competitions(): BelongsTo
     {
-        return $this->belongsTo(Author::class, 'blog_author_id');
+        return $this->belongsTo(Competition::class, 'blog_competion_id');
     }
 
     public function category(): BelongsTo
@@ -51,6 +52,7 @@ class Post extends Model
     {
         return $this->morphMany(Comment::class, 'commentable');
     }
+
 
 
 }
