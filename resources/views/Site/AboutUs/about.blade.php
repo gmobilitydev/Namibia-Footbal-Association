@@ -55,7 +55,7 @@
                                 <h2 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12"
                                     style="color: hsl(0, 0%, 15%)">
                                     Our Mandate</h2>
-                                <p class="text-lg" style="color: hsl(0, 0%, 17%)">The mandate of the Namibia Football
+                                <p class="text-lg text-justify" style="color: hsl(0, 0%, 17%)">The mandate of the Namibia Football
                                     Association [NFA]
                                     is to govern and develop the beautiful game of
                                     football

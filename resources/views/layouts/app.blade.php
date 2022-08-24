@@ -60,7 +60,7 @@
             </nav>
         </div> -->
 
-        <nav class="relative px-auto py-4 bg-white 
+        <nav class="px-auto py-4 bg-white
         items-center justify-center space-x-8 text-sm font-medium lg:flex lg:flex-1 lg:w-0">
 		
 		<div class="lg:hidden">
