@@ -1218,22 +1218,22 @@
         {
             "name": "filament/filament",
             "version": "v2.15.19",
+
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/admin.git",
                 "reference": "b83082d50a3ca4c848acdc4d2e6e6e3a02cde404"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/admin/zipball/b83082d50a3ca4c848acdc4d2e6e6e3a02cde404",
+                "type": "zip"             "url": "https://api.github.com/repos/filamentphp/admin/zipball/b83082d50a3ca4c848acdc4d2e6e6e3a02cde404",
                 "reference": "b83082d50a3ca4c848acdc4d2e6e6e3a02cde404",
+
                 "shasum": ""
             },
             "require": {
                 "danharrin/livewire-rate-limiting": "^0.3|^1.0",
                 "filament/forms": "self.version",
-                "filament/notifications": "self.version",
-                "filament/support": "self.version",
+
                 "filament/tables": "self.version",
                 "illuminate/auth": "^8.6|^9.0",
                 "illuminate/console": "^8.6|^9.0",
@@ -1289,6 +1289,24 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/filamentphp/forms/zipball/79823f5c0025d68d6ba2fde4a030b4ec760765dc",
                 "reference": "79823f5c0025d68d6ba2fde4a030b4ec760765dc",
+                "issues": "https://github.com/laravel-filament/filament/issues",
+                "source": "https://github.com/laravel-filament/filament"
+            },
+            "time": "2022-03-13T13:04:10+00:00"
+        },
+        {
+            "name": "filament/forms",
+            "version": "v2.10.27",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/filamentphp/forms.git",
+                "reference": "208b747075f83865f4628c41f6297e5fbe8d12fc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/filamentphp/forms/zipball/208b747075f83865f4628c41f6297e5fbe8d12fc",
+                "reference": "208b747075f83865f4628c41f6297e5fbe8d12fc",
+
                 "shasum": ""
             },
             "require": {
@@ -1296,6 +1314,7 @@
                 "danharrin/date-format-converter": "^0.2",
                 "filament/notifications": "self.version",
                 "filament/support": "self.version",
+
                 "illuminate/console": "^8.6|^9.0",
                 "illuminate/contracts": "^8.6|^9.0",
                 "illuminate/database": "^8.6|^9.0",
@@ -1383,6 +1402,7 @@
                 "source": "https://github.com/filamentphp/filament"
             },
             "time": "2022-08-08T09:45:06+00:00"
+
         },
         {
             "name": "filament/spatie-laravel-media-library-plugin",
@@ -1563,6 +1583,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/filamentphp/support/zipball/971cd8c11af089bad473700c94b16de58d0eb743",
                 "reference": "971cd8c11af089bad473700c94b16de58d0eb743",
+
                 "shasum": ""
             },
             "require": {
@@ -1586,7 +1607,45 @@
                     "src/helpers.php"
                 ],
                 "psr-4": {
-                    "Filament\\Support\\": "src"
+
+                    "Filament\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Filament support for `spatie/laravel-settings`.",
+            "homepage": "https://github.com/laravel-filament/filament",
+            "support": {
+                "issues": "https://github.com/laravel-filament/filament/issues",
+                "source": "https://github.com/laravel-filament/filament"
+            },
+            "time": "2022-03-13T13:04:01+00:00"
+        },
+        {
+            "name": "filament/spatie-laravel-tags-plugin",
+            "version": "v2.15.19",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/filamentphp/spatie-laravel-tags-plugin.git",
+                "reference": "126b2cb1490d253ffe4231ef96e14a8948e712d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/filamentphp/spatie-laravel-tags-plugin/zipball/126b2cb1490d253ffe4231ef96e14a8948e712d3",
+                "reference": "126b2cb1490d253ffe4231ef96e14a8948e712d3",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^8.6|^9.0",
+                "php": "^8.0",
+                "spatie/laravel-tags": "^4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Filament\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1599,7 +1658,53 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2022-08-16T21:36:34+00:00"
+
+            "time": "2022-08-01T21:24:59+00:00"
+        },
+        {
+            "name": "filament/spatie-laravel-translatable-plugin",
+            "version": "v2.10.27",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/filamentphp/spatie-laravel-translatable-plugin.git",
+                "reference": "423316e3cb5a82eda8116b588bc1a14276515174"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/filamentphp/spatie-laravel-translatable-plugin/zipball/423316e3cb5a82eda8116b588bc1a14276515174",
+                "reference": "423316e3cb5a82eda8116b588bc1a14276515174",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "self.version",
+                "illuminate/support": "^8.6|^9.0",
+                "php": "^8.0",
+                "spatie/laravel-translatable": "^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Filament\\SpatieLaravelTranslatablePluginServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Filament\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Filament support for `spatie/laravel-translatable`.",
+            "homepage": "https://github.com/laravel-filament/filament",
+            "support": {
+                "issues": "https://github.com/laravel-filament/filament/issues",
+                "source": "https://github.com/laravel-filament/filament"
+            },
+            "time": "2022-03-02T00:43:02+00:00"
         },
         {
             "name": "filament/tables",
@@ -1621,6 +1726,7 @@
                 "filament/forms": "self.version",
                 "filament/notifications": "self.version",
                 "filament/support": "self.version",
+
                 "illuminate/console": "^8.6|^9.0",
                 "illuminate/contracts": "^8.6|^9.0",
                 "illuminate/database": "^8.6|^9.0",
@@ -1655,6 +1761,7 @@
                 "source": "https://github.com/filamentphp/filament"
             },
             "time": "2022-08-15T07:54:28+00:00"
+
         },
         {
             "name": "flowframe/laravel-trend",
@@ -6258,27 +6365,29 @@
         },
         {
             "name": "spatie/laravel-translatable",
-            "version": "6.0.0",
+
+            "version": "5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-translatable.git",
-                "reference": "c4c2bef702738f26562b6dc37b66bdac545610e1"
+                "reference": "4567de39c483f7e43dddab9b8cb657796b139fd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-translatable/zipball/c4c2bef702738f26562b6dc37b66bdac545610e1",
-                "reference": "c4c2bef702738f26562b6dc37b66bdac545610e1",
+                "url": "https://api.github.com/repos/spatie/laravel-translatable/zipball/4567de39c483f7e43dddab9b8cb657796b139fd2",
+                "reference": "4567de39c483f7e43dddab9b8cb657796b139fd2",
                 "shasum": ""
             },
             "require": {
-                "illuminate/database": "^9.0",
-                "illuminate/support": "^9.0",
+                "illuminate/database": "^8.0|^9.0",
+                "illuminate/support": "^8.0|^9.0",
                 "php": "^8.0",
-                "spatie/laravel-package-tools": "^1.11"
+                "spatie/laravel-package-tools": "^1.9"
             },
             "require-dev": {
                 "mockery/mockery": "^1.4",
-                "orchestra/testbench": "^7.0"
+                "orchestra/testbench": "^6.23|^7.0"
+ 
             },
             "type": "library",
             "extra": {
@@ -6289,6 +6398,7 @@
                 },
                 "aliases": {
                     "Translatable": "Spatie\\Translatable\\Facades\\Translatable"
+
                 }
             },
             "autoload": {
@@ -6312,6 +6422,12 @@
                     "email": "sebastian@spatie.be",
                     "homepage": "https://spatie.be",
                     "role": "Developer"
+
+                },
+                {
+                    "name": "Mohamed Said",
+                    "email": "theMohamedSaid@gmail.com",
+                    "role": "Original idea"
                 }
             ],
             "description": "A trait to make an Eloquent model hold translations",
@@ -6336,6 +6452,15 @@
                 }
             ],
             "time": "2022-03-07T13:50:51+00:00"
+                "source": "https://github.com/spatie/laravel-translatable/tree/5.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                }
+            ],
+            "time": "2022-01-13T11:15:07+00:00"
         },
         {
             "name": "spatie/temporary-directory",
@@ -9322,6 +9447,7 @@
             },
             "abandoned": "symfony/html-sanitizer",
             "time": "2021-09-14T08:27:50+00:00"
+
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
