@@ -3,11 +3,11 @@
 
 @section('content')
     <!-- Component Code -->
-
     <header class="competition-banner">
         <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
             <div class="sm:justify-between sm:items-center sm:flex">
                 <div class="text-center sm:text-left">
+                    <img src="{{ asset('storage') }}/{{ $comp->badge }}" />
                     <h1 class="text-2xl font-bold text-white sm:text-3xl">
                         {{ $comp->name }}
                     </h1>
