@@ -9,6 +9,8 @@ use App\Models\Blog\Post;
 use App\Models\Gallery\Gallery;
 use App\Models\Vacancies\Vacancy;
 use App\Models\Documents\Documents;
+use App\Models\Documents\DocCategory;
+
 use App\Models\Competitions\Competition;
 use App\Models\Organisation\Committee;
 
@@ -43,7 +45,9 @@ class WebsiteController extends Controller
      */
     public function documents(){
         $documentlist = Documents::all();
-        return view('Site.AboutUs.docs',['documentlist'=>$documentlist]);
+        $categories = DocCategory::with('document')->get();
+
+        return view('Site.AboutUs.docs',compact('documentlist', 'categories'));
 
     }
     /**
@@ -93,11 +97,14 @@ class WebsiteController extends Controller
      * Competitions Module
      */
     public function competitions(){
-        $competitions = Competition::all();
+        $competitions = Competition::with('posts')->get();
+
+
         return view('Site.Competitions.competitions',['competitions'=>$competitions]);
     }
     public function showCompetition(Competition $comp){
-        return view('Site.Competitions.show',['comp'=>$comp]);
+
+        return view('Site.Competitions.show',compact('comp'));
     }
 
     /**

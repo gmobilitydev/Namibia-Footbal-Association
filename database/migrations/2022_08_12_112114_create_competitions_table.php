@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('image');
+            $table->string('badge');
             $table->string('content');
             $table->dateTime('launch_date');
             $table->boolean('status');

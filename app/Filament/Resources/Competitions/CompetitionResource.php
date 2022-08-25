@@ -53,6 +53,12 @@ class CompetitionResource extends Resource
                  ->schema([
                      Forms\Components\FileUpload::make('image')
                          ->label('Image')
+                         ->directory('Competitions/Competition-Image')
+
+                         ->image(),
+                         Forms\Components\FileUpload::make('badge')
+                         ->label('Competition Badge')
+                         ->directory('Competitions/Competition-Badges')
                          ->image(),
                          Forms\Components\MultiSelect::make('teams')
                          ->relationship('teams', 'name'),

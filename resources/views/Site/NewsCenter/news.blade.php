@@ -39,7 +39,7 @@
                             <a rel="noopener noreferrer" href="#"
                                 aria-label="Te nulla oportere reprimique his dolorum"></a>
                             <a rel="noopener noreferrer" href="#"
-                                class="text-xs tracking-wider uppercase hover:underline dark:text-slate-900">{{ $post->category->name }}</a>
+                                class="text-xs tracking-wider uppercase hover:underline dark:text-slate-900"></a>
                             <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">{{ $post->title }}</h3>
                             <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-400">
                                 <span>{{ $post->published_at->format('m/d/y') }}</span>

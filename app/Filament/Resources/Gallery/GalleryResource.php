@@ -49,6 +49,8 @@ class GalleryResource extends Resource
                     ->schema([
                         Forms\Components\FileUpload::make('image')
                             ->label('Image')
+                            ->directory('Gallery')
+
                             ->image(),
 
 

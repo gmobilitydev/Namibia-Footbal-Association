@@ -15,6 +15,13 @@ class Documents extends Model
         'title',
         'description',
         'category',
+        'category_id',
         'file'
     ];
+
+    public function category(){
+        return $this->belongsTo(DocCategory::class,'category_id');
+    }
+
+
 }

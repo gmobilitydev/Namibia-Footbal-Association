@@ -183,8 +183,6 @@
                                     class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b dark:via-transparent dark:from-gray-900 dark:to-gray-900">
                                 </div>
                                 <div class="absolute top-0 left-0 right-0 flex items-center justify-between mx-5 mt-3">
-                                    <a rel="noopener noreferrer" href="#"
-                                        class="px-3 py-2 text-xs font-semibold tracking-wider uppercase dark:text-gray-100 bgundefined">Politics</a>
                                     <div class="flex flex-col justify-start text-center dark:text-gray-100">
                                         <span
                                             class="text-3xl font-semibold leading-none tracking-wide">{{ $competition->launch_date->format('d') }}</span>
