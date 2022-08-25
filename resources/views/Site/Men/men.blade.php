@@ -26,7 +26,7 @@
     <div>
 
         <!-- Section: Design Block -->
-        <section class="mb-40 background-radial-gradient">
+        <section class="mb-0 background-radial-gradient">
             <style>
                 .background-radial-gradient {
                     background-color: hsl(218, 41%, 15%);
@@ -54,7 +54,7 @@
                                     style="color: hsl(218, 81%, 75%);">For Namibia</span></h1>
 
                         </div>
-                        <div class="mb-12 lg:mb-0">
+                        <div class="mb-1 lg:mb-0">
                             <img src="{{ asset('assets/images/JoslinKamatuka.jpg') }}"
                                 class="w-full rounded-lg shadow-lg hover:scale-110 transition duration-300 ease-in-out"
                                 alt="" />
@@ -62,7 +62,7 @@
                     </div>
                 </div>
             </div>
-            <section class="mb-40 background-radial-gradient-2">
+            <section class="py-40 background-radial-gradient-2">
                 <style>
                     .background-radial-gradient-2 {
                         background-color: hsl(0, 0%, 100%);
