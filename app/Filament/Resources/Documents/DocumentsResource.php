@@ -80,6 +80,10 @@ class DocumentsResource extends Resource
         return $table
             ->columns([
                 //
+                Tables\Columns\TextColumn::make('id'),
+                Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\TextColumn::make('category.name'),
+
             ])
             ->filters([
                 //

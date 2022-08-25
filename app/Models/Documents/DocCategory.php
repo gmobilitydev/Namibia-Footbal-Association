@@ -15,6 +15,6 @@ class DocCategory extends Model
     ];
 
     public function document(){
-        return $this->hasMany(Document::class,'category_id');
+        return $this->hasMany(Documents::class,'category_id');
     }
 }

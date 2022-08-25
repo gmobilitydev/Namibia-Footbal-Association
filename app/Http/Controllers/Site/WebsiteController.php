@@ -9,6 +9,8 @@ use App\Models\Blog\Post;
 use App\Models\Gallery\Gallery;
 use App\Models\Vacancies\Vacancy;
 use App\Models\Documents\Documents;
+use App\Models\Documents\DocCategory;
+
 use App\Models\Competitions\Competition;
 use App\Models\Organisation\Committee;
 
@@ -43,7 +45,9 @@ class WebsiteController extends Controller
      */
     public function documents(){
         $documentlist = Documents::all();
-        return view('Site.AboutUs.docs',['documentlist'=>$documentlist]);
+        $categories = DocCategory::with('document')->get();
+
+        return view('Site.AboutUs.docs',compact('documentlist', 'categories'));
 
     }
     /**

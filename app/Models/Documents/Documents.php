@@ -15,6 +15,7 @@ class Documents extends Model
         'title',
         'description',
         'category',
+        'category_id',
         'file'
     ];
 
