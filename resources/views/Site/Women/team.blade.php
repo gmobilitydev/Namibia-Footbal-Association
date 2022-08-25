@@ -8,7 +8,7 @@
             <a class="text-white" href="{{ url('/gladiators-squads') }}">Squads</a>
         </div>
 
-        <header class="bg-sky-900">
+        <header class="bg-red-800">
             <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
                 <div class="sm:justify-between sm:items-center sm:flex">
                     <div class="text-center sm:text-center">

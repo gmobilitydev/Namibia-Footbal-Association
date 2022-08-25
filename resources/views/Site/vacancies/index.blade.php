@@ -33,7 +33,7 @@
             <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
 
                 @forelse ($vacancyList as $vacancy)
-                    <a class="relative block p-8 border border-gray-100 shadow-xl rounded-xl" href="">
+                    <button id="btnOpen" class="openModal relative block p-8 border border-gray-100 shadow-xl rounded-xl">
                         <span
                             class="absolute right-4 top-4 rounded-full px-3 py-1.5 bg-green-100 text-green-600 font-medium text-xs">
                             @if ($vacancy->status != '1')
@@ -53,7 +53,7 @@
                                 <i>Closing on</i> {{ $vacancy->end_date }}
                             </p>
                         </div>
-                    </a>
+                    </button>
 
 
                 @empty
@@ -74,5 +74,43 @@
 
             </div>
         </div>
+
+        <div id="myModal" class="absolute m-auto p-4 border border-black w-48">
+            <div class="flex flex-row">
+                <h1>Modal Content</h1>
+                <button class="closeModal ml-auto my-auto">X</button>
+            </div>
+        </div>
     </section>
+
+    <!-- <script>
+        let open = document.getElementsByClassName("btnOpen");
+        let close = document.getElementsByClassName("close");
+        var modal = document.getElementById("myModal");
+
+        open.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        close.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script> -->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.openModal').on('click', function(e){
+                $('#interestModal').removeClass('invisible');
+            });
+            $('.closeModal').on('click', function(e){
+                $('#interestModal').addClass('invisible');
+            });
+        });
+    </script>
 @endsection

@@ -100,9 +100,9 @@
                     </a>
                     @else
                     <!-- <div class="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"> -->
-                    <div class="flex justify-center flex-row">
+                    <div class="flex justify-center flex-col md:flex-row">
                             <a rel="noopener noreferrer" href="./warriors/ {{ $post->id }}"
-                                class="relative mx-2 overflow-hidden bg-no-repeat bg-cover max-w-xs max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-white">
+                                class="w-full relative mx-2 overflow-hidden bg-no-repeat bg-cover max-w-xs max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-white">
                                 <img role="presentation"
                                     class="object-cover w-full rounded h-44 dark:bg-white  hover:scale-110 transition duration-300 ease-in-out"
                                     src="{{ asset('storage') }}/{{ $post->image }}">
@@ -113,6 +113,7 @@
 
                                 </div>
                             </a>
+                    
                     <!-- </div> -->
                     @endif
 

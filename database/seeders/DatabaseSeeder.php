@@ -96,6 +96,8 @@ class DatabaseSeeder extends Seeder
       Vacancy::factory(10)->create();
       $this->command->info('Vacancy data added');
 
+    //Player
+
 
     }
 }
