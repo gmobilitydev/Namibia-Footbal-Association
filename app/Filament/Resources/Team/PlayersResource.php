@@ -63,6 +63,8 @@ class PlayersResource extends Resource
                 ->schema([
                     Forms\Components\FileUpload::make('image')
                         ->label('Image')
+                        ->directory('Team/Players')
+
                         ->image(),
 
 

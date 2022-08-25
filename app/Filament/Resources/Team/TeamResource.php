@@ -53,6 +53,8 @@ class TeamResource extends Resource
                     ->schema([
                         Forms\Components\FileUpload::make('image')
                             ->label('Team Badge')
+                            ->directory('Team/Team-Badges')
+
                             ->image(),
 
 

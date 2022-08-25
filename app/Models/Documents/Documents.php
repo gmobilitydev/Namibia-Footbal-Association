@@ -17,4 +17,10 @@ class Documents extends Model
         'category',
         'file'
     ];
+
+    public function category(){
+        return $this->belongsTo(DocCategory::class,'category_id');
+    }
+
+
 }

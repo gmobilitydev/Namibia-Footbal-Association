@@ -28,7 +28,7 @@ class Post extends Model
         'published_at',
         'seo_title',
         'seo_description',
-        'image'
+        'image',
     ];
 
     /**
@@ -40,7 +40,7 @@ class Post extends Model
 
     public function competitions(): BelongsTo
     {
-        return $this->belongsTo(Competition::class, 'blog_competion_id');
+        return $this->belongsTo(Competition::class, 'blog_competition_id');
     }
 
     public function category(): BelongsTo

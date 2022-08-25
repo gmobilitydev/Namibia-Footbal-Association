@@ -222,6 +222,8 @@ class ProductResource extends Resource
         return [
             Tables\Columns\SpatieMediaLibraryImageColumn::make('product-image')
                 ->label('Image')
+                ->directory('Shop/Product-Images')
+
                 ->collection('product-images'),
 
             Tables\Columns\TextColumn::make('name')

@@ -5,6 +5,7 @@ namespace App\Models\Competitions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Team\Team;
+use App\Models\Blog\Post;
 class Competition extends Model
 {
     use HasFactory;
@@ -14,7 +15,9 @@ class Competition extends Model
         'image',
         'content',
         'launch_date',
-        'status'
+        'status',
+        'badge',
+
     ];
     protected $casts = [
         'launch_date' => 'date',
