@@ -12,7 +12,14 @@ class Team extends Model
     use HasFactory;
 
     protected $table = 'teams';
-    protected $fillable = ['name'];
+    protected $fillable = [
+        'name',
+        'country',
+        'date_founded',
+        'manager',
+        'team_bio',
+        'image'
+];
 
 
 
