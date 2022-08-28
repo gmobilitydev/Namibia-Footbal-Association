@@ -99,3 +99,4 @@ Route::get('/store', [ShopController::class,'maintenance']);
  */
 Route::get('/about',[WebsiteController::class, 'aboutUs']);
 Route::get('/org', [WebsiteController::class,'organisation']);
+Route::get('/org/member/{member}',[WebsiteController::class, 'showMember']);

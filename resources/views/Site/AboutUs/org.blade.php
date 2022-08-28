@@ -20,8 +20,9 @@
 
 
                 </span>
-                @forelse ($committeeList as $committee)
-                    <div class="flex flex-col mt-8">
+                <div class="flex flex-col mt-8">
+
+                    @forelse ($committeeList as $committee)
                         <!-- Meet the Team -->
                         <div class="container max-w-7xl px-4">
                             <!-- Section Header -->
@@ -38,14 +39,15 @@
                                     </p>
                                 </div>
                             </div>
-                            @foreach ($committee->member as $member)
-                                <!-- Team Members -->
-                                <div class="flex flex-wrap">
+                            <div class="flex flex-wrap">
+
+                                @foreach ($committee->member as $member)
+                                    <!-- Team Members -->
                                     <!-- Member #1 -->
                                     <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
                                         <div class="flex flex-col">
                                             <!-- Avatar -->
-                                            <a href="#" class="mx-auto">
+                                            <a href="./org/member/{{ $member->id }}" class="mx-auto">
                                                 <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
                                                     src="{{ asset('storage') }}/{{ $member->image }}">
                                             </a>
@@ -66,7 +68,9 @@
                                             </div>
                                         </div>
                                     </div>
-                            @endforeach
+                                @endforeach
+                            </div>
+
 
 
 
@@ -74,10 +78,11 @@
 
 
                         </div>
-                    </div>
+
+                    @empty
+                    @endforelse
+                </div>
             </div>
-        @empty
-            @endforelse
 
         </div>
         </div>
