@@ -46,6 +46,8 @@ Route::get('competitions/{comp}',[WebsiteController::class,'showCompetition']);
 Route::get('competitions/{comp}/matches',[WebsiteController::class, 'competitionMatches']);
 Route::get('competitions/{comp}/standings',[WebsiteController::class, 'competitionStandings']);
 Route::get('competitions/{comp}/teams',[WebsiteController::class, 'competitionTeams']);
+Route::get('competitions/{comp}/docs',[WebsiteController::class, 'competitionDocs']);
+
 
 
 

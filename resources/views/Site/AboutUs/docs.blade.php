@@ -26,6 +26,7 @@
                 <h2 class="text-3xl font-bold sm:text-4xl">Our Official Documents</h2>
             </div>
 
+
             <section class="pt-10">
                 <div x-data="{
                     openTab: {{ $categories->first()->id }},
@@ -33,18 +34,17 @@
                     inactiveClasses: 'text-xl p-4 -mb-px border-b border-transparent hover:text-amber-500',
                 }" class="w-10/12 mb-14 mx-auto items-center">
                     <div class="flex flex-col md:flex-row text-sm font-medium border-b border-gray-100">
-                        @foreach ($categories as $category)
+                        @forelse ($categories as $category)
                             <a href="javascript:void(0)" @click="openTab = {{ $category->id }}"
                                 :class="openTab === {{ $category->id }} ? activeClasses : inactiveClasses">
                                 {{ $category->name }}
                             </a>
-                        @endforeach
-
+                        @empty
+                            <p>no categories found</p>
+                        @endforelse
                     </div>
 
-
-                    <!-- component -->
-                    @foreach ($categories as $category)
+                    @forelse ($categories as $category)
                         <div
                             class="bg-white flex flex-col py-1 mx-2 bg-white flex items-center justify-center mx-auto mt-10">
                             <div x-show="openTab === {{ $category->id }}" style="display: none;"
@@ -149,7 +149,20 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+
+                    @empty
+                        <div class="max-w-screen-xl px-4 py-32 mx-auto lg:h-screen lg:items-center lg:flex">
+                            <div class="max-w-xl mx-auto text-center">
+                                <h1 class="text-3xl font-extrabold sm:text-5xl">
+                                    No Documents Available
+                                    <strong class="font-extrabold text-yellow-500 sm:block">
+                                        Coming Soon
+                                    </strong>
+                                </h1>
+                            </div>
+                        </div>
+                    @endforelse
+
                 </div>
 
 

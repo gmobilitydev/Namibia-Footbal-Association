@@ -116,6 +116,9 @@ class WebsiteController extends Controller
     public function competitionTeams(Competition $comp){
         return view('Site.Competitions.teams',compact('comp'));
     }
+    public function competitionDocs(Competition $comp){
+        return view('Site.Competitions.docs',compact('comp'));
+    }
 
     /**
      *

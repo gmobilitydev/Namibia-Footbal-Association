@@ -8,20 +8,30 @@
 
         <section class="mb-32 text-gray-800 text-center lg:text-left background-radial-gradient">
             <div class="relative overflow-hidden bg-no-repeat bg-cover"
-                style="background-position: 50%; background-image: url({{ asset('storage') }}/{{ $comp->posts->first()->image }}); height: 500px;">
+                style="background-position: 50%; background-image: url({{ asset('storage') }}/{{ $comp->image }}); height: 500px;">
                 <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
-                    style="background-color: rgba(0, 0, 0, 0.75)">
-                    <div class="flex justify-center items-center h-full">
-                        <div class="text-bottom text-white px-6 py-6 md:py-0 md:px-12 max-w-[800px]">
-                            <h2 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight leading-tight mb-12">
-                                {{ $comp->posts->first()->title }}
-                            </h2>
-                        </div>
-                    </div>
+                    style="background-color: rgba(0, 0, 0, 0.26)">
+
                 </div>
             </div>
+            <header class="bg-yellow-300">
+                <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
+                    <div class="justify-between items-center flex">
+                        <div class="text-center sm:text-center">
+                            <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">
+                                <div class="wrap-countdown mercado-countdown"
+                                    data-expire="{{ $comp->launch_date->format('Y/m/d h:i:s') }}">
+                                </div>
+                            </h1>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
 
             <section class="overflow-hidden text-gray-700">
+
 
 
 
@@ -68,7 +78,12 @@
                         </div>
                 </section>
 
+
+
             </section>
         </section>
+
+
     </div>
+    <script src="{{ asset('js/jquery.countdown.min.js') }}"></script>
 @endsection

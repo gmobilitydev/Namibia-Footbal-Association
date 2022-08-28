@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Team\Team;
 use App\Models\Blog\Post;
+use App\Models\Documents\Documents;
 class Competition extends Model
 {
     use HasFactory;
@@ -34,6 +35,9 @@ class Competition extends Model
     }
     public function groups(){
         return $this->hasMany(Group::class,'competition_id');
+    }
+    public function documents(){
+        return $this->hasMany(Documents::class,'document_id');
     }
 
 }

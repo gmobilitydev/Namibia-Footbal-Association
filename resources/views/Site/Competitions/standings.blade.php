@@ -15,10 +15,10 @@
                 @forelse ($group->teams as $key=>$team)
                     <div class="flex items-center border-b">
                         <h1>{{ ++$key }}</h1>
-                        <img class="object-contain md:object-scale-down h-20 m-3"
+                        <img class="object-contain md:object-scale-down h-20 p-5 m-3"
                             src="{{ asset('storage') }}/{{ $team->image }}">
                         <a href="#">
-                            <h1 class="text-lg font-bold text-gray-900 sm:text-3xl">
+                            <h1 class="text-sm font-bold text-gray-900 ">
                                 {{ $team->name }}
                             </h1>
                         </a>

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
@@ -213,22 +215,26 @@
             <div class="flex items-center justify-center flex-1">
                 <nav class=" lg:text-gray-900 lg:tracking-wide lg:font-bold lg:text-xs lg:space-x-4 lg:flex">
                     <a href="{{ url('/competitions') }}/{{ $comp->id }}"
-                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-yellow-600 hover:border-current">
+                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-amber-400 hover:border-current">
                         Home
                     </a>
 
                     <a href="{{ url('/competitions/') }}/{{ $comp->id }}/{{ 'matches' }}"
-                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-yellow-600 hover:border-current">
+                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-amber-400 hover:border-current">
                         Matches
                     </a>
 
                     <a href="{{ url('/competitions/') }}/{{ $comp->id }}/{{ 'standings' }}"
-                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-yellow-600 hover:border-current">
+                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-amber-400 hover:border-current">
                         Standings </a>
 
                     <a href="{{ url('/competitions/') }}/{{ $comp->id }}/{{ 'teams' }}"
-                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-yellow-600 hover:border-current">
+                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-amber-400 hover:border-current">
                         Teams
+                    </a>
+                    <a href="{{ url('/competitions/') }}/{{ $comp->id }}/{{ 'docs' }}"
+                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-amber-400 hover:border-current">
+                        Documents
                     </a>
                 </nav>
 

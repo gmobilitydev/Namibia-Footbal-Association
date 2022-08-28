@@ -57,6 +57,8 @@ class DocumentsResource extends Resource
                  ->directory('official-documents'),
                  Forms\Components\Select::make('category')
                  ->relationship('category', 'name'),
+                 Forms\Components\Select::make('competition_id')
+                 ->relationship('competitions', 'name'),
 
 
 
