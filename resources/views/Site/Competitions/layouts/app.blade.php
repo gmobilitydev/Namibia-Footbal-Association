@@ -196,8 +196,8 @@
     <header class="competition-banner">
         <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
             <div class="flex items-center">
-                <div class="text-center ">
-                    <img src="{{ asset('storage') }}/{{ $comp->badge }}" />
+                <div class="text-center w-24">
+                    <img src="{{ asset('storage') }}/{{ $comp->badge }} " />
                 </div>
                 <div class="px-6">
                     <h1 class="text-2xl font-bold text-white sm:text-3xl">

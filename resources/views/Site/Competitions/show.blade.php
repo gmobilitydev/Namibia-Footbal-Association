@@ -8,7 +8,7 @@
 
         <section class="mb-32 text-gray-800 text-center lg:text-left background-radial-gradient">
             <div class="relative overflow-hidden bg-no-repeat bg-cover"
-                style="background-position: 50%; background-image: url({{ asset('storage') }}/{{ $comp->image }}); height: 500px;">
+                style=" background-image: url({{ asset('storage') }}/{{ $comp->image }}); height: 500px;">
 
             </div>
             <header class="bg-gradient-to-b from-orange-400 to-yellow-300">

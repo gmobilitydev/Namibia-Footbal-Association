@@ -29,13 +29,13 @@
                             <div class="flex flex-wrap justify-center text-center mb-24">
                                 <div class="w-full lg:w-6/12 px-4">
                                     <!-- Header -->
-                                    <h1 class="text-gray-900 text-4xl font-bold mb-8">
+                                    <h1 class="text-gray-900 text-4xl font-bold mb-8 border-b py-6">
                                         {{ $committee->name }}
                                     </h1>
 
                                     <!-- Description -->
                                     <p class="text-gray-700 text-lg font-light">
-                                        {{ $committee->description }}
+                                        {{ Str::limit($committee->description, 65) }}
                                     </p>
                                 </div>
                             </div>
