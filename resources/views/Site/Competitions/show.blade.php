@@ -14,18 +14,43 @@
 
                 </div>
             </div>
-            <header class="bg-yellow-300">
+            <header class="competition-banner">
                 <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
-                    <div class="justify-between items-center flex">
-                        <div class="text-center sm:text-center">
-                            <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">
-                                <div class="wrap-countdown mercado-countdown"
-                                    data-expire="{{ $comp->launch_date->format('Y/m/d h:i:s') }}">
-                                </div>
-                            </h1>
-                        </div>
+                    <div class="grid justify-items-center">
+                        <div class="justify-between items-center flex">
+                            <div class="text-center sm:text-center">
+                                <h1 class="text-2xl text-white sm:text-3xl">
+                                    <div class="wrap-countdown mercado-countdown"
+                                        data-expire="{{ $comp->launch_date->format('Y/m/d h:i:s') }}">
+                                    </div>
 
+
+                                </h1>
+                                <div class="flex items-center text-white">
+                                    <div class="container px-2  ">
+                                        <h2 class="text-sm font-bold text-center">Days</h2>
+
+                                    </div>
+                                    <div class="container  px-2  ">
+                                        <h2 class="text-sm font-bold  text-center">Hours</h2>
+
+                                    </div>
+                                    <div class="container  px-2  ">
+                                        <h2 class="text-sm font-bold text-center">Mins</h2>
+
+                                    </div>
+                                    <div class="container  px-2 bprder-r">
+                                        <h2 class="text-sm font-bold text-center">Secs</h2>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
+
                 </div>
             </header>
 

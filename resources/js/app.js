@@ -14,7 +14,7 @@ import './bootstrap';
                     var _this = $(this),
                         _expire = _this.data('expire');
                     _this.countdown(_expire, function (event) {
-                        $(this).html(event.strftime('<span><b>%D</b> : </span> <span><b>%-H</b> </span>: <span><b>%M</b> :</span> <span><b>%S</b> </span>  '));
+                        $(this).html(event.strftime('<span><b>%D</b></span> | <span><b>%-H</b> </span> |  <span><b>%M</b> </span> | <span><b>%S</b> </span> <br>'));
                     });
                 });
             }
