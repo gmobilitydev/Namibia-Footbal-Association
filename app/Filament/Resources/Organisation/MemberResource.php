@@ -62,6 +62,8 @@ class MemberResource extends Resource
                         ->schema([
                             Forms\Components\FileUpload::make('image')
                                 ->label('Image')
+                                ->directory('Organisation/Members')
+
                                 ->image(),
 
                             ])

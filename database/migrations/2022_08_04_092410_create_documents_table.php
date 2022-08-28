@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('documents', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id')->nullable()->onDelete('cascade');
+            $table->foreignId('document_id')->nullable()->onDelete('cascade');
             $table->string('title');
             $table->string('description');
             $table->string('category');

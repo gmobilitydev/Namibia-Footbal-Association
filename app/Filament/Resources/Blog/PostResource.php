@@ -47,13 +47,11 @@ class PostResource extends Resource
                             ->columnSpan([
                                 'sm' => 2,
                             ]),
-                        Forms\Components\Select::make('blog_author_id')
-                            ->relationship('author', 'name')
-                            ->searchable()
+                            Forms\Components\Select::make('blog_competition_id')
+                            ->relationship('competitions', 'name')
                             ->required(),
                         Forms\Components\Select::make('blog_category_id')
                             ->relationship('category', 'name')
-                            ->searchable()
                             ->required(),
                         Forms\Components\DatePicker::make('published_at')
                             ->label('Published Date'),
@@ -69,6 +67,8 @@ class PostResource extends Resource
                     ->schema([
                         Forms\Components\FileUpload::make('image')
                             ->label('Image')
+                            ->directory('Posts')
+
                             ->image(),
 
                         Forms\Components\Placeholder::make('created_at')

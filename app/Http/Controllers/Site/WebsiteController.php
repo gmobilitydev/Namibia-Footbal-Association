@@ -9,8 +9,13 @@ use App\Models\Blog\Post;
 use App\Models\Gallery\Gallery;
 use App\Models\Vacancies\Vacancy;
 use App\Models\Documents\Documents;
+use App\Models\Documents\DocCategory;
+
 use App\Models\Competitions\Competition;
+
+use App\Models\Organisation\Member;
 use App\Models\Organisation\Committee;
+use App\Models\Organisation\About;
 
 use App\Models\Team\Player;
 use App\Models\Team\Team;
@@ -43,7 +48,9 @@ class WebsiteController extends Controller
      */
     public function documents(){
         $documentlist = Documents::all();
-        return view('Site.AboutUs.docs',['documentlist'=>$documentlist]);
+        $categories = DocCategory::with('document')->get();
+
+        return view('Site.AboutUs.docs',compact('documentlist', 'categories'));
 
     }
     /**
@@ -93,11 +100,27 @@ class WebsiteController extends Controller
      * Competitions Module
      */
     public function competitions(){
-        $competitions = Competition::all();
+        $competitions = Competition::with('posts')->get();
+
+
         return view('Site.Competitions.competitions',['competitions'=>$competitions]);
     }
     public function showCompetition(Competition $comp){
-        return view('Site.Competitions.show',['comp'=>$comp]);
+
+        return view('Site.Competitions.show',compact('comp'));
+    }
+    public function competitionMatches(Competition $comp){
+
+        return view('Site.Competitions.matches',compact('comp'));
+    }
+    public function competitionStandings(Competition $comp){
+        return view('Site.Competitions.standings',compact('comp'));
+    }
+    public function competitionTeams(Competition $comp){
+        return view('Site.Competitions.teams',compact('comp'));
+    }
+    public function competitionDocs(Competition $comp){
+        return view('Site.Competitions.docs',compact('comp'));
     }
 
     /**
@@ -119,9 +142,12 @@ class WebsiteController extends Controller
         return view('Site.AboutUs.org',['committeeList'=>$committeeList]);
     }
     public function aboutUs(){
-        return view('Site.AboutUs.about');
+        $about = About::first();
+        return view('Site.AboutUs.about' ,compact('about'));
     }
-
+    public function showMember(Member $member){
+        return view('Site.AboutUs.members.profile',compact('member'));
+    }
     public function showMensTeam(Team $team){
         return view('Site.Men.team', ['team'=>$team]);
     }
