@@ -26,7 +26,7 @@
     <div>
 
         <!-- Section: Design Block -->
-        <section class="mb-40 background-radial-gradient">
+        <section class="mb-0 background-radial-gradient">
             <style>
                 .background-radial-gradient {
                     background-color: hsl(218, 41%, 15%);
@@ -54,7 +54,7 @@
                                     style="color: hsl(218, 81%, 75%);">For Namibia</span></h1>
 
                         </div>
-                        <div class="mb-12 lg:mb-0">
+                        <div class="mb-1 lg:mb-0">
                             <img src="{{ asset('assets/images/JoslinKamatuka.jpg') }}"
                                 class="w-full rounded-lg shadow-lg hover:scale-110 transition duration-300 ease-in-out"
                                 alt="" />
@@ -62,7 +62,7 @@
                     </div>
                 </div>
             </div>
-            <section class="background-radial-gradient-2">
+            <section class="py-40 background-radial-gradient-2">
                 <style>
                     .background-radial-gradient-2 {
                         background-color: hsl(0, 0%, 100%);
@@ -118,12 +118,23 @@
                     @endif
 
                     @empty
-                    <h1 class="text-3xl font-extrabold sm:text-5xl">
-                        No Posts Found
-                        <strong class="font-extrabold text-yellow-500 sm:block">
-                            Stay Posted
-                        </strong>
-                    </h1>
+                    
+
+                    <!-- <div class="flex items-center justify-center h-full py-40 bg-gray-200"> -->
+                    <div class="container">
+                        <div class="bg-white rounded-lg shadow-lg p-5 md:p-20 mx-2">
+                            <div class="text-center">
+                                <h2
+                                    class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
+                                        <span class="text-yellow-500"> No Posts Found </span>
+                                </h2>
+                                <h3 class='text-xl md:text-3xl mt-10'>Stay Posted</h3>
+
+                            </div>
+
+                        </div>
+                    </div>
+                            <!-- </div> -->
                     @endforelse
 
                     </div>

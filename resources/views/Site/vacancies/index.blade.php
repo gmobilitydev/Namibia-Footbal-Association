@@ -33,7 +33,7 @@
             <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
 
                 @forelse ($vacancyList as $vacancy)
-                    <button id="btnOpen" class="openModal relative block p-8 border border-gray-100 shadow-xl rounded-xl">
+                    <div class=" relative block p-8 border border-gray-100 shadow-xl rounded-xl">
                         <span
                             class="absolute right-4 top-4 rounded-full px-3 py-1.5 bg-green-100 text-green-600 font-medium text-xs">
                             @if ($vacancy->status != '1')
@@ -46,14 +46,13 @@
 
                         <div class="mt-4 text-gray-500 sm:pr-8">
 
-
-                            <h5 class="mt-4 text-xl font-bold text-gray-900"> {{ $vacancy->job_title }}</h5>
+                            <h5 id="modal-open" class="openModal hover:text-amber-400 hover:cursor-pointer mt-4 text-xl font-bold text-gray-900"> {{ $vacancy->job_title }}</h5>
 
                             <p class="hidden mt-2 text-sm sm:block">
                                 <i>Closing on</i> {{ $vacancy->end_date }}
                             </p>
                         </div>
-                    </button>
+                    </div>
 
 
                 @empty
@@ -73,44 +72,48 @@
 
 
             </div>
+
+            <!-- Modal overlay -->
+            <div id="overlay" class="bg-black absolute inset-0 bg-opacity-50 hidden justify-center items-center"> 
+                <!-- modal content -->
+                <div class="bg-gray-200 rounded py-3 px-4">
+                    <!-- Modal header -->
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-lg font-bold px-1">{{ $vacancy->job_title }}</h4>
+                        <svg id="modal-close" class="hover:cursor-pointer hover:bg-gray-300 p-1 rounded-full w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </div>
+                    <!-- modal content -->
+                    <div class="py-3 px-4">
+                        <div class="flex justify-center items-center">
+                            <p class="text-sm text-gray-400"><i>Starting on </i>{{ $vacancy->start_date }} and <i>Closing on </i>{{ $vacancy->end_date }}</p>
+                        </div>
+                        <p class="text-md text-gray-600 mt-2">{{ $vacancy->job_description }}</p>
+                    </div>
+
+                    
+                </div>
+            </div> 
         </div>
 
-        <div id="myModal" class="absolute m-auto p-4 border border-black w-48">
-            <div class="flex flex-row">
-                <h1>Modal Content</h1>
-                <button class="closeModal ml-auto my-auto">X</button>
-            </div>
-        </div>
+        
     </section>
 
-    <!-- <script>
-        let open = document.getElementsByClassName("btnOpen");
-        let close = document.getElementsByClassName("close");
-        var modal = document.getElementById("myModal");
+    
 
-        open.onclick = function() {
-            modal.style.display = "block";
-        }
+    <script>
+       window.addEventListener('DOMContentLoaded', () =>{
+            const overlay = document.querySelector('#overlay')
+            const vacancies = document.querySelectorAll('.openModal')
+            const closeBtn = document.querySelector('#modal-close')
 
-        close.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+            const toggleModal = () => {
+                overlay.classList.toggle('hidden')
+                overlay.classList.toggle('flex')
             }
-        }
-    </script> -->
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.openModal').on('click', function(e){
-                $('#interestModal').removeClass('invisible');
-            });
-            $('.closeModal').on('click', function(e){
-                $('#interestModal').addClass('invisible');
-            });
-        });
+            // overlay.addEventListener('click', toggleModal)
+            vacancies.forEach(vacancy => vacancy.addEventListener('click', toggleModal))
+            closeBtn.addEventListener('click', toggleModal)
+       })
     </script>
 @endsection
