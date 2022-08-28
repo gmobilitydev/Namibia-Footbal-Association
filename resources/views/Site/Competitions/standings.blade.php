@@ -33,8 +33,8 @@
             </div>
 
         @empty
-            <div class="text-center sm:text-left">
-                <h1 class="text-lg font-bold text-gray-900 sm:text-3xl border-b">
+            <div class="text-center">
+                <h1 class="text-xs text-gray-900 sm:text-3xl border-b py-6">
                     No groups found
                 </h1>
             </div>

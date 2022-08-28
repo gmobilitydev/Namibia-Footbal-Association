@@ -4,7 +4,7 @@
 @section('content')
     <div class="container px-6 mx-auto mb-40">
 
-        <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+        <div class="overflow-x-auto relative ">
 
             <div class="grid overflow-hidden grid-cols-3 gap-2 m-20 sm:grid-cols-2">
 
@@ -27,13 +27,16 @@
 
 
                 @empty
-                    <td class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap">
-                        No teams found
-                    </td>
-                @endforelse
-
             </div>
+            <div class="text-center">
+                <h1 class="text-xs text-gray-900 sm:text-3xl border-b py-6">
+                    No teams found
+                </h1>
+            </div>
+            @endforelse
+
         </div>
+    </div>
 
     </div>
 @endsection
