@@ -1,71 +1,74 @@
-@extends('layouts.app')
+@extends('Site.Competitions.layouts.app')
 
 
 @section('content')
-    <!-- Component Code -->
-    <header class="competition-banner">
-        <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
-            <div class="sm:justify-between sm:items-center sm:flex">
-                <div class="text-center sm:text-left">
-                    <img src="{{ asset('storage') }}/{{ $comp->badge }}" />
-                    <h1 class="text-2xl font-bold text-white sm:text-3xl">
-                        {{ $comp->name }}
-                    </h1>
+    <div class="container px-6 mx-auto">
+
+        <!-- Section: Design Block -->
+
+        <section class="mb-32 text-gray-800 text-center lg:text-left background-radial-gradient">
+            <div class="relative overflow-hidden bg-no-repeat bg-cover"
+                style="background-position: 50%; background-image: url({{ asset('storage') }}/{{ $comp->posts->first()->image }}); height: 500px;">
+                <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+                    style="background-color: rgba(0, 0, 0, 0.75)">
+                    <div class="flex justify-center items-center h-full">
+                        <div class="text-bottom text-white px-6 py-6 md:py-0 md:px-12 max-w-[800px]">
+                            <h2 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight leading-tight mb-12">
+                                {{ $comp->posts->first()->title }}
+                            </h2>
+                        </div>
+                    </div>
                 </div>
-
-
-
             </div>
-        </div>
-    </header>
-    <header class="">
-        <div class="flex items-center justify-between h-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
 
-
-            <div class="flex items-center justify-center flex-1">
-                <nav class=" lg:text-gray-900 lg:tracking-wide lg:font-bold lg:text-xs lg:space-x-4 lg:flex">
-                    <a href="/about"
-                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-yellow-600 hover:border-current">
-                        Home
-                    </a>
-
-                    <a href="/news"
-                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-yellow-600 hover:border-current">
-                        Matches
-                    </a>
-
-                    <a href="/products"
-                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-yellow-600 hover:border-current">
-                        Standings </a>
-
-                    <a href="/contact"
-                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-yellow-600 hover:border-current">
-                        Teams
-                    </a>
-                </nav>
-
-
-            </div>
-    </header>
+            <section class="overflow-hidden text-gray-700">
 
 
 
+                <!-- Gallery Lightbox -->
+                <!-- component -->
+                <section class="text-gray-600 body-font">
+                    <div class="container px-5 py-0 mx-auto">
+                        <h2 class="text-3xl font-bold mb-12 py-4 text-center">Latest News</h2>
+                        <div class="grid lg:grid-cols-4 gap-2">
+                            @forelse ($comp->posts as $post)
+                                <article class="flex flex-col dark:bg-gray-200">
+                                    <a rel="noopener noreferrer" href="./news/{{ $post->id }}"
+                                        aria-label="Te nulla oportere reprimique his dolorum">
+                                        <img alt="" class="object-cover w-full h-52 dark:bg-gray-500"
+                                            src="{{ asset('storage') }}/{{ $post->image }}">
+                                    </a>
+                                    <div class="flex flex-col flex-1 p-6">
+                                        <a rel="noopener noreferrer" href="#"
+                                            aria-label="Te nulla oportere reprimique his dolorum"></a>
+                                        <a rel="noopener noreferrer" href="#"
+                                            class="text-xs tracking-wider uppercase hover:underline dark:text-slate-900"></a>
+                                        <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">{{ $post->title }}</h3>
+                                        <div
+                                            class="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-400">
+                                            <span>{{ $post->published_at->format('m/d/y') }}</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            @empty
+                                <div class="container px-6 mx-auto"></div>
 
-    <div class="relative h-screen w-full flex items-center justify-center text-center bg-cover bg-center"
-        style="background-image:url({{ asset('assets/images/nnc.jpeg') }});">
-
-        <main class="px-4 sm:px-6 lg:px-8 z-10">
-            <div class="text-center">
-                <h2
-                    class="text-4xl tracking-tight leading-10 font-medium sm:text-5xl text-white sm:leading-none md:text-6xl">
-                    <span class="text-white font-bold"></span>
-                </h2>
-                <p class="mt-3 text-white sm:mt-5 sm:text-md sm:max-w-xl sm:mx-auto md:mt-5">
-                </p>
-
-            </div>
-        </main>
+                                <h1 class="text-3xl font-extrabold sm:text-5xl">
+                                    No Posts Found
+                                    <strong class="font-extrabold text-yellow-500 sm:block">
+                                        Stay Posted
+                                    </strong>
+                                </h1>
+                            @endforelse
 
 
+
+
+
+                        </div>
+                </section>
+
+            </section>
+        </section>
     </div>
 @endsection

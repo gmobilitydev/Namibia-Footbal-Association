@@ -43,6 +43,11 @@ Route::get('/warriors-squads/{team}', [WebsiteController::class, 'showMensTeam']
 //------------------------------------Competitions Routes--------------------------------------------------
 Route::get('/competitions', [WebsiteController::class, 'competitions']);
 Route::get('competitions/{comp}',[WebsiteController::class,'showCompetition']);
+Route::get('competitions/{comp}/matches',[WebsiteController::class, 'competitionMatches']);
+Route::get('competitions/{comp}/standings',[WebsiteController::class, 'competitionStandings']);
+Route::get('competitions/{comp}/teams',[WebsiteController::class, 'competitionTeams']);
+
+
 
 //---------------------------------------- Women's/Brave Warriors Routes ----------------------------------------
 
