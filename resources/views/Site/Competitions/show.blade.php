@@ -122,3 +122,4 @@
     </div>
     <script src="{{ asset('js/jquery.countdown.min.js') }}"></script>
 @endsection
+
