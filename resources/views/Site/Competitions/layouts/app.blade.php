@@ -193,7 +193,7 @@
         });
     </script>
     <!-- Component Code -->
-    <header class="bg-gradient-to-b from-orange-500 to-yellow-300">
+    <header class="competition-banner">
         <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
             <div class="flex items-center">
                 <div class="text-center ">

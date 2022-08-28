@@ -11,11 +11,11 @@
                 style="background-position: 50%; background-image: url({{ asset('storage') }}/{{ $comp->image }}); height: 500px;">
 
             </div>
-            <header class="bg-gradient-to-b from-orange-500 to-yellow-300">
+            <header class="bg-gradient-to-b from-orange-400 to-yellow-300">
                 <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
                     <div class="grid justify-items-center">
                         <h1 class="font-bold text-white sm:text-3xl">
-                            Tournament Starts In:
+                            {{ $comp->name }} Starts In:
 
 
                         </h1>
