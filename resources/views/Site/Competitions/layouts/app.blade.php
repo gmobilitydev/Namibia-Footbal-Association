@@ -143,7 +143,7 @@
                     </div>
                     <div class="mt-auto">
                         <p class="my-4 text-xs text-center text-gray-400">
-                            <span>Copyright © 2021</span>
+                            <span>Copyright © 2022</span>
                         </p>
                     </div>
                 </nav>
@@ -193,11 +193,13 @@
         });
     </script>
     <!-- Component Code -->
-    <header class="competition-banner">
+    <header class="bg-gradient-to-b from-orange-500 to-yellow-300">
         <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
-            <div class="sm:justify-between sm:items-center sm:flex">
-                <div class="text-center sm:text-left">
+            <div class="flex items-center">
+                <div class="text-center ">
                     <img src="{{ asset('storage') }}/{{ $comp->badge }}" />
+                </div>
+                <div class="px-6">
                     <h1 class="text-2xl font-bold text-white sm:text-3xl">
                         {{ $comp->name }}
                     </h1>

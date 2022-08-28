@@ -2,21 +2,23 @@
 
 
 @section('content')
-    <div class="container px-6 mx-auto">
+    <div class="w-screen">
 
         <!-- Section: Design Block -->
 
         <section class="mb-32 text-gray-800 text-center lg:text-left background-radial-gradient">
             <div class="relative overflow-hidden bg-no-repeat bg-cover"
                 style="background-position: 50%; background-image: url({{ asset('storage') }}/{{ $comp->image }}); height: 500px;">
-                <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
-                    style="background-color: rgba(0, 0, 0, 0.26)">
 
-                </div>
             </div>
-            <header class="competition-banner">
+            <header class="bg-gradient-to-b from-orange-500 to-yellow-300">
                 <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
                     <div class="grid justify-items-center">
+                        <h1 class="font-bold text-white sm:text-3xl">
+                            Tournament Starts In:
+
+
+                        </h1>
                         <div class="justify-between items-center flex">
                             <div class="text-center sm:text-center">
                                 <h1 class="text-2xl text-white sm:text-3xl">
@@ -86,21 +88,29 @@
                                     </div>
                                 </article>
                             @empty
-                                <div class="container px-6 mx-auto"></div>
-
-                                <h1 class="text-3xl font-extrabold sm:text-5xl">
-                                    No Posts Found
-                                    <strong class="font-extrabold text-yellow-500 sm:block">
-                                        Stay Posted
-                                    </strong>
-                                </h1>
-                            @endforelse
-
-
-
-
-
                         </div>
+                        <div class="flex items-center justify-center">
+                            <div class="container">
+                                <div class="bg-white rounded-lg shadow-lg p-5 md:p-20 mx-2">
+                                    <div class="text-center">
+                                        <h2
+                                            class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
+                                            No<span class="text-yellow-500">Posts</span>
+                                        </h2>
+                                        <h3 class='text-xl md:text-3xl mt-10'>Found</h3>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        @endforelse
+
+
+
+
+
+                    </div>
                 </section>
 
 
