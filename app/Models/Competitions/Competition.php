@@ -32,5 +32,8 @@ class Competition extends Model
     public function posts(){
         return $this->hasMany(Post::class, 'blog_competition_id');
     }
+    public function groups(){
+        return $this->hasMany(Group::class,'competition_id');
+    }
 
 }

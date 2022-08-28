@@ -40,37 +40,29 @@
                         @foreach ($comp->fixtures as $fixture)
                             <a href="#" class="group">
                                 <div
-                                    class="bg-white flex flex-col md:flex-row border border-gray-200 shadow-md group-hover:shadow-amber-400 group-hover:scale-105 rounded-md my-4 py-4 px-6">
+                                    class="bg-white flex flex-col md:flex-row border border-gray-200 shadow-md group-hover:shadow-amber-400 group-hover:scale-105 rounded-md my-4 px-6">
                                     <!-- Match details name, date, type -->
-                                    <div class="my-2 md:m-auto w-full md:w-1/5">
-                                        <p class="font-bold text-lg">{{ $fixture->date }}</p>
+                                    <div class="flex items-center">
+                                        <img class="object-contain md:object-scale-down h-6 m-3"
+                                            src="{{ asset('storage') }}/{{ $fixture->home->image }}">
+                                        <a href="#">
+                                            <h1 class="text-sm font-bold text-gray-900 ">
+                                                {{ $fixture->home->name }}
+                                            </h1>
+                                        </a>
+                                        <div class="px-3 m-6 bg-amber-400 text-white font-bold shadow">
+                                            {{ $fixture->date->format('H:i') }}
+                                        </div>
+                                        <img class="object-contain md:object-scale-down h-6 m-3"
+                                            src="{{ asset('storage') }}/{{ $fixture->away->image }}">
+                                        <a href="#">
+                                            <h1 class="text-sm font-bold text-gray-900 ">
+                                                {{ $fixture->away->name }}
+                                            </h1>
+                                        </a>
                                     </div>
 
-                                    <!-- Fixture Center Teams and Time -->
-                                    <div class="flex flex-row mx-auto w-96">
-                                        <div class="text-center m-auto">
-                                            <img class="h-10 mx-auto"
-                                                src="{{ asset('storage') }}/{{ $fixture->home->image }}">
-                                            <p class="mt-2 text-xl font-bold">{{ $fixture->home->name }}</p>
-                                        </div>
-                                        <div class="m-auto">
-                                            <p class="m-auto text-xl">{{ $fixture->date }}</p>
-                                            <p class="m-auto text-5xl">vs</p>
-                                        </div>
-                                        <div class="text-center m-auto">
-                                            <img class="h-10 mx-auto"
-                                                src="{{ asset('storage') }}/{{ $fixture->away->image }}">
-                                            <p class="mt-2 text-xl font-bold">{{ $fixture->away->name }}</p>
-                                        </div>
-                                    </div>
 
-                                    <!-- Button for more info -->
-                                    <div class="flex flex-row h-1/2 my-auto">
-                                        <button
-                                            class="bg-amber-400 hover:bg-amber-500 text-white font-bold py-2 px-2 mx-auto my-4 md:mx-2 rounded ">Match
-                                            Info</button>
-                                        <!-- <button class="bg-amber-400 hover:bg-amber-500 text-white font-bold py-2 px-2 rounded">Buy Tickets</button> -->
-                                    </div>
                                 </div>
                             </a>
                         @endforeach

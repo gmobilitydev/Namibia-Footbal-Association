@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Competitions\Competition;
 use App\Models\Competitions\Fixtures;
+use App\Models\Competitions\Group;
 
 class Team extends Model
 {
@@ -42,6 +43,9 @@ class Team extends Model
     public function awayFixtures(){
         return $this->hasMany(Fixtures::class,'away_team');
     }
+    public function groups(){
+        return $this->belongsToMany(Group::class,'team_groups');
 
+    }
 
 }

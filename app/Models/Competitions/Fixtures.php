@@ -19,7 +19,9 @@ class Fixtures extends Model
         'home_result',
         'away_result'
     ];
-
+    protected $casts = [
+        'date' => 'datetime',
+    ];
     public function competitions(){
         return $this->belongsTo(Competition::class, 'competition_id');
     }

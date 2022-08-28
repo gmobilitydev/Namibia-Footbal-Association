@@ -6,11 +6,11 @@
 
         <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
 
-            <div class="grid overflow-hidden grid-cols-3 grid-rows-2 gap-2 m-20">
+            <div class="grid overflow-hidden grid-cols-3 gap-2 m-20 sm:grid-cols-2">
 
                 @forelse ($comp->teams as $team)
                     <div class="sm:justify-between sm:items-center sm:flex">
-                        <div class="text-center sm:text-left flex items-center border-b">
+                        <div class="flex items-center border-b">
 
                             <img class="object-contain md:object-scale-down h-20 m-3"
                                 src="{{ asset('storage') }}/{{ $team->image }}">
