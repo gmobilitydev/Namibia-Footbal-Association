@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
+use App\Models\Utilities\Partners;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -24,5 +24,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        view()->composer('layouts/app', function ($view) {
+            $partners=Partners::all();
+            $view->with('partners', $partners);
+        });
     }
 }

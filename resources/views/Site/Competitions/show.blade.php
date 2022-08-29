@@ -70,7 +70,7 @@
                         <div class="grid lg:grid-cols-4 gap-2">
                             @forelse ($comp->posts as $post)
                                 <article class="flex flex-col dark:bg-gray-200">
-                                    <a rel="noopener noreferrer" href="./news/{{ $post->id }}"
+                                    <a rel="noopener noreferrer" href="{{ url('/news') }}/{{ $post->id }}"
                                         aria-label="Te nulla oportere reprimique his dolorum">
                                         <img alt="" class="object-cover w-full h-52 dark:bg-gray-500"
                                             src="{{ asset('storage') }}/{{ $post->image }}">
@@ -122,4 +122,3 @@
     </div>
     <script src="{{ asset('js/jquery.countdown.min.js') }}"></script>
 @endsection
-
