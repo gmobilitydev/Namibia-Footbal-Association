@@ -20,7 +20,10 @@ use App\Models\Organisation\About;
 use App\Models\Team\Player;
 use App\Models\Team\Team;
 use App\Models\Competitions\Fixtures;
+use App\Models\Utilities\Highlight;
+
 use Illuminate\Support\Facades\DB;
+
 
 class WebsiteController extends Controller
 {
@@ -30,7 +33,8 @@ class WebsiteController extends Controller
     public function latestPosts(){
         $latestPostList = Post::orderBy('created_at','desc')->limit(5)->get();
         $competitions = Competition::all();
-        return view('Site.index',compact('latestPostList','competitions'));
+        $highlight = Highlight::first();
+        return view('Site.index',compact('latestPostList','competitions','highlight'));
     }
 
 /**
