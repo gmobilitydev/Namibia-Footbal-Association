@@ -152,7 +152,7 @@
                                     style="padding-top: 56.25%">
                                     <iframe
                                         class="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 w-full h-full"
-                                        src="{{ isset($highlight->link) }}" title="YouTube video player" frameborder="0"
+                                        src="{{ $highlight->link }}" title="YouTube video player" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen></iframe>
                                 </div>
