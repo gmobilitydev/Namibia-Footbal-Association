@@ -56,7 +56,7 @@
                                             class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 flex flex-row">
                                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                class="h-12" viewBox="0 0 303.188 303.188"
+                                                class="h-12 py-auto" viewBox="0 0 303.188 303.188"
                                                 style="enable-background:new 0 0 303.188 303.188;" xml:space="preserve">
                                                 <g>
                                                     <polygon style="fill:#E8E8E8;"

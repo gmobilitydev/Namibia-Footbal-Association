@@ -8,17 +8,14 @@
         <!-- Section: Design Block -->
 
         <section class="mb-32 text-gray-800 text-center lg:text-left background-radial-gradient">
-            <div class="relative overflow-hidden bg-no-repeat bg-cover"
-                style=" background-image: url({{ asset('storage') }}/{{ $comp->image }}); height: 500px;">
-
+            <div class="relative overflow-hidden bg-no-repeat bg-cover bg-center"
+                style="background-image: url({{ asset('storage') }}/{{ $comp->image }}); height: 500px;">
             </div>
             <header class="bg-gradient-to-b from-orange-400 to-yellow-300">
                 <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
                     <div class="grid justify-items-center">
                         <h1 class="font-bold text-white sm:text-3xl">
                             {{ $comp->name }} Starts In:
-
-
                         </h1>
                         <div class="justify-between items-center flex">
                             <div class="text-center sm:text-center">
@@ -26,31 +23,22 @@
                                     <div class="wrap-countdown mercado-countdown"
                                         data-expire="{{ $comp->launch_date->format('Y/m/d h:i:s') }}">
                                     </div>
-
-
                                 </h1>
                                 <div class="flex items-center text-white">
-                                    <div class="container px-2  ">
+                                    <div class="container px-2">
                                         <h2 class="text-sm font-bold text-center">Days</h2>
-
                                     </div>
-                                    <div class="container  px-2  ">
+                                    <div class="container px-2">
                                         <h2 class="text-sm font-bold  text-center">Hours</h2>
-
                                     </div>
-                                    <div class="container  px-2  ">
+                                    <div class="container px-2">
                                         <h2 class="text-sm font-bold text-center">Mins</h2>
-
                                     </div>
-                                    <div class="container  px-2 bprder-r">
+                                    <div class="container px-2 border-r">
                                         <h2 class="text-sm font-bold text-center">Secs</h2>
-
                                     </div>
-
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
 

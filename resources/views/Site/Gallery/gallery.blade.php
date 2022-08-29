@@ -46,7 +46,7 @@
             </div>
 
             <section class="overflow-hidden text-gray-700">
-                <div class="container px-5 mx-auto lg:pt-24 lg:px-24">
+                <div class="container px-5 mx-auto pt-12 lg:pt-24 lg:px-24">
                     <h2 class="text-center text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-24"
                         style="color: hsl(0, 0%, 15%)">
                         Gallery
@@ -59,7 +59,7 @@
                 <!-- component -->
                 <section class="text-gray-600 body-font">
                     <div class="container px-5 py-0 mx-auto">
-                        
+
                         <div class="flex flex-wrap -m-4">
                             @forelse ($images as $image)
                                 <div class="lg:w-1/3 sm:w-1/2 p-4">

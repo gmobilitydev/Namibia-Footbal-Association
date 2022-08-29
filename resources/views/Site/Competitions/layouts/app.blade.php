@@ -215,7 +215,7 @@
 
 
             <div class="flex items-center justify-center flex-1">
-                <nav class=" lg:text-gray-900 lg:tracking-wide lg:font-bold lg:text-xs lg:space-x-4 lg:flex">
+                <nav class=" lg:text-gray-900 lg:tracking-wide font-bold text-xs space-x-2 lg:space-x-4 flex">
                     <a href="{{ url('/competitions') }}/{{ $comp->id }}"
                         class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-amber-400 hover:border-current">
                         Home

@@ -2,7 +2,7 @@
 
 
 @section('content')
-    <div class="relative px-4 py-3 text-white bg-zinc-900 pr-14 space-x-8 text-sm font-medium text-left sm:text-center w-50">
+    <div class="relative px-4 py-3 text-white bg-zinc-900 pr-14 space-x-4 md:space-x-8 text-sm font-medium text-left sm:text-center w-50">
         <a class="text-white" href="{{ url('/warriors') }}">Home</a>
         <a class="text-white" href="{{ url('/warriors-fixtures') }}">Fixtures & Results</a>
         <a class="text-white" href="{{ url('/warriors-squads') }}">Squads</a>
@@ -113,12 +113,12 @@
 
                                 </div>
                             </a>
-                    
+
                     <!-- </div> -->
                     @endif
 
                     @empty
-                    
+
 
                     <!-- <div class="flex items-center justify-center h-full py-40 bg-gray-200"> -->
                     <div class="container">

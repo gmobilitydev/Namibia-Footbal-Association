@@ -2,7 +2,7 @@
 
 
 @section('content')
-    <div class="relative px-4 py-3 text-white bg-zinc-900 pr-14 space-x-8 text-sm font-medium text-left sm:text-center w-50">
+    <div class="relative px-4 py-3 text-white bg-zinc-900 pr-14 space-x-4 md:space-x-8 text-sm font-medium text-left sm:text-center w-50">
         <a class="text-white" href="{{ url('/gladiators') }}">Home</a>
         <a class="text-white" href="{{ url('/gladiators-fixtures') }}">Fixtures & Results</a>
         <a class="text-white" href="{{ url('/gladiators-squads') }}">Squads</a>

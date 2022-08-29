@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="contents-center">
-        <div class="relative px-4 py-3 text-white bg-zinc-900 pr-14 space-x-8 text-sm font-medium text-left sm:text-center w-50">
+        <div class="relative px-4 py-3 text-white bg-zinc-900 pr-14 space-x-4 md:space-x-8 text-sm font-medium text-left sm:text-center w-50">
             <a class="text-white" href="{{ url('/gladiators') }}">Home</a>
             <a class="text-white" href="{{ url('/gladiators-fixtures') }}">Fixtures & Results</a>
             <a class="text-white" href="{{ url('/gladiators-squads') }}">Squads</a>
@@ -23,8 +23,8 @@
 
         <!-- accordian -->
         <!-- component -->
-        <!-- This is an example component --> 
-        
+        <!-- This is an example component -->
+
         <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-10 ml-20 mt-10" style="color:black">
             Group Stage Teams <br />
         </h1>
@@ -125,6 +125,6 @@
 
 
         </div>
-       
+
     </div>
 @endsection

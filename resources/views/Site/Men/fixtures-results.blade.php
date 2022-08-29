@@ -3,7 +3,7 @@
 @section('content')
     <div>
         <div
-            class="relative px-4 py-3 text-white bg-zinc-900 pr-14 space-x-8 text-sm font-medium text-left sm:text-center w-50">
+            class="relative px-auto py-3 text-white bg-zinc-900 pr-14 space-x-8 text-sm font-medium text-left text-center w-50">
             <a class="text-white" href="{{ url('/warriors') }}">Home</a>
             <a class="text-white" href="{{ url('/warriors-fixtures') }}">Fixtures & Results</a>
             <a class="text-white" href="{{ url('/warriors-squads') }}">Squads</a>
@@ -36,7 +36,7 @@
                 <!-- component -->
                 <!-- <div class="mx-auto bg-gray-700 h-screen flex items-center justify-center px-1"> -->
                 <div class="py-5 mx-auto bg-gray-700 flex items-center justify-center px-1">
-                    <div class="flex flex-col w-full bg-white rounded shadow-lg sm:w-3/4 md:w-3/5 lg:1/2">
+                    <div class="flex flex-col w-full bg-white rounded shadow-lg w-3/4 md:w-3/5 lg:1/2">
 
                         <!-- Event Image -->
                         <!-- <div class="w-full h-64 bg-top bg-cover rounded-t" style="background-image: url(https://www.si.com/.image/t_share/MTY4MTkyMjczODM4OTc0ODQ5/cfp-trophy-deitschjpg.jpg)"></div> -->
@@ -102,8 +102,8 @@
                     <!-- component -->
                     <div class="bg-white flex flex-col py-1 mx-2 bg-white flex items-center justify-center mx-auto mt-10">
                         <!-- fixture table -->
-                        <div x-show="openTab === 1" style="display: none;" class="w-full  flex flex-col p-4 mx-5">
-                            <h2 class="text-5xl font-bold text-center pb-2">
+                        <div x-show="openTab === 1" style="display: none;" class="flex flex-col p-4">
+                            <h2 class="text-3xl md:text-5xl font-bold text-center pb-2">
                                 FIXTURES
                             </h2>
 
@@ -112,8 +112,8 @@
                                     <div class="bg-white rounded-lg shadow-lg p-5 md:p-20 mx-2">
                                         <div class="text-center">
                                             <h2
-                                                class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
-                                                Brave Warriors <span class="text-yellow-500"> Fixtures </span>
+                                                class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 text-xl sm:text-2xl md:text-5xl sm:leading-none lg:text-6xl">
+                                                Brave Warriors <span class="text-yellow-500"> Fixtures</span>
                                             </h2>
                                             <h3 class='text-xl md:text-3xl mt-10'>No Fixtures Available</h3>
 
@@ -122,14 +122,12 @@
                                     </div>
                                 </div>
                             <!-- </div> -->
-
-
                         </div>
 
 
                         <!-- results table -->
                         <div x-show="openTab === 2" style="display: none;" class="flex flex-col p-4">
-                            <h2 class="text-5xl font-bold text-center pb-2">
+                            <h2 class="text-3xl md:text-5xl font-bold text-center pb-2">
                                 RESULTS
                             </h2>
 
@@ -138,7 +136,7 @@
                                     <div class="bg-white rounded-lg shadow-lg p-5 md:p-20 mx-2">
                                         <div class="text-center">
                                             <h2
-                                                class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
+                                                class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 text-xl sm:text-2xl md:text-5xl sm:leading-none lg:text-6xl">
                                                 Brave Warriors <span class="text-yellow-500"> Results</span>
                                             </h2>
                                             <h3 class='text-xl md:text-3xl mt-10'>No Results Available</h3>
