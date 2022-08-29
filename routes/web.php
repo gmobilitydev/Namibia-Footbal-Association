@@ -43,6 +43,13 @@ Route::get('/warriors-squads/{team}', [WebsiteController::class, 'showMensTeam']
 //------------------------------------Competitions Routes--------------------------------------------------
 Route::get('/competitions', [WebsiteController::class, 'competitions']);
 Route::get('competitions/{comp}',[WebsiteController::class,'showCompetition']);
+Route::get('competitions/{comp}/matches',[WebsiteController::class, 'competitionMatches']);
+Route::get('competitions/{comp}/standings',[WebsiteController::class, 'competitionStandings']);
+Route::get('competitions/{comp}/teams',[WebsiteController::class, 'competitionTeams']);
+Route::get('competitions/{comp}/docs',[WebsiteController::class, 'competitionDocs']);
+
+
+
 
 //---------------------------------------- Women's/Brave Warriors Routes ----------------------------------------
 
@@ -92,3 +99,4 @@ Route::get('/store', [ShopController::class,'maintenance']);
  */
 Route::get('/about',[WebsiteController::class, 'aboutUs']);
 Route::get('/org', [WebsiteController::class,'organisation']);
+Route::get('/org/member/{member}',[WebsiteController::class, 'showMember']);

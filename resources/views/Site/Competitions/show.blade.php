@@ -1,71 +1,126 @@
-@extends('layouts.app')
+
+@extends('Site.Competitions.layouts.app')
 
 
 @section('content')
-    <!-- Component Code -->
-    <header class="competition-banner">
-        <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
-            <div class="sm:justify-between sm:items-center sm:flex">
-                <div class="text-center sm:text-left">
-                    <img src="{{ asset('storage') }}/{{ $comp->badge }}" />
-                    <h1 class="text-2xl font-bold text-white sm:text-3xl">
-                        {{ $comp->name }}
-                    </h1>
+    <div class="w-screen">
+
+        <!-- Section: Design Block -->
+
+        <section class="mb-32 text-gray-800 text-center lg:text-left background-radial-gradient">
+            <div class="relative overflow-hidden bg-no-repeat bg-cover"
+                style=" background-image: url({{ asset('storage') }}/{{ $comp->image }}); height: 500px;">
+
+            </div>
+            <header class="bg-gradient-to-b from-orange-400 to-yellow-300">
+                <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
+                    <div class="grid justify-items-center">
+                        <h1 class="font-bold text-white sm:text-3xl">
+                            {{ $comp->name }} Starts In:
+
+
+                        </h1>
+                        <div class="justify-between items-center flex">
+                            <div class="text-center sm:text-center">
+                                <h1 class="text-2xl text-white sm:text-3xl">
+                                    <div class="wrap-countdown mercado-countdown"
+                                        data-expire="{{ $comp->launch_date->format('Y/m/d h:i:s') }}">
+                                    </div>
+
+
+                                </h1>
+                                <div class="flex items-center text-white">
+                                    <div class="container px-2  ">
+                                        <h2 class="text-sm font-bold text-center">Days</h2>
+
+                                    </div>
+                                    <div class="container  px-2  ">
+                                        <h2 class="text-sm font-bold  text-center">Hours</h2>
+
+                                    </div>
+                                    <div class="container  px-2  ">
+                                        <h2 class="text-sm font-bold text-center">Mins</h2>
+
+                                    </div>
+                                    <div class="container  px-2 bprder-r">
+                                        <h2 class="text-sm font-bold text-center">Secs</h2>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
+            </header>
 
 
-
-            </div>
-        </div>
-    </header>
-    <header class="">
-        <div class="flex items-center justify-between h-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
-
-
-            <div class="flex items-center justify-center flex-1">
-                <nav class=" lg:text-gray-900 lg:tracking-wide lg:font-bold lg:text-xs lg:space-x-4 lg:flex">
-                    <a href="/about"
-                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-yellow-600 hover:border-current">
-                        Home
-                    </a>
-
-                    <a href="/news"
-                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-yellow-600 hover:border-current">
-                        Matches
-                    </a>
-
-                    <a href="/products"
-                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-yellow-600 hover:border-current">
-                        Standings </a>
-
-                    <a href="/contact"
-                        class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-yellow-600 hover:border-current">
-                        Teams
-                    </a>
-                </nav>
-
-
-            </div>
-    </header>
+            <section class="overflow-hidden text-gray-700">
 
 
 
 
-    <div class="relative h-screen w-full flex items-center justify-center text-center bg-cover bg-center"
-        style="background-image:url({{ asset('assets/images/nnc.jpeg') }});">
+                <!-- Gallery Lightbox -->
+                <!-- component -->
+                <section class="text-gray-600 body-font">
+                    <div class="container px-5 py-0 mx-auto">
+                        <h2 class="text-3xl font-bold mb-12 py-4 text-center">Latest News</h2>
+                        <div class="grid lg:grid-cols-4 gap-2">
+                            @forelse ($comp->posts as $post)
+                                <article class="flex flex-col dark:bg-gray-200">
+                                    <a rel="noopener noreferrer" href="./news/{{ $post->id }}"
+                                        aria-label="Te nulla oportere reprimique his dolorum">
+                                        <img alt="" class="object-cover w-full h-52 dark:bg-gray-500"
+                                            src="{{ asset('storage') }}/{{ $post->image }}">
+                                    </a>
+                                    <div class="flex flex-col flex-1 p-6">
+                                        <a rel="noopener noreferrer" href="#"
+                                            aria-label="Te nulla oportere reprimique his dolorum"></a>
+                                        <a rel="noopener noreferrer" href="#"
+                                            class="text-xs tracking-wider uppercase hover:underline dark:text-slate-900"></a>
+                                        <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">{{ $post->title }}</h3>
+                                        <div
+                                            class="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-400">
+                                            <span>{{ $post->published_at->format('m/d/y') }}</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            @empty
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <div class="container">
+                                <div class="bg-white rounded-lg shadow-lg p-5 md:p-20 mx-2">
+                                    <div class="text-center">
+                                        <h2
+                                            class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
+                                            No<span class="text-yellow-500">Posts</span>
+                                        </h2>
+                                        <h3 class='text-xl md:text-3xl mt-10'>Found</h3>
 
-        <main class="px-4 sm:px-6 lg:px-8 z-10">
-            <div class="text-center">
-                <h2
-                    class="text-4xl tracking-tight leading-10 font-medium sm:text-5xl text-white sm:leading-none md:text-6xl">
-                    <span class="text-white font-bold"></span>
-                </h2>
-                <p class="mt-3 text-white sm:mt-5 sm:text-md sm:max-w-xl sm:mx-auto md:mt-5">
-                </p>
+                                    </div>
 
-            </div>
-        </main>
+                                </div>
+                            </div>
+                        </div>
+                        @endforelse
+
+
+
+
+
+                    </div>
+                </section>
+
+
+
+            </section>
+        </section>
 
 
     </div>
+    <script src="{{ asset('js/jquery.countdown.min.js') }}"></script>
 @endsection
+

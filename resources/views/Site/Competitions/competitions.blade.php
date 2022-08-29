@@ -70,7 +70,7 @@
                                 <div class="relative p-8 pt-40 text-white bg-black bg-opacity-40">
                                     <h5 class="text-2xl font-bold">{{ $comp->name }}</h5>
 
-                                    <p class="text-sm">Competition Date</p>
+                                    <p class="text-sm">{{ $comp->launch_date->format('d M Y') }}</p>
                                 </div>
                             </a>
 

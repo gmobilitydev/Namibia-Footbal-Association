@@ -5,24 +5,32 @@ namespace App\Models\Team;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Competitions\Competition;
+use App\Models\Competitions\Fixtures;
+use App\Models\Competitions\Group;
 
 class Team extends Model
 {
     use HasFactory;
 
     protected $table = 'teams';
-
     protected $fillable = [
-        'image',
         'name',
         'country',
         'date_founded',
-        'manager'
+        'manager',
+        'team_bio',
+        'image'
+];
 
+
+
+    protected $casts = [
+        'date_founded' => 'date',
     ];
+
     public function player()
     {
-        return $this->hasMany(Player::class,'team_id');
+        return $this->hasMany(Players::class,'team_id');
     }
 
     public function competitions(){
@@ -35,6 +43,9 @@ class Team extends Model
     public function awayFixtures(){
         return $this->hasMany(Fixtures::class,'away_team');
     }
+    public function groups(){
+        return $this->belongsToMany(Group::class,'team_groups');
 
+    }
 
 }
