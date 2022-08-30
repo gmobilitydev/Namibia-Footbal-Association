@@ -81,6 +81,7 @@ Route::get('/procurement', function(){
 });
 
 Route::get('/vacancies',[WebsiteController::class, 'vacancies']);
+Route::get('/vacancy-detail/{id}',[WebsiteController::class, 'vacancy_detail']);
 Route::get('/docs',[WebsiteController::class, 'documents']);
 
 

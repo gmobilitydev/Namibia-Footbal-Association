@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,12 +21,6 @@
 
     <header class="shadow-sm">
         <div class="flex items-center justify-between h-16 max-w-screen-xl px-4 mx-auto">
-
-
-
-
-
-
             <!-- <nav class="items-center justify-center hidden space-x-8 text-sm font-medium lg:flex lg:flex-1 lg:w-0">
 
                 <a class="text-gray-900 w-10" href="{{ url('/') }}"><img
@@ -62,7 +60,7 @@
 
         <nav class="px-auto py-4 bg-white
         items-center justify-center space-x-8 text-sm font-medium lg:flex lg:flex-1 lg:w-0">
-		
+
 		<div class="lg:hidden">
 			<button class="navbar-burger flex items-center text-blue-600 p-3">
 				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -72,7 +70,7 @@
 			</button>
 		</div>
 		<ul class="hidden absolute lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-            
+
                 <a class="text-gray-900 w-10" href="{{ url('/') }}"><img
                     src="{{ asset('assets/logos/logo.jpg') }}">
                 </a>
@@ -88,19 +86,19 @@
             <li><a class="text-gray-900 hover:text-amber-300" href="{{ url('/procurement') }}">Procurement</a></li>
             <li><a class="text-gray-900 hover:text-amber-300" href="{{ url('/vacancies') }}">Vacancies</a></li>
 		</ul>
-		
+
 	</nav>
 	<div class="navbar-menu relative z-50 hidden">
 		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
             <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
                 <div class="flex items-center mb-8">
-                    
+
                     <button>
                         <a class="text-gray-900" href="{{ url('/') }}">
                             <img class="h-12 sm:h-24 mx-auto" src="{{ asset('assets/logos/logo.jpg') }}">
                         </a>
                     </button>
-                    
+
                     <button class="navbar-close">
                         <svg class="ml-64 sm:ml-60 h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>

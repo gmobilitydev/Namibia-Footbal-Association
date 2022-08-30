@@ -42,6 +42,11 @@ class WebsiteController extends Controller
         return view('Site.vacancies.index',['vacancyList'=>$vacancyList]);
 
     }
+
+    public function vacancy_detail($id){
+        return Vacancy::find($id);
+
+    }
     /**
      *
      * Documents Module
