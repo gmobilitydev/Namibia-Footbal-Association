@@ -32,16 +32,16 @@
         <div class="px-6 py-12 md:px-12 text-center lg:text-left">
             <div class="container mx-auto xl:px-32">
                 <div class="grid lg:grid-cols-2 gap-12 flex items-center">
-                    <div class="mt-12 lg:mt-0">
+                    <div class="mb-2 lg:mb-0">
+                        <img src="{{ asset('assets/images/BraveGladiator.jpg') }}"
+                            class="w-full rounded-lg shadow-lg hover:scale-110 transition duration-300 ease-in-out"
+                            alt="" />
+                    </div>
+                    <div class="mt-2 lg:mt-0">
                         <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12"
                             style="color: hsl(218, 81%, 95%);">The Home of Womens Football <br /><span
                                 style="color: hsl(0, 81%, 75%);">For Namibia</span></h1>
 
-                    </div>
-                    <div class="mb-12 lg:mb-0">
-                        <img src="{{ asset('assets/images/JoslinKamatuka.jpg') }}"
-                            class="w-full rounded-lg shadow-lg hover:scale-110 transition duration-300 ease-in-out"
-                            alt="" />
                     </div>
                 </div>
             </div>
