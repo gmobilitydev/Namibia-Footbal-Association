@@ -26,20 +26,6 @@
         <!-- Section: Design Block -->
         <section class="mb-32 text-gray-800 text-center lg:text-left background-radial-gradient">
 
-            <div class="relative overflow-hidden bg-no-repeat bg-cover"
-                style="
-                    background-position: 50%;
-                    background-image: url('{{ asset('storage') }}/{{ $about->image }}');
-                    height: 500px;
-                  ">
-                <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
-                    style="background-color: rgba(17, 7, 7, 0.137)">
-                    <div class="flex justify-center items-center h-full">
-                        <div class="text-center text-white px-6 py-6 md:py-0 md:px-12 max-w-[800px]">
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </section>
         <!-- Container for demo purpose -->
@@ -52,11 +38,7 @@
                     <div class="container mx-auto">
                         <div class="grid lg:grid-cols-2 gap-12 flex items-center">
                             <div class="mt-12 lg:mt-0">
-                                <h2 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12"
-                                    style="color: hsl(0, 0%, 15%)">
-                                    {{ $about->content_title }}</h2>
-                                <p class="text-lg text-justify" style="color: hsl(0, 0%, 17%)">{{ $about->content }}
-                                </p>
+                              
                             </div>
                             <div class="mb-12 lg:mb-0">
                                 <div class="relative w-full overflow-hidden rounded-lg shadow-lg">
