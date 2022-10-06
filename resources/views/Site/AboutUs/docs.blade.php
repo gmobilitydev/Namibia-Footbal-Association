@@ -28,21 +28,6 @@
 
 
             <section class="pt-10">
-                <div x-data="{
-                    openTab: {{ $categories->first()->id }},
-                    activeClasses: 'text-xl p-4 -mb-px border-b border-current text-amber-500',
-                    inactiveClasses: 'text-xl p-4 -mb-px border-b border-transparent hover:text-amber-500',
-                }" class="w-10/12 mb-14 mx-auto items-center">
-                    <div class="flex flex-col md:flex-row text-sm font-medium border-b border-gray-100">
-                        @forelse ($categories as $category)
-                            <a href="javascript:void(0)" @click="openTab = {{ $category->id }}"
-                                :class="openTab === {{ $category->id }} ? activeClasses : inactiveClasses">
-                                {{ $category->name }}
-                            </a>
-                        @empty
-                            <p>no categories found</p>
-                        @endforelse
-                    </div>
 
                     @forelse ($categories as $category)
                         <div
@@ -50,7 +35,7 @@
                             <div x-show="openTab === {{ $category->id }}" style="display: none;"
                                 class="w-full flex flex-col p-4 mx-5">
                                 <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
-
+                                 
                                     @forelse ($category->document as $doc)
                                         <div
                                             class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 flex flex-row">

@@ -29,7 +29,7 @@ class PostFactory extends Factory
 
     public function createImage()
     {
-        $image = file_get_contents('https://picsum.photos/200');
+        $image = file_get_contents('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTS_L3WqSPijSsCRECAzKC6XLgSuaaxDyYJCbJyuZ2xL5gy8ZNF'); //
         $filename = Str::uuid() . '.jpg';
 
         Storage::disk('public')->put($filename, $image);
