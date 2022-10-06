@@ -29,7 +29,7 @@
 
             <section class="pt-10">
                 <div x-data="{
-                    openTab: {{ }},
+                    openTab: {{ $categories->first()->id }},
                     activeClasses: 'text-xl p-4 -mb-px border-b border-current text-amber-500',
                     inactiveClasses: 'text-xl p-4 -mb-px border-b border-transparent hover:text-amber-500',
                 }" class="w-10/12 mb-14 mx-auto items-center">
