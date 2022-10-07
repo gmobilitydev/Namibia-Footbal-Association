@@ -19,6 +19,8 @@
 <body>
     <header class="shadow-sm">
         <div class="flex items-center justify-between h-16 max-w-screen-xl px-4 mx-auto">
+
+        <!-- Navigation start for maximum widthn-->
             <nav class="px-auto py-4 bg-white items-center justify-center space-x-8 text-sm font-medium lg:flex lg:flex-1 lg:w-0">
 
 
@@ -48,9 +50,11 @@
                 </ul>
 
             </nav>
+        <!-- Navigation end here -->
 
             <div class="navbar-menu relative z-50 hidden">
                 <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+
                     <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
                         <div class="flex items-center mb-8">
 
@@ -118,28 +122,6 @@
                                             d="M6 18L18 6M6 6l12 12"></path>
                                     </svg>
                                 </button>
-                            </div>
-                            <div>
-                                <ul>
-                                    <li class="mb-1"><a class="text-gray-900 hover:text-amber-300"
-                                            href="{{ url('/warriors') }}">Brave Warriors</a></li>
-                                    <li class="mb-1"><a class="text-gray-900 hover:text-amber-300"
-                                            href="{{ url('/gladiators') }}">Brave Gladiators</a></li>
-                                    <li class="mb-1"><a class="text-gray-900 hover:text-amber-300"
-                                            href="{{ url('/competitions') }}">Competitions</a></li>
-                                    <li class="mb-1"><a class="text-gray-900 hover:text-amber-300"
-                                            href="{{ url('/docs') }}">Official Documents</a></li>
-                                    <li class="mb-1"><a class="text-gray-900 hover:text-amber-300"
-                                            href="{{ url('/store') }}">Store</a></li>
-                                    <li class="mb-1"><a class="text-gray-900 hover:text-amber-300"
-                                            href="{{ url('/gallery') }}">Gallery</a></li>
-                                    <li class="mb-1"><a class="text-gray-900 hover:text-amber-300"
-                                            href="{{ url('/about') }}">About Us</a></li>
-                                    <li class="mb-1"><a class="text-gray-900 hover:text-amber-300"
-                                            href="{{ url('/procurement') }}">Procurement</a></li>
-                                    <li class="mb-1"><a class="text-gray-900 hover:text-amber-300"
-                                            href="{{ url('/vacancies') }}">Vacancies</a></li>
-                                </ul>
                             </div>
                             <div class="mt-auto">
                                 <p class="my-4 text-xs text-center text-gray-400">

@@ -6,4 +6,8 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+<<<<<<< HEAD
+=======
+    'Mockery' => array($vendorDir . '/mockery/mockery/library'),
+>>>>>>> refs/remotes/origin/main
 );
