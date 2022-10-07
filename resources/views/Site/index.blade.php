@@ -19,8 +19,8 @@
                 </div>
 
             <section>
-
-
+             
+          
                 <div class="max-w-screen-xl p-5 mx-auto dark:bg-zinc-900 dark:text-gray-100">
                     <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12"
                         style="color: hsl(0, 0%, 100%)">
