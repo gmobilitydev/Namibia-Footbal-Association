@@ -21,7 +21,7 @@ class Documents extends Model
     ];
 
     public function category(){
-        return $this->belongsTo(DocCategory::class,'category_id');
+        return $this->belongsTo(DocCategory::class,'categoryid');
     }
     public function competitions(){
         return $this->belongsTo(Competition::class,'document_id');
