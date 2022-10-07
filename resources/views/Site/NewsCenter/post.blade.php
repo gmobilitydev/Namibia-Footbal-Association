@@ -11,7 +11,7 @@
             <div class="sm:justify-between sm:items-center sm:flex">
                 <div class="text-center sm:text-left">
                     <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">
-                        News Center
+                        News Center here
                     </h1>
                 </div>
 

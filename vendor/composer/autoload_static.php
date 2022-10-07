@@ -4,16 +4,7 @@
 
 namespace Composer\Autoload;
 
-<<<<<<< HEAD
 class ComposerStaticInita14acd37729c6cd9a34d0dc9c41d17e7
-{
-    public static $prefixLengthsPsr4 = array (
-        'D' => 
-        array (
-            'Database\\Seeders\\' => 17,
-            'Database\\Factories\\' => 19,
-=======
-class ComposerStaticInit96b6bae11323e3da8d38515ae2679f93
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -210,24 +201,15 @@ class ComposerStaticInit96b6bae11323e3da8d38515ae2679f93
             'Brick\\Math\\' => 11,
             'BladeUI\\Icons\\' => 14,
             'BladeUI\\Heroicons\\' => 18,
->>>>>>> refs/remotes/origin/main
         ),
         'A' => 
         array (
             'App\\' => 4,
-<<<<<<< HEAD
-=======
             'Akaunting\\Money\\' => 16,
->>>>>>> refs/remotes/origin/main
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-<<<<<<< HEAD
-        'Database\\Seeders\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/database/seeders',
-=======
         'voku\\' => 
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
@@ -602,13 +584,10 @@ class ComposerStaticInit96b6bae11323e3da8d38515ae2679f93
         array (
             0 => __DIR__ . '/../..' . '/database/seeders',
             1 => __DIR__ . '/..' . '/laravel/pint/database/seeders',
->>>>>>> refs/remotes/origin/main
         ),
         'Database\\Factories\\' => 
         array (
             0 => __DIR__ . '/../..' . '/database/factories',
-<<<<<<< HEAD
-=======
             1 => __DIR__ . '/..' . '/laravel/pint/database/factories',
         ),
         'DanHarrin\\LivewireRateLimiting\\' => 
@@ -638,13 +617,10 @@ class ComposerStaticInit96b6bae11323e3da8d38515ae2679f93
         'BladeUI\\Heroicons\\' => 
         array (
             0 => __DIR__ . '/..' . '/blade-ui-kit/blade-heroicons/src',
->>>>>>> refs/remotes/origin/main
         ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
-<<<<<<< HEAD
-=======
             1 => __DIR__ . '/..' . '/laravel/pint/app',
         ),
         'Akaunting\\Money\\' => 
@@ -660,13 +636,10 @@ class ComposerStaticInit96b6bae11323e3da8d38515ae2679f93
             array (
                 0 => __DIR__ . '/..' . '/mockery/mockery/library',
             ),
->>>>>>> refs/remotes/origin/main
         ),
     );
 
     public static $classMap = array (
-<<<<<<< HEAD
-=======
         'Akaunting\\Money\\Casts\\CurrencyCast' => __DIR__ . '/..' . '/akaunting/laravel-money/src/Casts/CurrencyCast.php',
         'Akaunting\\Money\\Casts\\MoneyCast' => __DIR__ . '/..' . '/akaunting/laravel-money/src/Casts/MoneyCast.php',
         'Akaunting\\Money\\Currency' => __DIR__ . '/..' . '/akaunting/laravel-money/src/Currency.php',
@@ -674,7 +647,6 @@ class ComposerStaticInit96b6bae11323e3da8d38515ae2679f93
         'Akaunting\\Money\\Provider' => __DIR__ . '/..' . '/akaunting/laravel-money/src/Provider.php',
         'Akaunting\\Money\\View\\Components\\Currency' => __DIR__ . '/..' . '/akaunting/laravel-money/src/View/Components/Currency.php',
         'Akaunting\\Money\\View\\Components\\Money' => __DIR__ . '/..' . '/akaunting/laravel-money/src/View/Components/Money.php',
->>>>>>> refs/remotes/origin/main
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Filament\\Pages\\Auth\\Login' => __DIR__ . '/../..' . '/app/Filament/Pages/Auth/Login.php',
@@ -691,7 +663,6 @@ class ComposerStaticInit96b6bae11323e3da8d38515ae2679f93
         'App\\Filament\\Resources\\Competitions\\CompetitionResource\\Pages\\CreateCompetition' => __DIR__ . '/../..' . '/app/Filament/Resources/Competitions/CompetitionResource/Pages/CreateCompetition.php',
         'App\\Filament\\Resources\\Competitions\\CompetitionResource\\Pages\\EditCompetition' => __DIR__ . '/../..' . '/app/Filament/Resources/Competitions/CompetitionResource/Pages/EditCompetition.php',
         'App\\Filament\\Resources\\Competitions\\CompetitionResource\\Pages\\ListCompetitions' => __DIR__ . '/../..' . '/app/Filament/Resources/Competitions/CompetitionResource/Pages/ListCompetitions.php',
-<<<<<<< HEAD
         'App\\Filament\\Resources\\Competitions\\FixturesResource' => __DIR__ . '/../..' . '/app/Filament/Resources/Competitions/FixturesResource.php',
         'App\\Filament\\Resources\\Competitions\\FixturesResource\\Pages\\CreateFixtures' => __DIR__ . '/../..' . '/app/Filament/Resources/Competitions/FixturesResource/Pages/CreateFixtures.php',
         'App\\Filament\\Resources\\Competitions\\FixturesResource\\Pages\\EditFixtures' => __DIR__ . '/../..' . '/app/Filament/Resources/Competitions/FixturesResource/Pages/EditFixtures.php',
@@ -708,13 +679,10 @@ class ComposerStaticInit96b6bae11323e3da8d38515ae2679f93
         'App\\Filament\\Resources\\Documents\\DocumentsResource\\Pages\\CreateDocuments' => __DIR__ . '/../..' . '/app/Filament/Resources/Documents/DocumentsResource/Pages/CreateDocuments.php',
         'App\\Filament\\Resources\\Documents\\DocumentsResource\\Pages\\EditDocuments' => __DIR__ . '/../..' . '/app/Filament/Resources/Documents/DocumentsResource/Pages/EditDocuments.php',
         'App\\Filament\\Resources\\Documents\\DocumentsResource\\Pages\\ListDocuments' => __DIR__ . '/../..' . '/app/Filament/Resources/Documents/DocumentsResource/Pages/ListDocuments.php',
-=======
->>>>>>> refs/remotes/origin/main
         'App\\Filament\\Resources\\Gallery\\GalleryResource' => __DIR__ . '/../..' . '/app/Filament/Resources/Gallery/GalleryResource.php',
         'App\\Filament\\Resources\\Gallery\\GalleryResource\\Pages\\CreateGallery' => __DIR__ . '/../..' . '/app/Filament/Resources/Gallery/GalleryResource/Pages/CreateGallery.php',
         'App\\Filament\\Resources\\Gallery\\GalleryResource\\Pages\\EditGallery' => __DIR__ . '/../..' . '/app/Filament/Resources/Gallery/GalleryResource/Pages/EditGallery.php',
         'App\\Filament\\Resources\\Gallery\\GalleryResource\\Pages\\ListGalleries' => __DIR__ . '/../..' . '/app/Filament/Resources/Gallery/GalleryResource/Pages/ListGalleries.php',
-<<<<<<< HEAD
         'App\\Filament\\Resources\\Organisation\\AboutResource' => __DIR__ . '/../..' . '/app/Filament/Resources/Organisation/AboutResource.php',
         'App\\Filament\\Resources\\Organisation\\AboutResource\\Pages\\CreateAbout' => __DIR__ . '/../..' . '/app/Filament/Resources/Organisation/AboutResource/Pages/CreateAbout.php',
         'App\\Filament\\Resources\\Organisation\\AboutResource\\Pages\\EditAbout' => __DIR__ . '/../..' . '/app/Filament/Resources/Organisation/AboutResource/Pages/EditAbout.php',
@@ -727,8 +695,6 @@ class ComposerStaticInit96b6bae11323e3da8d38515ae2679f93
         'App\\Filament\\Resources\\Organisation\\MemberResource\\Pages\\CreateMember' => __DIR__ . '/../..' . '/app/Filament/Resources/Organisation/MemberResource/Pages/CreateMember.php',
         'App\\Filament\\Resources\\Organisation\\MemberResource\\Pages\\EditMember' => __DIR__ . '/../..' . '/app/Filament/Resources/Organisation/MemberResource/Pages/EditMember.php',
         'App\\Filament\\Resources\\Organisation\\MemberResource\\Pages\\ListMembers' => __DIR__ . '/../..' . '/app/Filament/Resources/Organisation/MemberResource/Pages/ListMembers.php',
-=======
->>>>>>> refs/remotes/origin/main
         'App\\Filament\\Resources\\Shop\\BrandResource' => __DIR__ . '/../..' . '/app/Filament/Resources/Shop/BrandResource.php',
         'App\\Filament\\Resources\\Shop\\BrandResource\\Pages\\CreateBrand' => __DIR__ . '/../..' . '/app/Filament/Resources/Shop/BrandResource/Pages/CreateBrand.php',
         'App\\Filament\\Resources\\Shop\\BrandResource\\Pages\\EditBrand' => __DIR__ . '/../..' . '/app/Filament/Resources/Shop/BrandResource/Pages/EditBrand.php',
@@ -759,7 +725,6 @@ class ComposerStaticInit96b6bae11323e3da8d38515ae2679f93
         'App\\Filament\\Resources\\Shop\\ProductResource\\Pages\\ListProducts' => __DIR__ . '/../..' . '/app/Filament/Resources/Shop/ProductResource/Pages/ListProducts.php',
         'App\\Filament\\Resources\\Shop\\ProductResource\\RelationManagers\\CommentsRelationManager' => __DIR__ . '/../..' . '/app/Filament/Resources/Shop/ProductResource/RelationManagers/CommentsRelationManager.php',
         'App\\Filament\\Resources\\Shop\\ProductResource\\Widgets\\ProductStats' => __DIR__ . '/../..' . '/app/Filament/Resources/Shop/ProductResource/Widgets/ProductStats.php',
-<<<<<<< HEAD
         'App\\Filament\\Resources\\Team\\PlayersResource' => __DIR__ . '/../..' . '/app/Filament/Resources/Team/PlayersResource.php',
         'App\\Filament\\Resources\\Team\\PlayersResource\\Pages\\CreatePlayers' => __DIR__ . '/../..' . '/app/Filament/Resources/Team/PlayersResource/Pages/CreatePlayers.php',
         'App\\Filament\\Resources\\Team\\PlayersResource\\Pages\\EditPlayers' => __DIR__ . '/../..' . '/app/Filament/Resources/Team/PlayersResource/Pages/EditPlayers.php',
@@ -776,8 +741,6 @@ class ComposerStaticInit96b6bae11323e3da8d38515ae2679f93
         'App\\Filament\\Resources\\Utilities\\PartnersResource\\Pages\\CreatePartners' => __DIR__ . '/../..' . '/app/Filament/Resources/Utilities/PartnersResource/Pages/CreatePartners.php',
         'App\\Filament\\Resources\\Utilities\\PartnersResource\\Pages\\EditPartners' => __DIR__ . '/../..' . '/app/Filament/Resources/Utilities/PartnersResource/Pages/EditPartners.php',
         'App\\Filament\\Resources\\Utilities\\PartnersResource\\Pages\\ListPartners' => __DIR__ . '/../..' . '/app/Filament/Resources/Utilities/PartnersResource/Pages/ListPartners.php',
-=======
->>>>>>> refs/remotes/origin/main
         'App\\Filament\\Resources\\Vacancies\\VacancyResource' => __DIR__ . '/../..' . '/app/Filament/Resources/Vacancies/VacancyResource.php',
         'App\\Filament\\Resources\\Vacancies\\VacancyResource\\Pages\\CreateVacancy' => __DIR__ . '/../..' . '/app/Filament/Resources/Vacancies/VacancyResource/Pages/CreateVacancy.php',
         'App\\Filament\\Resources\\Vacancies\\VacancyResource\\Pages\\EditVacancy' => __DIR__ . '/../..' . '/app/Filament/Resources/Vacancies/VacancyResource/Pages/EditVacancy.php',
@@ -805,7 +768,6 @@ class ComposerStaticInit96b6bae11323e3da8d38515ae2679f93
         'App\\Models\\Blog\\Post' => __DIR__ . '/../..' . '/app/Models/Blog/Post.php',
         'App\\Models\\Comment' => __DIR__ . '/../..' . '/app/Models/Comment.php',
         'App\\Models\\Competitions\\Competition' => __DIR__ . '/../..' . '/app/Models/Competitions/Competition.php',
-<<<<<<< HEAD
         'App\\Models\\Competitions\\Fixtures' => __DIR__ . '/../..' . '/app/Models/Competitions/Fixtures.php',
         'App\\Models\\Competitions\\Group' => __DIR__ . '/../..' . '/app/Models/Competitions/Group.php',
         'App\\Models\\Documents\\DocCategory' => __DIR__ . '/../..' . '/app/Models/Documents/DocCategory.php',
@@ -814,14 +776,6 @@ class ComposerStaticInit96b6bae11323e3da8d38515ae2679f93
         'App\\Models\\Organisation\\About' => __DIR__ . '/../..' . '/app/Models/Organisation/About.php',
         'App\\Models\\Organisation\\Committee' => __DIR__ . '/../..' . '/app/Models/Organisation/Committee.php',
         'App\\Models\\Organisation\\Member' => __DIR__ . '/../..' . '/app/Models/Organisation/Member.php',
-=======
-        'App\\Models\\Documents\\Documents' => __DIR__ . '/../..' . '/app/Models/Documents/Documents.php',
-        'App\\Models\\Fixture' => __DIR__ . '/../..' . '/app/Models/Fixture.php',
-        'App\\Models\\Gallery\\Gallery' => __DIR__ . '/../..' . '/app/Models/Gallery/Gallery.php',
-        'App\\Models\\Images' => __DIR__ . '/../..' . '/app/Models/Images.php',
-        'App\\Models\\Leagues\\League' => __DIR__ . '/../..' . '/app/Models/Leagues/League.php',
-        'App\\Models\\Player' => __DIR__ . '/../..' . '/app/Models/Player.php',
->>>>>>> refs/remotes/origin/main
         'App\\Models\\Shop\\Brand' => __DIR__ . '/../..' . '/app/Models/Shop/Brand.php',
         'App\\Models\\Shop\\Category' => __DIR__ . '/../..' . '/app/Models/Shop/Category.php',
         'App\\Models\\Shop\\Customer' => __DIR__ . '/../..' . '/app/Models/Shop/Customer.php',
@@ -830,27 +784,17 @@ class ComposerStaticInit96b6bae11323e3da8d38515ae2679f93
         'App\\Models\\Shop\\OrderItem' => __DIR__ . '/../..' . '/app/Models/Shop/OrderItem.php',
         'App\\Models\\Shop\\Payment' => __DIR__ . '/../..' . '/app/Models/Shop/Payment.php',
         'App\\Models\\Shop\\Product' => __DIR__ . '/../..' . '/app/Models/Shop/Product.php',
-<<<<<<< HEAD
         'App\\Models\\Team\\Players' => __DIR__ . '/../..' . '/app/Models/Team/Players.php',
         'App\\Models\\Team\\Team' => __DIR__ . '/../..' . '/app/Models/Team/Team.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\Utilities\\Highlight' => __DIR__ . '/../..' . '/app/Models/Utilities/Highlight.php',
         'App\\Models\\Utilities\\Partners' => __DIR__ . '/../..' . '/app/Models/Utilities/Partners.php',
-=======
-        'App\\Models\\Team\\Fixtures' => __DIR__ . '/../..' . '/app/Models/Team/Fixtures.php',
-        'App\\Models\\Team\\Players' => __DIR__ . '/../..' . '/app/Models/Team/Players.php',
-        'App\\Models\\Team\\Team' => __DIR__ . '/../..' . '/app/Models/Team/Team.php',
-        'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
->>>>>>> refs/remotes/origin/main
         'App\\Models\\Vacancies\\Vacancy' => __DIR__ . '/../..' . '/app/Models/Vacancies/Vacancy.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
-<<<<<<< HEAD
-        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-=======
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'BladeUI\\Heroicons\\BladeHeroiconsServiceProvider' => __DIR__ . '/..' . '/blade-ui-kit/blade-heroicons/src/BladeHeroiconsServiceProvider.php',
         'BladeUI\\Icons\\BladeIconsServiceProvider' => __DIR__ . '/..' . '/blade-ui-kit/blade-icons/src/BladeIconsServiceProvider.php',
@@ -973,7 +917,6 @@ class ComposerStaticInit96b6bae11323e3da8d38515ae2679f93
         'DanHarrin\\DateFormatConverter\\Converter' => __DIR__ . '/..' . '/danharrin/date-format-converter/src/Converter.php',
         'DanHarrin\\LivewireRateLimiting\\Exceptions\\TooManyRequestsException' => __DIR__ . '/..' . '/danharrin/livewire-rate-limiting/src/Exceptions/TooManyRequestsException.php',
         'DanHarrin\\LivewireRateLimiting\\WithRateLimiting' => __DIR__ . '/..' . '/danharrin/livewire-rate-limiting/src/WithRateLimiting.php',
->>>>>>> refs/remotes/origin/main
         'Database\\Factories\\AddressFactory' => __DIR__ . '/../..' . '/database/factories/AddressFactory.php',
         'Database\\Factories\\Blog\\AuthorFactory' => __DIR__ . '/../..' . '/database/factories/Blog/AuthorFactory.php',
         'Database\\Factories\\Blog\\CategoryFactory' => __DIR__ . '/../..' . '/database/factories/Blog/CategoryFactory.php',
@@ -981,13 +924,10 @@ class ComposerStaticInit96b6bae11323e3da8d38515ae2679f93
         'Database\\Factories\\CommentFactory' => __DIR__ . '/../..' . '/database/factories/CommentFactory.php',
         'Database\\Factories\\Documents\\DocumentsFactory' => __DIR__ . '/../..' . '/database/factories/Documents/DocumentsFactory.php',
         'Database\\Factories\\FixtureFactory' => __DIR__ . '/../..' . '/database/factories/FixtureFactory.php',
-<<<<<<< HEAD
         'Database\\Factories\\Fixtures\\FixtureFactory' => __DIR__ . '/../..' . '/database/factories/Fixtures/FixtureFactory.php',
         'Database\\Factories\\Fixtures\\PlayerFactory' => __DIR__ . '/../..' . '/database/factories/Fixtures/PlayerFactory.php',
         'Database\\Factories\\Fixtures\\TeamFactory' => __DIR__ . '/../..' . '/database/factories/Fixtures/TeamFactory.php',
         'Database\\Factories\\League\\LeagueFactory' => __DIR__ . '/../..' . '/database/factories/League/LeagueFactory.php',
-=======
->>>>>>> refs/remotes/origin/main
         'Database\\Factories\\PlayerFactory' => __DIR__ . '/../..' . '/database/factories/PlayerFactory.php',
         'Database\\Factories\\Shop\\BrandFactory' => __DIR__ . '/../..' . '/database/factories/Shop/BrandFactory.php',
         'Database\\Factories\\Shop\\CategoryFactory' => __DIR__ . '/../..' . '/database/factories/Shop/CategoryFactory.php',
@@ -1000,8 +940,6 @@ class ComposerStaticInit96b6bae11323e3da8d38515ae2679f93
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Factories\\Vacancies\\VacancyFactory' => __DIR__ . '/../..' . '/database/factories/Vacancies/VacancyFactory.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
-<<<<<<< HEAD
-=======
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
         'DeepCopy\\Exception\\PropertyException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
@@ -7105,22 +7043,15 @@ class ComposerStaticInit96b6bae11323e3da8d38515ae2679f93
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
         'phpDocumentor\\Reflection\\Utils' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/Utils.php',
         'voku\\helper\\ASCII' => __DIR__ . '/..' . '/voku/portable-ascii/src/voku/helper/ASCII.php',
->>>>>>> refs/remotes/origin/main
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-<<<<<<< HEAD
             $loader->prefixLengthsPsr4 = ComposerStaticInita14acd37729c6cd9a34d0dc9c41d17e7::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInita14acd37729c6cd9a34d0dc9c41d17e7::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInita14acd37729c6cd9a34d0dc9c41d17e7::$prefixesPsr0;
             $loader->classMap = ComposerStaticInita14acd37729c6cd9a34d0dc9c41d17e7::$classMap;
-=======
-            $loader->prefixLengthsPsr4 = ComposerStaticInit96b6bae11323e3da8d38515ae2679f93::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit96b6bae11323e3da8d38515ae2679f93::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit96b6bae11323e3da8d38515ae2679f93::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit96b6bae11323e3da8d38515ae2679f93::$classMap;
->>>>>>> refs/remotes/origin/main
 
         }, null, ClassLoader::class);
     }

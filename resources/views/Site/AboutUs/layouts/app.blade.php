@@ -23,47 +23,6 @@
         <div class="flex items-center justify-between h-16 max-w-screen-xl px-4 mx-auto">
 
 
-
-
-
-
-            <!-- <nav class="items-center justify-center hidden space-x-8 text-sm font-medium lg:flex lg:flex-1 lg:w-0">
-
-                    <a class="text-gray-900 w-10" href="{{ url('/') }}"><img
-                            src="{{ asset('assets/logos/logo.jpg') }}"></a>
-
-                    <a class="text-gray-900 hover:text-amber-300" href="{{ url('/news') }}">News Center</a>
-                    <a class="text-gray-900 hover:text-amber-300" href="{{ url('/warriors') }}">Brave Warriors</a>
-                    <a class="text-gray-900 hover:text-amber-300" href="{{ url('/gladiators') }}">Brave Gladiators</a>
-                    <a class="text-gray-900 hover:text-amber-300" href="{{ url('/competitions') }}">Competitions</a>
-                    <a class="text-gray-900 hover:text-amber-300" href="{{ url('/docs') }}">Official Documents</a>
-                    <a class="text-gray-900 hover:text-amber-300" href="{{ url('/store') }}">Store</a>
-                    <a class="text-gray-900 hover:text-amber-300" href="{{ url('/gallery') }}">Gallery</a>
-                    <a class="text-gray-900 hover:text-amber-300" href="{{ url('/about') }}">About Us</a>
-                    <a class="text-gray-900 hover:text-amber-300" href="{{ url('/procurement') }}">Procurement</a>
-                    <a class="text-gray-900 hover:text-amber-300" href="{{ url('/vacancies') }}">Vacancies</a>
-
-                </nav>
-
-
-            </div>
-
-            <div class="border-t border-gray-100 lg:hidden ">
-                <nav class="flex items-center justify-center p-4 overflow-x-auto text-sm font-medium">
-                    <a class="flex-shrink-0 pl-4 text-gray-900 text-gray-900 w-10"><img
-                            src="{{ asset('assets/logos/logo.jpg') }}"></a>
-
-                    <a class="flex-shrink-0 pl-4 text-gray-900" href="{{ url('/news') }}">News Center</a>
-                    <a class="flex-shrink-0 pl-4 text-gray-900" href="{{ url('/warriors') }}">Brave Warriors</a>
-                    <a class="flex-shrink-0 pl-4 text-gray-900" href="{{ url('/gladiators') }}">Brave Gladiators</a>
-                    <a class="flex-shrink-0 pl-4 text-gray-900" href="{{ url('/competitions') }}">Competitions</a>
-                    <a class="flex-shrink-0 pl-4 text-gray-900" href="{{ url('/docs') }}">Official Documents</a>
-                    <a class="flex-shrink-0 pl-4 text-gray-900" href="{{ url('/store') }}">Store</a>
-                    <a class="flex-shrink-0 pl-4 text-gray-900" href="{{ url('/gallery') }}">Gallery</a>
-                    <a class="flex-shrink-0 pl-4 text-gray-900" href="{{ url('/about') }}">About Us</a>
-                </nav>
-            </div> -->
-
             <nav
                 class="px-auto py-4 bg-white
             items-center justify-center space-x-8 text-sm font-medium lg:flex lg:flex-1 lg:w-0">

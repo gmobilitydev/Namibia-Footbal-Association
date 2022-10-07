@@ -6,11 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-<<<<<<< HEAD
-    'Database\\Seeders\\' => array($baseDir . '/database/seeders'),
-    'Database\\Factories\\' => array($baseDir . '/database/factories'),
-    'App\\' => array($baseDir . '/app'),
-=======
     'voku\\' => array($vendorDir . '/voku/portable-ascii/src/voku'),
     'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),
     'ZipStream\\' => array($vendorDir . '/maennchen/zipstream-php/src'),
@@ -113,5 +108,4 @@ return array(
     'BladeUI\\Heroicons\\' => array($vendorDir . '/blade-ui-kit/blade-heroicons/src'),
     'App\\' => array($baseDir . '/app', $vendorDir . '/laravel/pint/app'),
     'Akaunting\\Money\\' => array($vendorDir . '/akaunting/laravel-money/src'),
->>>>>>> refs/remotes/origin/main
 );

@@ -6,8 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-<<<<<<< HEAD
-=======
     'Akaunting\\Money\\Casts\\CurrencyCast' => $vendorDir . '/akaunting/laravel-money/src/Casts/CurrencyCast.php',
     'Akaunting\\Money\\Casts\\MoneyCast' => $vendorDir . '/akaunting/laravel-money/src/Casts/MoneyCast.php',
     'Akaunting\\Money\\Currency' => $vendorDir . '/akaunting/laravel-money/src/Currency.php',
@@ -15,7 +13,6 @@ return array(
     'Akaunting\\Money\\Provider' => $vendorDir . '/akaunting/laravel-money/src/Provider.php',
     'Akaunting\\Money\\View\\Components\\Currency' => $vendorDir . '/akaunting/laravel-money/src/View/Components/Currency.php',
     'Akaunting\\Money\\View\\Components\\Money' => $vendorDir . '/akaunting/laravel-money/src/View/Components/Money.php',
->>>>>>> refs/remotes/origin/main
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Filament\\Pages\\Auth\\Login' => $baseDir . '/app/Filament/Pages/Auth/Login.php',
@@ -32,7 +29,6 @@ return array(
     'App\\Filament\\Resources\\Competitions\\CompetitionResource\\Pages\\CreateCompetition' => $baseDir . '/app/Filament/Resources/Competitions/CompetitionResource/Pages/CreateCompetition.php',
     'App\\Filament\\Resources\\Competitions\\CompetitionResource\\Pages\\EditCompetition' => $baseDir . '/app/Filament/Resources/Competitions/CompetitionResource/Pages/EditCompetition.php',
     'App\\Filament\\Resources\\Competitions\\CompetitionResource\\Pages\\ListCompetitions' => $baseDir . '/app/Filament/Resources/Competitions/CompetitionResource/Pages/ListCompetitions.php',
-<<<<<<< HEAD
     'App\\Filament\\Resources\\Competitions\\FixturesResource' => $baseDir . '/app/Filament/Resources/Competitions/FixturesResource.php',
     'App\\Filament\\Resources\\Competitions\\FixturesResource\\Pages\\CreateFixtures' => $baseDir . '/app/Filament/Resources/Competitions/FixturesResource/Pages/CreateFixtures.php',
     'App\\Filament\\Resources\\Competitions\\FixturesResource\\Pages\\EditFixtures' => $baseDir . '/app/Filament/Resources/Competitions/FixturesResource/Pages/EditFixtures.php',
@@ -49,13 +45,10 @@ return array(
     'App\\Filament\\Resources\\Documents\\DocumentsResource\\Pages\\CreateDocuments' => $baseDir . '/app/Filament/Resources/Documents/DocumentsResource/Pages/CreateDocuments.php',
     'App\\Filament\\Resources\\Documents\\DocumentsResource\\Pages\\EditDocuments' => $baseDir . '/app/Filament/Resources/Documents/DocumentsResource/Pages/EditDocuments.php',
     'App\\Filament\\Resources\\Documents\\DocumentsResource\\Pages\\ListDocuments' => $baseDir . '/app/Filament/Resources/Documents/DocumentsResource/Pages/ListDocuments.php',
-=======
->>>>>>> refs/remotes/origin/main
     'App\\Filament\\Resources\\Gallery\\GalleryResource' => $baseDir . '/app/Filament/Resources/Gallery/GalleryResource.php',
     'App\\Filament\\Resources\\Gallery\\GalleryResource\\Pages\\CreateGallery' => $baseDir . '/app/Filament/Resources/Gallery/GalleryResource/Pages/CreateGallery.php',
     'App\\Filament\\Resources\\Gallery\\GalleryResource\\Pages\\EditGallery' => $baseDir . '/app/Filament/Resources/Gallery/GalleryResource/Pages/EditGallery.php',
     'App\\Filament\\Resources\\Gallery\\GalleryResource\\Pages\\ListGalleries' => $baseDir . '/app/Filament/Resources/Gallery/GalleryResource/Pages/ListGalleries.php',
-<<<<<<< HEAD
     'App\\Filament\\Resources\\Organisation\\AboutResource' => $baseDir . '/app/Filament/Resources/Organisation/AboutResource.php',
     'App\\Filament\\Resources\\Organisation\\AboutResource\\Pages\\CreateAbout' => $baseDir . '/app/Filament/Resources/Organisation/AboutResource/Pages/CreateAbout.php',
     'App\\Filament\\Resources\\Organisation\\AboutResource\\Pages\\EditAbout' => $baseDir . '/app/Filament/Resources/Organisation/AboutResource/Pages/EditAbout.php',
@@ -68,8 +61,6 @@ return array(
     'App\\Filament\\Resources\\Organisation\\MemberResource\\Pages\\CreateMember' => $baseDir . '/app/Filament/Resources/Organisation/MemberResource/Pages/CreateMember.php',
     'App\\Filament\\Resources\\Organisation\\MemberResource\\Pages\\EditMember' => $baseDir . '/app/Filament/Resources/Organisation/MemberResource/Pages/EditMember.php',
     'App\\Filament\\Resources\\Organisation\\MemberResource\\Pages\\ListMembers' => $baseDir . '/app/Filament/Resources/Organisation/MemberResource/Pages/ListMembers.php',
-=======
->>>>>>> refs/remotes/origin/main
     'App\\Filament\\Resources\\Shop\\BrandResource' => $baseDir . '/app/Filament/Resources/Shop/BrandResource.php',
     'App\\Filament\\Resources\\Shop\\BrandResource\\Pages\\CreateBrand' => $baseDir . '/app/Filament/Resources/Shop/BrandResource/Pages/CreateBrand.php',
     'App\\Filament\\Resources\\Shop\\BrandResource\\Pages\\EditBrand' => $baseDir . '/app/Filament/Resources/Shop/BrandResource/Pages/EditBrand.php',
@@ -100,7 +91,6 @@ return array(
     'App\\Filament\\Resources\\Shop\\ProductResource\\Pages\\ListProducts' => $baseDir . '/app/Filament/Resources/Shop/ProductResource/Pages/ListProducts.php',
     'App\\Filament\\Resources\\Shop\\ProductResource\\RelationManagers\\CommentsRelationManager' => $baseDir . '/app/Filament/Resources/Shop/ProductResource/RelationManagers/CommentsRelationManager.php',
     'App\\Filament\\Resources\\Shop\\ProductResource\\Widgets\\ProductStats' => $baseDir . '/app/Filament/Resources/Shop/ProductResource/Widgets/ProductStats.php',
-<<<<<<< HEAD
     'App\\Filament\\Resources\\Team\\PlayersResource' => $baseDir . '/app/Filament/Resources/Team/PlayersResource.php',
     'App\\Filament\\Resources\\Team\\PlayersResource\\Pages\\CreatePlayers' => $baseDir . '/app/Filament/Resources/Team/PlayersResource/Pages/CreatePlayers.php',
     'App\\Filament\\Resources\\Team\\PlayersResource\\Pages\\EditPlayers' => $baseDir . '/app/Filament/Resources/Team/PlayersResource/Pages/EditPlayers.php',
@@ -117,8 +107,6 @@ return array(
     'App\\Filament\\Resources\\Utilities\\PartnersResource\\Pages\\CreatePartners' => $baseDir . '/app/Filament/Resources/Utilities/PartnersResource/Pages/CreatePartners.php',
     'App\\Filament\\Resources\\Utilities\\PartnersResource\\Pages\\EditPartners' => $baseDir . '/app/Filament/Resources/Utilities/PartnersResource/Pages/EditPartners.php',
     'App\\Filament\\Resources\\Utilities\\PartnersResource\\Pages\\ListPartners' => $baseDir . '/app/Filament/Resources/Utilities/PartnersResource/Pages/ListPartners.php',
-=======
->>>>>>> refs/remotes/origin/main
     'App\\Filament\\Resources\\Vacancies\\VacancyResource' => $baseDir . '/app/Filament/Resources/Vacancies/VacancyResource.php',
     'App\\Filament\\Resources\\Vacancies\\VacancyResource\\Pages\\CreateVacancy' => $baseDir . '/app/Filament/Resources/Vacancies/VacancyResource/Pages/CreateVacancy.php',
     'App\\Filament\\Resources\\Vacancies\\VacancyResource\\Pages\\EditVacancy' => $baseDir . '/app/Filament/Resources/Vacancies/VacancyResource/Pages/EditVacancy.php',
@@ -146,7 +134,6 @@ return array(
     'App\\Models\\Blog\\Post' => $baseDir . '/app/Models/Blog/Post.php',
     'App\\Models\\Comment' => $baseDir . '/app/Models/Comment.php',
     'App\\Models\\Competitions\\Competition' => $baseDir . '/app/Models/Competitions/Competition.php',
-<<<<<<< HEAD
     'App\\Models\\Competitions\\Fixtures' => $baseDir . '/app/Models/Competitions/Fixtures.php',
     'App\\Models\\Competitions\\Group' => $baseDir . '/app/Models/Competitions/Group.php',
     'App\\Models\\Documents\\DocCategory' => $baseDir . '/app/Models/Documents/DocCategory.php',
@@ -155,14 +142,6 @@ return array(
     'App\\Models\\Organisation\\About' => $baseDir . '/app/Models/Organisation/About.php',
     'App\\Models\\Organisation\\Committee' => $baseDir . '/app/Models/Organisation/Committee.php',
     'App\\Models\\Organisation\\Member' => $baseDir . '/app/Models/Organisation/Member.php',
-=======
-    'App\\Models\\Documents\\Documents' => $baseDir . '/app/Models/Documents/Documents.php',
-    'App\\Models\\Fixture' => $baseDir . '/app/Models/Fixture.php',
-    'App\\Models\\Gallery\\Gallery' => $baseDir . '/app/Models/Gallery/Gallery.php',
-    'App\\Models\\Images' => $baseDir . '/app/Models/Images.php',
-    'App\\Models\\Leagues\\League' => $baseDir . '/app/Models/Leagues/League.php',
-    'App\\Models\\Player' => $baseDir . '/app/Models/Player.php',
->>>>>>> refs/remotes/origin/main
     'App\\Models\\Shop\\Brand' => $baseDir . '/app/Models/Shop/Brand.php',
     'App\\Models\\Shop\\Category' => $baseDir . '/app/Models/Shop/Category.php',
     'App\\Models\\Shop\\Customer' => $baseDir . '/app/Models/Shop/Customer.php',
@@ -171,27 +150,17 @@ return array(
     'App\\Models\\Shop\\OrderItem' => $baseDir . '/app/Models/Shop/OrderItem.php',
     'App\\Models\\Shop\\Payment' => $baseDir . '/app/Models/Shop/Payment.php',
     'App\\Models\\Shop\\Product' => $baseDir . '/app/Models/Shop/Product.php',
-<<<<<<< HEAD
     'App\\Models\\Team\\Players' => $baseDir . '/app/Models/Team/Players.php',
     'App\\Models\\Team\\Team' => $baseDir . '/app/Models/Team/Team.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Models\\Utilities\\Highlight' => $baseDir . '/app/Models/Utilities/Highlight.php',
     'App\\Models\\Utilities\\Partners' => $baseDir . '/app/Models/Utilities/Partners.php',
-=======
-    'App\\Models\\Team\\Fixtures' => $baseDir . '/app/Models/Team/Fixtures.php',
-    'App\\Models\\Team\\Players' => $baseDir . '/app/Models/Team/Players.php',
-    'App\\Models\\Team\\Team' => $baseDir . '/app/Models/Team/Team.php',
-    'App\\Models\\User' => $baseDir . '/app/Models/User.php',
->>>>>>> refs/remotes/origin/main
     'App\\Models\\Vacancies\\Vacancy' => $baseDir . '/app/Models/Vacancies/Vacancy.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
-<<<<<<< HEAD
-    'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
-=======
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'BladeUI\\Heroicons\\BladeHeroiconsServiceProvider' => $vendorDir . '/blade-ui-kit/blade-heroicons/src/BladeHeroiconsServiceProvider.php',
     'BladeUI\\Icons\\BladeIconsServiceProvider' => $vendorDir . '/blade-ui-kit/blade-icons/src/BladeIconsServiceProvider.php',
@@ -314,7 +283,6 @@ return array(
     'DanHarrin\\DateFormatConverter\\Converter' => $vendorDir . '/danharrin/date-format-converter/src/Converter.php',
     'DanHarrin\\LivewireRateLimiting\\Exceptions\\TooManyRequestsException' => $vendorDir . '/danharrin/livewire-rate-limiting/src/Exceptions/TooManyRequestsException.php',
     'DanHarrin\\LivewireRateLimiting\\WithRateLimiting' => $vendorDir . '/danharrin/livewire-rate-limiting/src/WithRateLimiting.php',
->>>>>>> refs/remotes/origin/main
     'Database\\Factories\\AddressFactory' => $baseDir . '/database/factories/AddressFactory.php',
     'Database\\Factories\\Blog\\AuthorFactory' => $baseDir . '/database/factories/Blog/AuthorFactory.php',
     'Database\\Factories\\Blog\\CategoryFactory' => $baseDir . '/database/factories/Blog/CategoryFactory.php',
@@ -322,13 +290,10 @@ return array(
     'Database\\Factories\\CommentFactory' => $baseDir . '/database/factories/CommentFactory.php',
     'Database\\Factories\\Documents\\DocumentsFactory' => $baseDir . '/database/factories/Documents/DocumentsFactory.php',
     'Database\\Factories\\FixtureFactory' => $baseDir . '/database/factories/FixtureFactory.php',
-<<<<<<< HEAD
     'Database\\Factories\\Fixtures\\FixtureFactory' => $baseDir . '/database/factories/Fixtures/FixtureFactory.php',
     'Database\\Factories\\Fixtures\\PlayerFactory' => $baseDir . '/database/factories/Fixtures/PlayerFactory.php',
     'Database\\Factories\\Fixtures\\TeamFactory' => $baseDir . '/database/factories/Fixtures/TeamFactory.php',
     'Database\\Factories\\League\\LeagueFactory' => $baseDir . '/database/factories/League/LeagueFactory.php',
-=======
->>>>>>> refs/remotes/origin/main
     'Database\\Factories\\PlayerFactory' => $baseDir . '/database/factories/PlayerFactory.php',
     'Database\\Factories\\Shop\\BrandFactory' => $baseDir . '/database/factories/Shop/BrandFactory.php',
     'Database\\Factories\\Shop\\CategoryFactory' => $baseDir . '/database/factories/Shop/CategoryFactory.php',
@@ -341,8 +306,6 @@ return array(
     'Database\\Factories\\UserFactory' => $baseDir . '/database/factories/UserFactory.php',
     'Database\\Factories\\Vacancies\\VacancyFactory' => $baseDir . '/database/factories/Vacancies/VacancyFactory.php',
     'Database\\Seeders\\DatabaseSeeder' => $baseDir . '/database/seeders/DatabaseSeeder.php',
-<<<<<<< HEAD
-=======
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
     'DeepCopy\\Exception\\CloneException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
     'DeepCopy\\Exception\\PropertyException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
@@ -6446,5 +6409,4 @@ return array(
     'phpDocumentor\\Reflection\\Types\\Void_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Void_.php',
     'phpDocumentor\\Reflection\\Utils' => $vendorDir . '/phpdocumentor/reflection-docblock/src/Utils.php',
     'voku\\helper\\ASCII' => $vendorDir . '/voku/portable-ascii/src/voku/helper/ASCII.php',
->>>>>>> refs/remotes/origin/main
 );
